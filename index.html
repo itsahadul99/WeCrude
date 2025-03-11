@@ -15,17 +15,10 @@
 
     <!-- Slick Slider JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
     <style>
-        body{
-            /* font-family: "Anek Devanagari", sans-serif; */
-        }
-        .container {
-            max-width: 1440px;
-            width: 100%;
-            margin: 0 auto;
+        * {
+            box-sizing: border-box;
+            font-family: Anek Devanagari;
         }
     </style>
 </head>
@@ -33,12 +26,12 @@
 <body>
     <!-- Announcement Bar-->
     <div class="bg-black text-white p-4 text-center">
-        <h1 class="text-lg font-medium container mx-auto">Free Shipping from $399 at BARF</h1>
+        <h1 class="text-lg font-medium ">Free Shipping from $399 at BARF</h1>
     </div>
 
     <!-- Navigation section -->
-    <section class="bg-[#F0EEE9] py-6 px-6 md:py-8">
-        <nav class="container mx-auto flex justify-between items-center">
+    <section class="bg-[#F0EEE9] py-6 px-6 md:px-[165px] md:py-8">
+        <nav class=" flex justify-between items-center container mx-auto">
             <div class="flex-1 flex gap-3 items-center">
                 <div class="cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -65,14 +58,16 @@
     </section>
 
     <!-- Banner section -->
-    <section class="bg-[url('./images/bannerBg.png')] bg-cover bg-no-repeat px-6 md:px-0">
-        <div class="container mx-auto pt-[40px] md:pt-[124px] pb-[116px]">
+    <section class="bg-[url('./images/bannerBg.png')] bg-cover bg-no-repeat px-6 md:px-[165px]">
+        <div class=" pt-[40px] md:pt-[124px] pb-[40px] md:pb-[116px] container mx-auto">
             <div class="flex-1 space-y-5">
-                <h1 class="text-5xl font-bold text-[#1E293B] md:text-[#0B0500] w-full md:max-w-2xl">Discover a New Artisanal Way of
+                <h1 class="text-5xl font-bold text-[#1E293B] md:text-[#0B0500] w-full md:max-w-2xl">Discover a New
+                    Artisanal Way of
                     Feeding Your Dog: 100% Natural</h1>
                 <p class="w-full md:max-w-lg text-[#56524F] text-base md:text-xl font-medium">Freshness, quality and
                     flavor in every bite, designed especially for your
                     dog.</p>
+                <img class="block md:hidden" src="./images/mobileBg.png" alt="">
                 <div class="flex gap-2 items-center">
                     <img src="./images/icons/check.svg" alt="">
                     <p>Formulated by Veterinarians and Canine Nutrition Experts</p>
@@ -85,7 +80,8 @@
                     <img src="./images/icons/check.svg" alt="">
                     <p>Safe, Fresh, and Direct Shipping to Your Door</p>
                 </div>
-                <button class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                <button
+                    class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
                     <p>Try it today with 20% off </p>
                     <img src="./images/icons/arrow-right.svg" alt="">
                 </button>
@@ -110,12 +106,14 @@
     </section>
 
     <!-- Special Menu section -->
-    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">Discover Our 4 Special Menus
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">Discover Our 4 Special
+                    Menus
                 </h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Our menus are designed to offer a balanced and delicious
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Our menus are designed to offer a balanced and
+                    delicious
                     diet.</p>
             </div>
             <div class="flex justify-center items-center gap-4 mt-[40px] overflow-x-auto">
@@ -175,10 +173,11 @@
     </section>
 
     <!-- How Does Crude works section -->
-    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-5xl md:text-[56px] font-semibold md:font-bold text-[#1E293B] md:text-[#090502]">How does CRUDE® work?</h1>
+                <h1 class="text-5xl md:text-[56px] font-semibold md:font-bold text-[#1E293B] md:text-[#090502]">How does
+                    CRUDE® work?</h1>
                 <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Choose the Perfect Menu for your Dog</p>
             </div>
             <div class="flex justify-center items-center gap-4 mt-[40px] w-full overflow-x-auto">
@@ -244,7 +243,7 @@
     </section>
 
     <!-- Benefits sections -->
-    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
                 <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">Benefits of Raw Food</h1>
@@ -253,21 +252,27 @@
             <div
                 class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-12 mt-[32px] md:mt-[80px] overflow-x-auto">
                 <div>
-                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
+                    <div
+                        class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
                         <p>Take care of bones and joints</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold py-8 md:py-[80px]">
-                        <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
-                            <img src="./images/icons/haddi.png" alt="">
-                        </div>
+                    <div
+                        class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold py-8 md:py-[80px]">
+                        <img src="./images/regulateWeight.png" alt="">
                         <p>Regulates your weight</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
+                    <div
+                        class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
-                            <img src="./images/icons/haddi.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M17.7433 0.186778C17.7078 0.129644 17.6583 0.0825081 17.5995 0.0498258C17.5407 0.0171436 17.4746 -5.39424e-06 17.4073 1.27278e-09L10.4248 1.27278e-09C10.3416 1.18863e-07 10.2606 0.0262126 10.1931 0.0749126C10.1257 0.123613 10.0754 0.192323 10.0492 0.271279L6.20754 11.8756C6.18787 11.9351 6.18258 11.9984 6.19212 12.0602C6.20166 12.1221 6.22575 12.1809 6.26241 12.2316C6.29908 12.2824 6.34727 12.3237 6.40302 12.3522C6.45877 12.3807 6.52049 12.3956 6.5831 12.3956H9.90506L6.83661 23.499C6.81161 23.5894 6.81958 23.6858 6.85909 23.7709C6.89861 23.856 6.9671 23.9243 7.05233 23.9636C7.13756 24.0029 7.23398 24.0106 7.32436 23.9854C7.41475 23.9601 7.49321 23.9035 7.54574 23.8258L17.1004 9.68232C17.1406 9.62282 17.1639 9.55349 17.1677 9.48178C17.1715 9.41006 17.1557 9.33867 17.122 9.27525C17.0883 9.21183 17.038 9.15878 16.9764 9.12179C16.9149 9.0848 16.8444 9.06526 16.7726 9.06528H13.5675L17.762 0.570724C17.7918 0.510412 17.8057 0.443505 17.8024 0.376324C17.7991 0.309142 17.7788 0.243905 17.7433 0.186778ZM12.5761 9.28576C12.5464 9.34607 12.5324 9.41298 12.5357 9.48015C12.539 9.54733 12.5594 9.61257 12.5949 9.66969C12.6304 9.72682 12.6798 9.77395 12.7386 9.80663C12.7974 9.83932 12.8635 9.85648 12.9308 9.85649H16.0278L8.24295 21.3803L10.8061 12.1054C10.8224 12.0466 10.8248 11.9849 10.8133 11.9251C10.8017 11.8652 10.7765 11.8089 10.7396 11.7604C10.7027 11.7119 10.6551 11.6726 10.6005 11.6455C10.5459 11.6184 10.4857 11.6044 10.4248 11.6044H7.13078L10.7105 0.791207H16.7707L12.5761 9.28576Z"
+                                    fill="#0B0500" />
+                            </svg>
                         </div>
                         <p>Increase your vitality</p>
                     </div>
@@ -276,21 +281,29 @@
                     <img src="./images/benifit.png" alt="">
                 </div>
                 <div>
-                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
+                    <div
+                        class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
                         <p>Reduces allergies</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold py-8 md:py-[80px]">
+                    <div
+                        class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold py-8 md:py-[80px]">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
-                            <img src="./images/icons/haddi.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M12 22.3523C11.6583 22.3523 11.3289 22.2285 11.0722 22.0036C10.1026 21.1558 9.16789 20.3591 8.34317 19.6564L8.33895 19.6527C5.92105 17.5923 3.8331 15.8128 2.38035 14.06C0.75642 12.1004 0 10.2424 0 8.21269C0 6.24066 0.676217 4.42131 1.90392 3.08959C3.14629 1.74212 4.85099 1 6.70457 1C8.08995 1 9.35867 1.438 10.4755 2.30172C11.039 2.73765 11.5499 3.27123 12 3.89359C12.4502 3.27123 12.9609 2.73765 13.5247 2.30172C14.6415 1.438 15.9102 1 17.2956 1C19.149 1 20.8538 1.74212 22.0962 3.08959C23.3239 4.42131 24 6.24066 24 8.21269C24 10.2424 23.2437 12.1004 21.6198 14.0598C20.167 15.8128 18.0792 17.5921 15.6617 19.6524C14.8355 20.3562 13.8993 21.1542 12.9276 22.004C12.6708 22.2286 12.3412 22.3524 12 22.3523ZM6.70457 2.40587C5.24835 2.40587 3.91059 2.98707 2.93737 4.04246C1.94972 5.11384 1.40568 6.5948 1.40568 8.21269C1.40568 9.91978 2.04014 11.4465 3.4627 13.163C4.83763 14.8221 6.88274 16.5649 9.25067 18.5829L9.25503 18.5865C10.0828 19.292 11.0213 20.0918 11.998 20.9458C12.9805 20.0902 13.9204 19.2891 14.7498 18.5825C17.1176 16.5645 19.1625 14.8221 20.5374 13.163C21.9598 11.4465 22.5943 9.91978 22.5943 8.21269C22.5943 6.59475 22.0502 5.11379 21.0626 4.04246C20.0896 2.98707 18.7516 2.40587 17.2956 2.40587C16.2288 2.40587 15.2493 2.74501 14.3846 3.41368C13.6139 4.00988 13.077 4.76354 12.7622 5.29088C12.6004 5.56205 12.3155 5.72391 12 5.72391C11.6845 5.72391 11.3996 5.56205 11.2377 5.29088C10.9232 4.76354 10.3863 4.00988 9.61536 3.41368C8.75061 2.74501 7.77116 2.40587 6.70457 2.40587Z"
+                                    fill="#0B0500" />
+                            </svg>
                         </div>
                         <p>Increase your appetite</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
+                    <div
+                        class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
-                            <img src="./images/icons/haddi.png" alt="">
+                            <img src="./images/diagestics.png" alt="">
                         </div>
                         <p>Improves your digestion</p>
                     </div>
@@ -300,10 +313,11 @@
     </section>
 
     <!-- Story section -->
-    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] w-full">Stories of Healthy and Happy Dogs</h1>
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] w-full">Stories of Healthy
+                    and Happy Dogs</h1>
                 <p class="text-[#5F5F5F] text-base md:text-xl mt-2">+ than 6000 furry ones have already tested us</p>
                 <div class="flex gap-3 justify-center items-center mt-[18px] md:mt-6">
                     <p>Excelente</p>
@@ -383,19 +397,22 @@
     </section>
 
     <!-- High Quality Ingredients section -->
-    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] leading-[56px] md:leading-[78.5px]">Natural and High Quality
+                <h1
+                    class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] leading-[56px] md:leading-[78.5px]">
+                    Natural and High Quality
                     Ingredients</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl w-full md:max-w-4xl mx-auto mt-4 md:mt-2">Each menu is carefully
+                <p class="text-[#5F5F5F] text-base md:text-xl w-full md:max-w-4xl mx-auto mt-4 md:mt-2">Each menu is
+                    carefully
                     prepared with high-quality meats, vegetables full of vitamins and essential nutrients, offering your
                     dog a balanced and delicious diet that improves their overall well-being.</p>
             </div>
             <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-6 mt-6 md:mt-10">
                 <div class="space-y-4">
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
                         <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
@@ -407,46 +424,48 @@
                         </div>
                     </div>
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
-                            <img src="./images/hook.png" alt="">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#ECDA8E] p-3 rounded-full">
+                            <img src="./images/chickenPis.png" alt="">
                         </div>
                         <div>
-                            <h4 class="text-[#000000] text-xl font-medium">Hake fillet</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">Hake is an excellent source of omega-3,
-                                and has a low fat content and high protein value necessary for muscle development and
-                                bone health of your pet.</p>
+                            <h4 class="text-[#000000] text-xl font-medium">Chicken meaty bone</h4>
+                            <p class="text-[#5F5F5F] text-base leading-[27px]">Chicken meat is an excellent source of
+                                calcium and phosphorus, which are essential for maintaining strong teeth and bones. It
+                                also promotes dental hygiene naturally, removing tartar and strengthening gums.</p>
                         </div>
                     </div>
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
-                            <img src="./images/hook.png" alt="">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#DED8F8] p-3 rounded-full">
+                            <img src="./images/chickenHeart.png" alt="">
                         </div>
                         <div>
-                            <h4 class="text-[#000000] text-xl font-medium">Hake fillet</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">Hake is an excellent source of omega-3,
-                                and has a low fat content and high protein value necessary for muscle development and
-                                bone health of your pet.</p>
+                            <h4 class="text-[#000000] text-xl font-medium">Chicken heart</h4>
+                            <p class="text-[#5F5F5F] text-base leading-[27px]">Chicken heart is a natural source of
+                                taurine, an essential amino acid for heart and eye health in dogs. It also contains
+                                iron, zinc and B vitamins, which support muscle development, the immune system and
+                                vitality.</p>
                         </div>
                     </div>
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#B0DCCF] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
-                            <h4 class="text-[#000000] text-xl font-medium">Hake fillet</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">Hake is an excellent source of omega-3,
-                                and has a low fat content and high protein value necessary for muscle development and
-                                bone health of your pet.</p>
+                            <h4 class="text-[#000000] text-xl font-medium">Spinach</h4>
+                            <p class="text-[#5F5F5F] text-base leading-[27px]">Spinach is a plant-based superfood rich
+                                in iron, antioxidants and fibre. It helps improve digestion, strengthens the immune
+                                system and provides vitamins A, C and K, essential for your pet's eye, skin and bone
+                                health.</p>
                         </div>
                     </div>
                 </div>
                 <div class="space-y-4">
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#EEC5B6] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
@@ -457,9 +476,21 @@
                         </div>
                     </div>
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#c9c3c3] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
+                        </div>
+                        <div>
+                            <h4 class="text-[#000000] text-xl font-medium">Hake head</h4>
+                            <p class="text-[#5F5F5F] text-base leading-[27px]">Hake head is rich in omega-3, calcium and
+                                phosphorus, key nutrients for healthy skin, a shiny coat and strong joints. It also
+                                promotes cardiovascular health and cognitive development.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#E3E6BF] p-3 rounded-full">
+                            <img src="./images/pumpkin.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl font-medium">Hake fillet</h4>
@@ -469,27 +500,16 @@
                         </div>
                     </div>
                     <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px] h-[184px]">
+                        <div class="flex justify-center items-center bg-[#BADDFD] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
-                            <h4 class="text-[#000000] text-xl font-medium">Hake fillet</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">Hake is an excellent source of omega-3,
-                                and has a low fat content and high protein value necessary for muscle development and
-                                bone health of your pet.</p>
-                        </div>
-                    </div>
-                    <div
-                        class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
-                            <img src="./images/hook.png" alt="">
-                        </div>
-                        <div>
-                            <h4 class="text-[#000000] text-xl font-medium">Hake fillet</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">Hake is an excellent source of omega-3,
-                                and has a low fat content and high protein value necessary for muscle development and
-                                bone health of your pet.</p>
+                            <h4 class="text-[#000000] text-xl font-medium">Pumpkin</h4>
+                            <p class="text-[#5F5F5F] text-base leading-[27px]">Pumpkin is an excellent source of dietary
+                                fiber, which improves digestive health by regulating intestinal transit. Rich in
+                                vitamins A, C and E, it helps strengthen the immune system and promotes healthy skin and
+                                a shiny coat.</p>
                         </div>
                     </div>
                 </div>
@@ -498,53 +518,65 @@
     </section>
 
     <!-- Q&A section -->
-    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="flex items-center gap-6 justify-center flex-wrap text-sm md:text-base font-medium">
-                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button
+                    class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Nutritional advice</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button
+                    class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Free shipping</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button
+                    class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Customized plan</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button
+                    class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Flexibility</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button
+                    class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>No commitment</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button
+                    class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>14 days trial</p>
@@ -554,7 +586,8 @@
                 <h1
                     class="text-5xl md:text-[56px] font-bold text-[#090502] w-full md:max-w-3xl mx-auto leading-[56px] md:leading-[78.4px]">
                     Do you have any questions? Take a look here.</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl mt-2"> Frequently asked questions from our human customers</p>
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2"> Frequently asked questions from our human customers
+                </p>
             </div>
             <div class="flex justify-center items-center gap-4 mt-5 flex-wrap text-sm md:text-base" id="faq-buttons">
                 <button class="text-[#3E2C1C] text-center py-2 px-6 rounded-full gap-2 bg-[#D4D1CD] cursor-pointer"
@@ -585,7 +618,7 @@
     </section>
 
     <!-- Exclusive Discount sections -->
-    <section class="bg-[#F0EEE9] py-[48px] md:py-[80px] px-6 md:px-0">
+    <section class="bg-[#F0EEE9] py-[48px] md:py-[80px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
                 <h1 class="text-5xl md:text-[56px] font-bold text-[#090502] leading-[48px] w-full md:max-w-5xl mx-auto">
@@ -601,13 +634,14 @@
                 </div>
                 <div class="flex justify-center items-center gap-1 mt-3 text-[#0B0704] text-sm">
                     <input type="checkbox">
-                    <p class="text-nowrap">I have read and accept the Privacy Policy and Terms of Use.</p>
+                    <p class="text-xs md:text-sm text-nowrap text-ellipsis">I have read and accept the Privacy Policy
+                        and Terms of Use.</p>
                 </div>
             </div>
     </section>
 
     <!-- Our Services section -->
-    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
                 <p class="text-lg md:text-2xl text-[#5F5F5F] font-medium">Our Services</p>
@@ -619,54 +653,58 @@
                     experts will accompany your pet throughout all its vital stages, offering personalized nutritional
                     monitoring adapted to its needs.</p>
             </div>
-            <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-6 mt-10">
-                <div class="space-y-4">
-                    <div class="flex gap-3 md:gap-4 items-start px-3 md:px-8 py-3 md:py-6 bg-white rounded-[24px] w-full max-w-[520px] md:h-[174px]"
+            <div class="flex flex-col md:flex-row container mx-auto justify-center items-start gap-6 mt-10">
+                <div class="space-y-4 flex-1">
+                    <div class="flex gap-3 md:gap-4 items-start px-3 md:px-8 py-3 md:py-6 bg-white rounded-[24px] w-full md:h-[174px]"
                         style="box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12)">
                         <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Introduction to natural food</h4>
-                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We will be there to help you with the
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We will be
+                                there to help you with the
                                 transition process and resolve any questions you may have.</p>
                         </div>
                     </div>
-                    <div class="flex gap-3 md:gap-4 items-start px-3 md:px-8 py-3 md:py-6 bg-white rounded-[24px] w-full max-w-[520px] md:h-[174px]"
+                    <div class="flex gap-3 md:gap-4 items-start px-3 md:px-8 py-3 md:py-6 bg-white rounded-[24px] w-fullh-fit md:h-[174px]"
                         style="box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12)">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        <div class="flex justify-center items-center bg-[#DED8F8] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Designing a custom plan</h4>
-                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">Every dog ​​is unique and its needs
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">Every dog
+                                ​​is unique and its needs
                                 depend on individual factors, so the Nutrition Team will tailor your dog's nutritional
                                 plan based on its specific needs.</p>
                         </div>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex gap-4 items-start px-8 py-6 bg-white rounded-[24px] w-full max-w-[520px] h-[174px]"
+                <div class="space-y-4 flex-1">
+                    <div class="flex gap-4 items-start px-8 py-6 bg-white rounded-[24px] w-full h-fit md:h-[174px]"
                         style="box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12)">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        <div class="flex justify-center items-center bg-[#ECDA8E] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Weight control</h4>
-                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We will monitor your pet's weight through
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We will
+                                monitor your pet's weight through
                                 a general evaluation, an analysis of body composition and the design of a personalized
                                 nutritional plan.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 items-start px-8 py-6 bg-white rounded-[24px] w-full max-w-[520px] h-[174px]"
+                    <div class="flex gap-4 items-start px-8 py-6 bg-white rounded-[24px] w-full h-fit md:h-[174px]"
                         style="box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12)">
-                        <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
+                        <div class="flex justify-center items-center bg-[#EEC5B6] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Specific plans for growing
                                 puppies</h4>
-                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We accompany your dog throughout all
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We accompany
+                                your dog throughout all
                                 stages of its life, with specific monitoring adapted to its age and growth projections,
                                 if any.</p>
                         </div>
@@ -674,18 +712,21 @@
                 </div>
             </div>
             <div class="mt-[40px] hidden md:block">
-                <button class="flex mx-auto w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                <button
+                    class="flex mx-auto w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
                     <p>Try it today with 20% off </p>
                     <img src="./images/icons/arrow-right.svg" alt="">
                 </button>
             </div>
-            <div class="mt-10 md:mt-[72px] flex flex-col md:flex-row justify-center items-start gap-8 md:gap-[89px]">
+            <div
+                class="mt-10 md:mt-[72px] flex flex-col md:flex-row justify-around items-start gap-8 md:gap-[89px] container mx-auto">
                 <div class="flex flex-col md:flex-row gap-4 md:gap-7">
                     <div>
-                        <img class="w-full " src="./images/service.png" alt="">
+                        <img class="w-full" src="./images/service.png" alt="">
                     </div>
                     <div class="order-1">
-                        <h1 class="text-5xl font-semibold opacity-100 md:opacity-80 text-nowrap text-[#1E293B] md:text-[#090502]">Nutritional advice</h1>
+                        <h1 class="text-5xl font-semibold opacity-100 md:opacity-80 text-[#1E293B] md:text-[#090502]">
+                            Nutritional advice</h1>
                         <h5 class="text-xl md:text-2xl font-bold text-[#090502] mt-1 ">Rachel</h5>
                         <div class="mt-2 md:mt-3 space-y-2">
                             <div class="flex items-center gap-2">
@@ -737,10 +778,11 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-0">
+    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">More opinions from our clients</h1>
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">More opinions from our
+                    clients</h1>
             </div>
             <div class="testimonial-carousel mt-[80px] w-full">
                 <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
@@ -945,7 +987,7 @@
     </section>
 
     <!-- Ready to transform dog diet section -->
-    <section class="bg-[#E3E3E1] md:bg-[#D8CEC3] py-[48px] md:py-[80px] px-6 md:px-0">
+    <section class="bg-[#E3E3E1] md:bg-[#D8CEC3] py-[48px] md:py-[80px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="text-center">
                 <h1 class="text-[40px] font-bold text-[#090502] leading-[56px] w-full md:max-w-5xl mx-auto">
@@ -977,7 +1019,7 @@
     </section>
 
     <!-- Footer section -->
-    <footer class="bg-[#3E2C1C] pt-[64px] px-6 md:px-0">
+    <footer class="bg-[#3E2C1C] pt-[64px] px-6 md:px-[165px]">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <img src="./images/footerLogo.png" alt="">
