@@ -15,8 +15,13 @@
 
     <!-- Slick Slider JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
     <style>
+        body{
+            /* font-family: "Anek Devanagari", sans-serif; */
+        }
         .container {
             max-width: 1440px;
             width: 100%;
@@ -32,7 +37,7 @@
     </div>
 
     <!-- Navigation section -->
-    <section class="bg-[#F0EEE9] py-6 px-4 md:py-10">
+    <section class="bg-[#F0EEE9] py-6 px-6 md:py-8">
         <nav class="container mx-auto flex justify-between items-center">
             <div class="flex-1 flex gap-3 items-center">
                 <div class="cursor-pointer">
@@ -60,12 +65,12 @@
     </section>
 
     <!-- Banner section -->
-    <section class="bg-[url('./images/bannerBg.png')] bg-cover bg-no-repeat">
-        <div class="container mx-auto pt-[124px] pb-[116px]">
+    <section class="bg-[url('./images/bannerBg.png')] bg-cover bg-no-repeat px-6 md:px-0">
+        <div class="container mx-auto pt-[40px] md:pt-[124px] pb-[116px]">
             <div class="flex-1 space-y-5">
-                <h1 class="text-5xl font-bold text-[#0B0500] w-full md:max-w-2xl">Discover a New Artisanal Way of
+                <h1 class="text-5xl font-bold text-[#1E293B] md:text-[#0B0500] w-full md:max-w-2xl">Discover a New Artisanal Way of
                     Feeding Your Dog: 100% Natural</h1>
-                <p class="w-full md:max-w-lg text-[#56524F] text-sm md:text-xl font-medium">Freshness, quality and
+                <p class="w-full md:max-w-lg text-[#56524F] text-base md:text-xl font-medium">Freshness, quality and
                     flavor in every bite, designed especially for your
                     dog.</p>
                 <div class="flex gap-2 items-center">
@@ -80,13 +85,9 @@
                     <img src="./images/icons/check.svg" alt="">
                     <p>Safe, Fresh, and Direct Shipping to Your Door</p>
                 </div>
-                <button class="flex items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
-                    Try it today with 20% off <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 20 20" fill="none">
-                        <path
-                            d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
-                            fill="white" />
-                    </svg>
+                <button class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                    <p>Try it today with 20% off </p>
+                    <img src="./images/icons/arrow-right.svg" alt="">
                 </button>
             </div>
         </div>
@@ -109,12 +110,12 @@
     </section>
 
     <!-- Special Menu section -->
-    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px]">
+    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-2xl md:text-[56px] font-bold text-[#090502]">Discover Our 4 Special Menus
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">Discover Our 4 Special Menus
                 </h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl">Our menus are designed to offer a balanced and delicious
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Our menus are designed to offer a balanced and delicious
                     diet.</p>
             </div>
             <div class="flex justify-center items-center gap-4 mt-[40px] overflow-x-auto">
@@ -174,13 +175,13 @@
     </section>
 
     <!-- How Does Crude works section -->
-    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px]">
+    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-2xl md:text-[56px] font-bold text-[#090502]">How does CRUDE® work?</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl">Choose the Perfect Menu for your Dog</p>
+                <h1 class="text-5xl md:text-[56px] font-semibold md:font-bold text-[#1E293B] md:text-[#090502]">How does CRUDE® work?</h1>
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Choose the Perfect Menu for your Dog</p>
             </div>
-            <div class="flex justify-center items-center gap-4 mt-[40px] overflow-x-auto">
+            <div class="flex justify-center items-center gap-4 mt-[40px] w-full overflow-x-auto">
                 <div class="w-full md:w-[354px] bg-[#F0EEE9] rounded-2xl">
                     <div class="relative">
                         <img class="mx-auto" src="./images/work1.png" alt="">
@@ -228,9 +229,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-[48px]">
+            <div class="mt-[24px] md:mt-[48px]">
                 <button
-                    class="flex mx-auto items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                    class="flex mx-auto w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
                     I want to start now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                         viewBox="0 0 20 20" fill="none">
                         <path
@@ -243,28 +244,28 @@
     </section>
 
     <!-- Benefits sections -->
-    <section class="bg-white py-[48px] md:py-[120px]">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-2xl md:text-[56px] font-bold text-[#090502]">Benefits of Raw Food</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl">Choose the Perfect Menu for your Dog</p>
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">Benefits of Raw Food</h1>
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Choose the Perfect Menu for your Dog</p>
             </div>
             <div
-                class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-12 mt-[80px] overflow-x-auto">
+                class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-12 mt-[32px] md:mt-[80px] overflow-x-auto">
                 <div>
-                    <div class="flex gap-4 items-center text-[#0B0500] text-2xl font-semibold">
+                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
                         <p>Take care of bones and joints</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#0B0500] text-2xl font-semibold py-[80px]">
+                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold py-8 md:py-[80px]">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
                         <p>Regulates your weight</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#0B0500] text-2xl font-semibold">
+                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
@@ -275,19 +276,19 @@
                     <img src="./images/benifit.png" alt="">
                 </div>
                 <div>
-                    <div class="flex gap-4 items-center text-[#0B0500] text-2xl font-semibold">
+                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
                         <p>Reduces allergies</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#0B0500] text-2xl font-semibold py-[80px]">
+                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold py-8 md:py-[80px]">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
                         <p>Increase your appetite</p>
                     </div>
-                    <div class="flex gap-4 items-center text-[#0B0500] text-2xl font-semibold">
+                    <div class="flex gap-4 items-center text-[#1E293B] md:text-[#0B0500] text-xl md:text-2xl font-semibold">
                         <div class="size-12 bg-[#F0EEE9] rounded-full flex justify-center items-center">
                             <img src="./images/icons/haddi.png" alt="">
                         </div>
@@ -299,12 +300,12 @@
     </section>
 
     <!-- Story section -->
-    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px]">
+    <section class="bg-[#F2F2F2] py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-2xl md:text-[56px] font-bold text-[#090502]">Stories of Healthy and Happy Dogs</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl">+ than 6000 furry ones have already tested us</p>
-                <div class="flex gap-3 justify-center items-center mt-6">
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] w-full">Stories of Healthy and Happy Dogs</h1>
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2">+ than 6000 furry ones have already tested us</p>
+                <div class="flex gap-3 justify-center items-center mt-[18px] md:mt-6">
                     <p>Excelente</p>
                     <div class="flex">
                         <img src="./images/icons/star.svg" alt="">
@@ -316,7 +317,7 @@
                     <img src="./images/icons/trustPilot.svg" alt="">
                 </div>
             </div>
-            <div class="carousel mt-[80px] w-full">
+            <div class="carousel mt-[32px] md:mt-[80px] w-full">
                 <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
                     <img class="w-full" src="./images/health1.png" alt="">
                     <div class="flex justify-between items-center mt-5">
@@ -382,16 +383,16 @@
     </section>
 
     <!-- High Quality Ingredients section -->
-    <section class="bg-white py-[48px] md:py-[120px]">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-2xl md:text-[56px] font-bold text-[#090502] leading-[78.5px]">Natural and High Quality
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] leading-[56px] md:leading-[78.5px]">Natural and High Quality
                     Ingredients</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl w-full md:max-w-4xl mx-auto">Each menu is carefully
+                <p class="text-[#5F5F5F] text-base md:text-xl w-full md:max-w-4xl mx-auto mt-4 md:mt-2">Each menu is carefully
                     prepared with high-quality meats, vegetables full of vitamins and essential nutrients, offering your
                     dog a balanced and delicious diet that improves their overall well-being.</p>
             </div>
-            <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-6 mt-10">
+            <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-6 mt-6 md:mt-10">
                 <div class="space-y-4">
                     <div
                         class="flex gap-4 items-start p-4 bg-white border border-[#F2F2F2] rounded-[20px] w-full max-w-[560px]">
@@ -497,59 +498,53 @@
     </section>
 
     <!-- Q&A section -->
-    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px]">
+    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="flex items-center gap-6 justify-center flex-wrap text-sm md:text-base font-medium">
-                <button class="text-[#3E2C1C] flex items-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Nutritional advice</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Free shipping</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Customized plan</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>Flexibility</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>No commitment</p>
                 </button>
-                <button class="text-[#3E2C1C] flex items-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+                <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
                     <div class="p-[2px] rounded-full bg-[#3E2C1C]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
-                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <p>14 days trial</p>
@@ -559,7 +554,7 @@
                 <h1
                     class="text-5xl md:text-[56px] font-bold text-[#090502] w-full md:max-w-3xl mx-auto leading-[56px] md:leading-[78.4px]">
                     Do you have any questions? Take a look here.</h1>
-                <p class="text-[#5F5F5F] text-base md:text-xl"> Frequently asked questions from our human customers</p>
+                <p class="text-[#5F5F5F] text-base md:text-xl mt-2"> Frequently asked questions from our human customers</p>
             </div>
             <div class="flex justify-center items-center gap-4 mt-5 flex-wrap text-sm md:text-base" id="faq-buttons">
                 <button class="text-[#3E2C1C] text-center py-2 px-6 rounded-full gap-2 bg-[#D4D1CD] cursor-pointer"
@@ -582,7 +577,6 @@
                     Subscription
                 </button>
             </div>
-
             <!-- FAQ Content -->
             <div class="space-y-6 mt-6 md:mt-[64px] w-full" id="faq-content">
                 <!-- FAQ items will be dynamically inserted here -->
@@ -591,7 +585,7 @@
     </section>
 
     <!-- Exclusive Discount sections -->
-    <section class="bg-[#F0EEE9] py-[48px] md:py-[80px]">
+    <section class="bg-[#F0EEE9] py-[48px] md:py-[80px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
                 <h1 class="text-5xl md:text-[56px] font-bold text-[#090502] leading-[48px] w-full md:max-w-5xl mx-auto">
@@ -607,18 +601,18 @@
                 </div>
                 <div class="flex justify-center items-center gap-1 mt-3 text-[#0B0704] text-sm">
                     <input type="checkbox">
-                    <p>I have read and accept the Privacy Policy and Terms of Use.</p>
+                    <p class="text-nowrap">I have read and accept the Privacy Policy and Terms of Use.</p>
                 </div>
             </div>
     </section>
 
     <!-- Our Services section -->
-    <section class="bg-white py-[48px] md:py-[120px]">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
                 <p class="text-lg md:text-2xl text-[#5F5F5F] font-medium">Our Services</p>
                 <h1
-                    class="text-5xl md:text-[56px] font-bold text-[#090502] leading-[78.5px] w-full md:max-w-5xl mx-auto">
+                    class="text-5xl md:text-[56px] font-bold text-[#090502] leading-[56px] md:leading-[78.5px] w-full md:max-w-5xl mx-auto">
                     Contact our veterinarians and canine nutritionists</h1>
                 <p class="text-[#5F5F5F] text-base md:text-xl w-full md:max-w-4xl mx-auto mt-3 md:mt-9">Our team of
                     canine nutrition
@@ -627,25 +621,25 @@
             </div>
             <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-6 mt-10">
                 <div class="space-y-4">
-                    <div class="flex gap-4 items-start px-8 py-6 bg-white rounded-[24px] w-full max-w-[520px] h-[174px]"
+                    <div class="flex gap-3 md:gap-4 items-start px-3 md:px-8 py-3 md:py-6 bg-white rounded-[24px] w-full max-w-[520px] md:h-[174px]"
                         style="box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12)">
                         <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Introduction to natural food</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">We will be there to help you with the
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We will be there to help you with the
                                 transition process and resolve any questions you may have.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 items-start px-8 py-6 bg-white rounded-[24px] w-full max-w-[520px] h-[174px]"
+                    <div class="flex gap-3 md:gap-4 items-start px-3 md:px-8 py-3 md:py-6 bg-white rounded-[24px] w-full max-w-[520px] md:h-[174px]"
                         style="box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12)">
                         <div class="flex justify-center items-center bg-[#A3D67E] p-3 rounded-full">
                             <img src="./images/hook.png" alt="">
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Designing a custom plan</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">Every dog ​​is unique and its needs
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">Every dog ​​is unique and its needs
                                 depend on individual factors, so the Nutrition Team will tailor your dog's nutritional
                                 plan based on its specific needs.</p>
                         </div>
@@ -659,7 +653,7 @@
                         </div>
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Weight control</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">We will monitor your pet's weight through
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We will monitor your pet's weight through
                                 a general evaluation, an analysis of body composition and the design of a personalized
                                 nutritional plan.</p>
                         </div>
@@ -672,32 +666,27 @@
                         <div>
                             <h4 class="text-[#000000] text-xl md:text-2xl font-medium">Specific plans for growing
                                 puppies</h4>
-                            <p class="text-[#5F5F5F] text-base leading-[27px]">We accompany your dog throughout all
+                            <p class="text-[#5F5F5F] text-sm md:text-base leading-[20px] md:leading-[27px]">We accompany your dog throughout all
                                 stages of its life, with specific monitoring adapted to its age and growth projections,
                                 if any.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mt-[40px]">
-                <button
-                    class="flex mx-auto items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded cursor-pointer">
-                    Try it today with 20% off <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 20 20" fill="none">
-                        <path
-                            d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
-                            fill="white" />
-                    </svg>
+            <div class="mt-[40px] hidden md:block">
+                <button class="flex mx-auto w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                    <p>Try it today with 20% off </p>
+                    <img src="./images/icons/arrow-right.svg" alt="">
                 </button>
             </div>
             <div class="mt-10 md:mt-[72px] flex flex-col md:flex-row justify-center items-start gap-8 md:gap-[89px]">
                 <div class="flex flex-col md:flex-row gap-4 md:gap-7">
                     <div>
-                        <img src="./images/service.png" alt="">
+                        <img class="w-full " src="./images/service.png" alt="">
                     </div>
-                    <div>
-                        <h1 class="text-5xl font-semibold opacity-80 text-[#090502]">Nutritional advice</h1>
-                        <h5 class="text-xl md:text-2xl font-bold text-[#090502]">Rachel</h5>
+                    <div class="order-1">
+                        <h1 class="text-5xl font-semibold opacity-100 md:opacity-80 text-nowrap text-[#1E293B] md:text-[#090502]">Nutritional advice</h1>
+                        <h5 class="text-xl md:text-2xl font-bold text-[#090502] mt-1 ">Rachel</h5>
                         <div class="mt-2 md:mt-3 space-y-2">
                             <div class="flex items-center gap-2">
                                 <div class="size-[6px] rounded-full bg-[#ACAAA8]"></div>
@@ -717,7 +706,7 @@
                         </div>
                         <div class="mt-3 md:mt-5 space-y-3">
                             <button
-                                class="flex items-center gap-3 text-[#3E2C1C] border border-[#3E2C1C] py-3 px-5 rounded cursor-pointer">
+                                class="flex justify-center w-full items-center gap-3 text-[#3E2C1C] border border-[#3E2C1C] py-3 px-5 rounded cursor-pointer">
                                 Book my first session<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 20 20" fill="none">
                                     <path
@@ -748,10 +737,10 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px]">
+    <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-2xl md:text-[56px] font-bold text-[#090502]">More opinions from our clients</h1>
+                <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">More opinions from our clients</h1>
             </div>
             <div class="testimonial-carousel mt-[80px] w-full">
                 <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
@@ -854,11 +843,11 @@
     </section>
 
     <!-- Stories section -->
-    <section class="bg-white py-[48px] md:py-[120px]">
+    <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
                 <h1
-                    class="text-5xl md:text-[56px] font-bold text-[#090502] leading-[78.5px] w-full md:max-w-5xl mx-auto">
+                    class="text-5xl md:text-[56px] font-bold text-[#090502] leading-[56px] md:leading-[78.5px] w-full md:max-w-5xl mx-auto">
                     Discover More Stories and Moments on Our Instagram</h1>
                 <p class="text-[#5F5F5F] text-base md:text-xl w-full md:max-w-4xl mx-auto mt-3 md:mt-9">@wecrude</p>
             </div>
@@ -956,10 +945,10 @@
     </section>
 
     <!-- Ready to transform dog diet section -->
-    <section class="bg-[#D8CEC3] py-[48px] md:py-[80px]">
+    <section class="bg-[#E3E3E1] md:bg-[#D8CEC3] py-[48px] md:py-[80px] px-6 md:px-0">
         <div class="container mx-auto">
             <div class="text-center">
-                <h1 class="text-3xl md:text-[40px] font-bold text-[#090502] leading-[56px] w-full md:max-w-5xl mx-auto">
+                <h1 class="text-[40px] font-bold text-[#090502] leading-[56px] w-full md:max-w-5xl mx-auto">
                     Ready to Transform Your Dog's Diet?
                 </h1>
                 <p class="text-[#56524F] text-base md:text-xl w-full md:max-w-4xl mx-auto mt-3">Join thousands of happy
@@ -976,7 +965,7 @@
             </div>
             <div class="mt-6 md:mt-8">
                 <button
-                    class="flex mx-auto items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                    class="flex justify-center w-full md:w-fit mx-auto items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
                     I want to start now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                         viewBox="0 0 20 20" fill="none">
                         <path
@@ -988,33 +977,35 @@
     </section>
 
     <!-- Footer section -->
-    <footer class="bg-[#3E2C1C] pt-[64px]">
+    <footer class="bg-[#3E2C1C] pt-[64px] px-6 md:px-0">
         <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 <img src="./images/footerLogo.png" alt="">
-                <div>
-                    <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
-                    <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
+                <div class="flex md:-ml-32 gap-[41px] md:gap-[166px] w-full mt-6 md:mt-0">
+                    <div class="flex-1">
+                        <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+                        <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
-                    <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
+                    <div class="flex-1">
+                        <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
+                        <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="pt-[185px]">
+            <div class="pt-6 md:pt-[185px]">
                 <div class="h-[1px] bg-[#5B4C3E]"></div>
                 <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
                     <div class="flex justify-center items-center gap-3 flex-wrap">
