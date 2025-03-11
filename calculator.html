@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCrude | Calculator</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+    <!-- jQuery (Required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Anek Devanagari';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement Bar-->
+    <div class="bg-black text-white p-4 text-center">
+        <h1 class="text-lg font-medium ">Free Shipping from $399 at BARF</h1>
+    </div>
+
+    <!-- Navigation section -->
+    <section class="bg-[#F0EEE9] py-6 px-6 md:px-[165px] md:py-8">
+        <nav class=" flex justify-between items-center container mx-auto">
+            <div class="flex-1 flex gap-3 items-center">
+                <div class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+                            fill="#0B0500" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                            fill="#0B0500" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+                            fill="#0B0500" />
+                    </svg>
+                </div>
+                <img src="./images/logo.png" alt="">
+            </div>
+            <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+                <img src="./images/icons/location.svg" alt="">
+                <img src="./images/icons/search.svg" alt="">
+                <img src="./images/icons/user.svg" alt="">
+                <img src="./images/icons/cart.svg" alt="">
+            </ul>
+        </nav>
+    </section>
+    <!-- banner section --  -->
+    <section
+        class="bg-[url('./images/about-images/image.png')] bg-cover flex items-center justify-center bg-center bg-no-repeat min-h-[440px] w-full px-6 md:px-0">
+        <div class="flex items-center justify-center flex-col gap-[16px]">
+            <h2 style="
+            color: var(--text-white, #fff);
+            text-align: center;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 72px;
+          ">
+               Calculate your Dog’s Daily Ration
+            </h2>
+
+            <div style="
+            color: var(--text-white, #fff);
+            font-size: var(--Typeface-size-h6, 20px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--Typeface-lineheight-h6, 30px);
+          " class="flex items-center gap-[12px]">
+                <span>Home</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                    <path
+                        d="M14.25 9.99996C14.2501 10.082 14.234 10.1633 14.2026 10.2392C14.1711 10.315 14.125 10.3839 14.0669 10.4418L7.81691 16.6918C7.5727 16.9361 7.17723 16.9361 6.93316 16.6918C6.6891 16.4476 6.68895 16.0521 6.93316 15.8081L12.7413 9.99996L6.93316 4.19184C6.68894 3.94762 6.68894 3.55215 6.93316 3.30809C7.17738 3.06402 7.57285 3.06387 7.81691 3.30809L14.0669 9.55809C14.125 9.61605 14.1711 9.68492 14.2026 9.76075C14.234 9.83658 14.2501 9.91788 14.25 9.99996Z"
+                        fill="white" />
+                </svg>
+                <span> Collection</span>
+            </div>
+        </div>
+    </section>
+    <!-- Marque Section -->
+    <section class="marquee-slider bg-[#3E2C1C] py-5 text-white text-lg md:text-xl overflow-hidden">
+        <div class="marquee-item flex items-center gap-2 px-4">
+            <div class="bg-white rounded-full size-2"></div>
+            <p>9 out of 10 dogs reduce allergies with our diet.</p>
+        </div>
+        <div class="marquee-item flex items-center gap-2 px-4">
+            <div class="bg-white rounded-full size-2"></div>
+            <p>95% of dogs improve their digestion in 1 month</p>
+        </div>
+        <div class="marquee-item flex items-center gap-2 px-4">
+            <div class="bg-white rounded-full size-2"></div>
+            <p>90% of dogs love the taste from day one</p>
+        </div>
+    </section>
+
+    <!-- Calculate section -->
+    <section class="bg-[#E2E1E0] py-6 px-6 md:px-[165px] md:py-[120px]">
+        <div class="container mx-auto bg-white border border-[#E2DED4] rounded-3xl py-[48px] px-8">
+            <h1 class="text-[#1E293B] font-semibold text-[40px] text-center">What is your weight?</h1>
+            <div
+                class="mt-3 px-5 py-[18px] rounded-xl border border-[#E2E1E0] w-full md:w-fit mx-auto flex justify-between gap-3 items-center">
+                <input class="text-[#1E293B] text-xl md:text-2xl font-medium" type="number" placeholder="24">
+                <p class="text-[#5F5F5F] text-xl md:text-2xl font-medium">KG</p>
+            </div>
+            <p class="mt-3 text-center text-[#5F5F5F] text-xl">Knowing your Dog’s Weight is Essential to Calculate It’s
+                Daily Ration</p>
+            <div class="mt-12">
+                <h1 class="text-[#1E293B] font-semibold text-[48px] text-center">What physical activity do you have?
+                </h1>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-5 mt-[37px]">
+                    <div class="p-5 rounded-[20px] border border-[#3E2C1C] text-center w-full md:w-[295px] h-[196px]">
+                        <div class="flex justify-center items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48"
+                                fill="none">
+                                <path
+                                    d="M13.988 43.4998C13.988 41.6594 10.9207 42.7329 9.38705 43.4998C9.80474 47.8915 5.62321 48.519 2.48621 47.6825C-0.650799 46.8459 5.20494 41.1993 5.20494 37.8534C5.20494 34.5074 1.85823 24.8869 5.20494 19.4494C8.55166 14.012 6.87744 12.9663 1.85823 9.41102C-3.16098 5.85574 6.45917 0 15.2428 0C24.0264 0 22.7716 5.85574 19.2163 9.41102C15.6611 12.9663 17.9615 17.7764 19.8437 18.1948C21.7259 18.6132 23.6081 14.0121 29.0456 8.78377C34.4831 3.55543 43.685 8.57464 37.411 8.78377C31.1369 8.99291 24.4447 14.8486 24.6538 18.1948C24.8629 21.5409 28.8365 27.6058 29.0456 37.8534C29.2547 48.1009 26.536 46.2187 25.6995 45.5913C24.8629 44.9639 25.9086 34.0888 25.2812 31.9975C21.5168 27.8148 19.8437 34.5071 19.0072 39.5263C18.1707 44.5455 18.1707 48.1008 15.4519 47.8916C12.7332 47.6825 13.988 45.8002 13.988 43.4998Z"
+                                    fill="#3E2C1C" />
+                                <path
+                                    d="M12.1301 39.2886C9.25347 39.7934 10.0483 33.4691 10.8053 30.2438C11.2496 28.3507 14.0973 29.6549 15.9141 30.6645C18.1851 31.9266 15.7258 38.6576 12.1301 39.2886Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="text-xl text-[#1E293B] font-semibold mb-1">Low</h1>
+                            <p class="text-base text-[#5F5F5F] w-full md:w-2/3 mx-auto">Regular 30-minute walks on a
+                                leash.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="p-5 rounded-[20px] border bg-[#3E2C1C] text-center text-white w-full md:w-[295px] h-[196px]">
+                        <div class="flex justify-center items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 36 48"
+                                fill="none">
+                                <path
+                                    d="M6.30652 41.2415C7.52961 43.8942 2.61179 43.9072 0 43.5821C6.87984 50.409 22.5506 47.288 30.1949 47.288C37.8391 47.288 35.3548 44.9474 32.8704 43.5821C30.386 42.2168 32.297 39.0958 34.017 36.1701C35.737 33.2443 33.6348 25.4422 30.1949 20.7609C26.7549 16.0796 28.2838 10.6182 30.1949 12.5688C38.4125 18.8105 36.8836 4.57154 31.9148 1.64576C26.9461 -1.28003 22.1684 -0.30477 15.2885 4.57154C8.4087 9.44786 16.2441 17.055 18.7285 12.5688C21.2129 8.08254 19.4929 18.2253 17.7729 21.3461C16.053 24.467 16.4352 34.0245 11.6575 34.8047C6.87984 35.5849 4.77767 37.9256 6.30652 41.2415Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-semibold mb-1">Average</h1>
+                            <p class="text-base w-full md:w-2/3 mx-auto">Go out for a run at least 1 hour a day</p>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-[20px] border border-[#3E2C1C] text-center w-full md:w-[295px] h-[196px]">
+                        <div class="flex justify-center items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="48" viewBox="0 0 54 48"
+                                fill="none">
+                                <path
+                                    d="M17.1702 48C20.6259 48 21.0468 43.6548 20.8253 41.4821C20.7699 40.7022 20.6259 38.7748 20.493 37.3041C20.3268 35.4657 21.1575 34.1287 21.3237 32.1232C21.4898 30.1177 27.3048 30.1177 32.2891 27.2766C37.2734 24.4355 34.9474 30.452 37.938 32.6246C40.9285 34.7972 42.4238 38.9754 41.427 41.4821C40.4301 43.9889 35.1135 45.3261 37.938 45.6604C40.7624 45.9946 43.2545 42.3179 44.5837 39.9781C45.9128 37.6384 42.7561 35.2986 42.4238 31.9561C42.0915 28.6136 46.5774 33.7945 49.4018 39.4767C52.2262 45.159 49.568 44.1562 48.2388 45.9946C46.9097 47.833 52.0601 48 53.057 47.3316C54.0538 46.6632 53.057 44.4905 53.057 41.148C53.057 37.8055 52.0601 37.8055 50.731 36.1342C49.4018 34.463 49.0695 30.452 49.0695 28.2794C49.0695 26.1067 46.5774 21.2601 47.242 19.756C49.9002 17.5834 51.2294 13.071 49.0695 9.06C46.9097 5.049 42.9222 3.712 44.0852 4.71475C45.2482 5.7175 47.5742 8.89287 48.5711 13.071C49.568 17.2491 38.2702 16.2464 31.1261 15.4107C23.982 14.5751 20.493 11.901 17.8347 5.21602C15.1764 -1.46898 6.37081 -0.633356 5.70624 1.70639C5.04167 4.04614 3.04885 5.04889 1.71971 5.21602C0.390562 5.38314 -0.938581 8.89276 4.0457 10.564C9.02999 12.2353 8.69771 11.5668 10.193 17.249C11.6883 22.9313 13.8481 29.1149 15.3426 33.1259C16.837 37.1369 16.1733 43.4876 15.3426 44.6575C13.1827 45.9945 12.8504 48 17.1702 48Z"
+                                    fill="#4A361F" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="text-xl text-[#1E293B] font-semibold mb-1">High</h1>
+                            <p class="text-base text-[#5F5F5F] w-full md:w-11/12 mx-auto">Sporty dog that runs marathon
+                                2 hours day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="flex mx-auto mt-12 w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                <p>Calculate Dosage</p>
+                <img src="./images/icons/arrow-right.svg" alt="">
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-[#3E2C1C] pt-[64px] px-6 md:px-[165px]">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <img src="./images/footerLogo.png" alt="">
+                <div class="flex md:-ml-32 gap-[41px] md:gap-[166px] w-full mt-6 md:mt-0">
+                    <div class="flex-1">
+                        <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+                        <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
+                        <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 md:pt-[185px]">
+                <div class="h-[1px] bg-[#5B4C3E]"></div>
+                <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
+                    <div class="flex justify-center items-center gap-3 flex-wrap">
+                        <p>C© 2025, Crude Natural pet food</p>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Refund Policy</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Privacy Policy</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Terms of Service</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Shipping Policy</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Contact information</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Legal notice</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Cancellation Policy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center gap-2 *:cursor-pointer pb-6">
+                    <img src="./images/americanExpress.png" alt="">
+                    <div class="bg-white p-2 rounded-md">
+                        <img src="./images/applepay.png" alt="">
+                    </div>
+                    <div class="bg-white p-2 rounded-md">
+                        <img src="./images/googlepay.png" alt="">
+                    </div>
+                    <img src="./images/masterCard.png" alt="">
+                    <img src="./images/visa.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="bg-white p-4 flex justify-center items-center">
+        <img src="./images/footerbottom.png" alt="">
+    </section>
+
+    <!-- Js -->
+    <script>
+        $(document).ready(function () {
+            $('.marquee-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                speed: 5000,  // Adjust scrolling speed
+                cssEase: 'linear',
+                infinite: true,
+                variableWidth: true, // Allow different widths
+                arrows: false,  // Hide arrows
+                dots: false  // Hide dots
+            });
+
+            // Ensure flex styles apply properly to Slick's cloned elements
+            $('.marquee-item').css({
+                'display': 'flex',
+                'align-items': 'center',
+                'gap': '10px' // Adjust gap if needed
+            });
+        });
+    </script>
+</body>
+
+</html>
