@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCrude | Store Location</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+    <!-- jQuery (Required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <!-- Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        #map {
+            height: calc(100vh - 40px);
+            width: 100%;
+            z-index: 1;
+            background-color: #7fd8e8;
+        }
+
+        .leaflet-control-attribution {
+            display: none;
+        }
+
+        .marker-icon {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff5722;
+            border: 2px solid white;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement Bar-->
+    <div class="bg-black text-white p-4 text-center">
+        <h1 class="text-lg font-medium ">Free Shipping from $399 at BARF</h1>
+    </div>
+
+    <!-- Navigation section -->
+    <section class="bg-[#F0EEE9] py-6 px-6 md:px-[165px] md:py-8">
+        <nav class=" flex justify-between items-center container mx-auto">
+            <div class="flex-1 flex gap-3 items-center">
+                <div class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+                            fill="#0B0500" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                            fill="#0B0500" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+                            fill="#0B0500" />
+                    </svg>
+                </div>
+                <img src="./images/logo.png" alt="">
+            </div>
+            <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+                <img src="./images/icons/location.svg" alt="">
+                <img src="./images/icons/search.svg" alt="">
+                <img src="./images/icons/user.svg" alt="">
+                <img src="./images/icons/cart.svg" alt="">
+            </ul>
+        </nav>
+    </section>
+    <!-- location sections -->
+    <section class="bg-[#F0EEE9] px-6 py-6 md:px-[165px] md:py-[65px]">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">These are our physical points
+                of sale</h1>
+            <p class="text-xl font-semibold text-[#1E293B] mt-2">Currently, we have 248 active points of sale.</p>
+            <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Just replace 280 with the actual number of active points
+                of sale. Would you like help with anything else?</p>
+        </div>
+        <div class="flex flex-col mt-12">
+            <!-- Main Content -->
+            <div class="flex flex-col md:flex-row gap-6 flex-1 ">
+                <!-- Map Container -->
+                <div id="map" class="flex-1 rounded-lg max-h-[500px]">
+                    <img src="./images/location-images/mapImg.png" alt="">
+                </div>
+                <!-- Sidebar -->
+                <div
+                    class="bg-white shadow-md z-10  rounded-lg w-full md:w-[354px] space-y-5 h-[500px] overflow-y-auto relative p-5 pt-0">
+                    <div class="sticky bg-white z-50 top-0 pt-5">
+                        <div class="relative">
+                            <input type="text" placeholder="Search by ID"
+                                class="border border-gray-300 rounded px-2.5 py-3 text-sm w-full">
+                            <svg class="w-4 h-4 absolute right-2.5 top-4 text-gray-500" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-2 border border-[#CECDCC] space-y-2 rounded-lg">
+                        <div>
+                            <h1 class="text-[#1E293B] font-semibold text-base">Crude collection point</h1>
+                            <p class="text-[#5F5F5F]">Cánoves i Samalús</p>
+                        </div>
+                        <hr class="h-[1px] text-[#CECDCC]">
+                        <div>
+                            <p class="text-[#5F5F5F]">Polígon La Canyella nave 6</p>
+                            <h1 class="text-[#1E293B] font-bold cursor-pointer text-base underline">View in Google Maps
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="p-2 border border-[#CECDCC] space-y-2 rounded-lg">
+                        <div>
+                            <h1 class="text-[#1E293B] font-semibold text-base">Petart</h1>
+                            <p class="text-[#5F5F5F]">Hospitalet</p>
+                        </div>
+                        <hr class="h-[1px] text-[#CECDCC]">
+                        <div>
+                            <p class="text-[#5F5F5F]">Carrer Santfeliu 76 Local 2</p>
+                            <h1 class="text-[#1E293B] font-bold cursor-pointer text-base underline">View in Google Maps
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="p-2 border border-[#CECDCC] space-y-2 rounded-lg">
+                        <div>
+                            <h1 class="text-[#1E293B] font-semibold text-base">Newfoundland CNC 4</h1>
+                            <p class="text-[#5F5F5F]">Caldes de Montbui</p>
+                        </div>
+                        <hr class="h-[1px] text-[#CECDCC]">
+                        <div>
+                            <p class="text-[#5F5F5F]">Avinguda de Pi i Margall, 164, Local 1,</p>
+                            <h1 class="text-[#1E293B] font-bold cursor-pointer text-base underline">View in Google Maps
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="p-2 border border-[#CECDCC] space-y-2 rounded-lg">
+                        <div>
+                            <h1 class="text-[#1E293B] font-semibold text-base">Crude collection point</h1>
+                            <p class="text-[#5F5F5F]">Cánoves i Samalús</p>
+                        </div>
+                        <hr class="h-[1px] text-[#CECDCC]">
+                        <div>
+                            <p class="text-[#5F5F5F]">Polígon La Canyella nave 6</p>
+                            <h1 class="text-[#1E293B] font-bold cursor-pointer text-base underline">View in Google Maps
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="p-2 border border-[#CECDCC] space-y-2 rounded-lg">
+                        <div>
+                            <h1 class="text-[#1E293B] font-semibold text-base">Crude collection point</h1>
+                            <p class="text-[#5F5F5F]">Cánoves i Samalús</p>
+                        </div>
+                        <hr class="h-[1px] text-[#CECDCC]">
+                        <div>
+                            <p class="text-[#5F5F5F]">Polígon La Canyella nave 6</p>
+                            <h1 class="text-[#1E293B] font-bold cursor-pointer text-base underline">View in Google Maps
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="p-2 border border-[#CECDCC] space-y-2 rounded-lg">
+                        <div>
+                            <h1 class="text-[#1E293B] font-semibold text-base">Crude collection point</h1>
+                            <p class="text-[#5F5F5F]">Cánoves i Samalús</p>
+                        </div>
+                        <hr class="h-[1px] text-[#CECDCC]">
+                        <div>
+                            <p class="text-[#5F5F5F]">Polígon La Canyella nave 6</p>
+                            <h1 class="text-[#1E293B] font-bold cursor-pointer text-base underline">View in Google Maps
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Company Logo Carousel -->
+    <section class="marquee-slider bg-white py-5">
+        <div class="marquee-item">
+            <img src="./images/location-images/boltshift.png" alt="">
+        </div>
+        <div class="marquee-item">
+            <img src="./images/location-images/globalBank.png" alt="">
+        </div>
+        <div class="marquee-item">
+            <img src="./images/location-images/niete.png" alt="">
+        </div>
+        <div class="marquee-item">
+            <img src="./images/location-images/spherule.png" alt="">
+        </div>
+    </section>
+
+    <section class="bg-white py-6 px-6 md:px-[100px] md:py-[60px] lg:px-[165px] lg:py-[120px]">
+        <div class="container mx-auto flex flex-col md:flex-row justify-center items-start gap-[70px]">
+            <div class="flex-1">
+                <h1 class="text-[#1E293B] font-semibold text-[48px] w-full md:w-2/3">Do you want to be a Crude®
+                    distributor?</h1>
+                <p class="mt-3 w-full md:w-2/3">Contact our sales team to receive more information about crude points of
+                    sale. Professionals in the animal feed sector are admitted to sell crude.</p>
+                <button class="mt-12 w-full md:w-fit text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                    Send Message
+                </button>
+            </div>
+            <div>
+                <img class="w-full" src="./images/location-images/begs.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-[#3E2C1C] pt-[64px] px-6 md:px-[165px]">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <img src="./images/footerLogo.png" alt="">
+                <div class="flex md:-ml-32 gap-[41px] md:gap-[166px] w-full mt-6 md:mt-0">
+                    <div class="flex-1">
+                        <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+                        <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
+                        <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
+                            <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 md:pt-[185px]">
+                <div class="h-[1px] bg-[#5B4C3E]"></div>
+                <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
+                    <div class="flex justify-center items-center gap-3 flex-wrap">
+                        <p>C© 2025, Crude Natural pet food</p>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Refund Policy</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Privacy Policy</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Terms of Service</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Shipping Policy</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Contact information</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Legal notice</p>
+                        </div>
+                        <div class="flex gap-1 items-center">
+                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+                            <p>Cancellation Policy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center gap-2 *:cursor-pointer pb-6">
+                    <img src="./images/americanExpress.png" alt="">
+                    <div class="bg-white p-2 rounded-md">
+                        <img src="./images/applepay.png" alt="">
+                    </div>
+                    <div class="bg-white p-2 rounded-md">
+                        <img src="./images/googlepay.png" alt="">
+                    </div>
+                    <img src="./images/masterCard.png" alt="">
+                    <img src="./images/visa.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="bg-white p-4 flex justify-center items-center">
+        <img src="./images/footerbottom.png" alt="">
+    </section>
+    <script>
+        $(document).ready(function () {
+            $('.marquee-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                speed: 5000,  // Adjust scrolling speed
+                cssEase: 'linear',
+                infinite: true,
+                variableWidth: true, // Allow different widths
+                arrows: false,  // Hide arrows
+                dots: false  // Hide dots
+            });
+
+            // Ensure flex styles apply properly to Slick's cloned elements
+            $('.marquee-item').css({
+                'margin': '0 108px',
+            });
+        });
+    //     $(document).ready(function () {
+    //         // Initialize map centered on Mediterranean
+    //         const map = L.map('map', {
+    //             zoomControl: false,
+    //             attributionControl: false
+    //         }).setView([38.5, 5], 4);
+
+    //         // Add tile layer with minimal styling
+    //         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    //             maxZoom: 19
+    //         }).addTo(map);
+
+    //         // Add zoom control to bottom right
+    //         L.control.zoom({
+    //             position: 'bottomright'
+    //         }).addTo(map);
+
+    //         // Custom style for the map - make it light blue
+    //         $(".leaflet-tile-pane").css("filter", "hue-rotate(165deg) saturate(0.8) brightness(1.1)");
+
+    //         // Add markers for Spain, France, Italy and North Africa
+    //         const markers = [
+    //             [41.3851, 2.1734],  // Barcelona
+    //             [40.4168, -3.7038], // Madrid
+    //             [37.3891, -5.9845], // Seville
+    //             [39.4699, -0.3763], // Valencia
+    //             [36.7213, -4.4213], // Malaga
+    //             [43.2627, -2.9253], // Bilbao
+    //             [37.9922, -1.1307], // Murcia
+    //             [41.6488, -0.8891], // Zaragoza
+    //             [37.1773, -3.5986], // Granada
+    //             [38.3452, -0.4815], // Alicante
+    //             [43.2965, 5.3698],  // Marseille
+    //             [45.7640, 4.8357],  // Lyon
+    //             [43.7102, 7.2620],  // Nice
+    //             [41.9028, 12.4964], // Rome
+    //             [40.8518, 14.2681], // Naples
+    //             [37.5079, 15.0830], // Sicily
+    //             [36.8065, 10.1815], // Tunis
+    //             [35.7595, -5.8340]  // Tangier
+    //         ];
+
+    //         // Add orange markers
+    //         markers.forEach(position => {
+    //             L.marker(position, {
+    //                 icon: L.divIcon({
+    //                     className: 'custom-div-icon',
+    //                     html: `<div class="marker-icon"></div>`,
+    //                     iconSize: [14, 14],
+    //                     iconAnchor: [7, 7]
+    //                 })
+    //             }).addTo(map);
+    //         });
+
+    //         // Tab switching
+    //         $("#map-tab, #location-tab").click(function () {
+    //             $("#map-tab, #location-tab").removeClass("bg-teal-active text-white").addClass("text-gray-600");
+    //             $(this).addClass("bg-teal-active text-white").removeClass("text-gray-600");
+    //         });
+    //     });
+     </script>
+</body>
+
+</html>

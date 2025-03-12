@@ -1,177 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipes</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- Slick Slider CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
-    />
 
-    <!-- jQuery (Required) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
 
-    <!-- Slick Slider JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: Anek Devanagari;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Announcement Bar-->
-    <div class="bg-black text-white p-4 text-center">
-      <h1 class="text-lg font-medium container mx-auto">
-        Free Shipping from $399 at BARF
-      </h1>
-    </div>
-    <!-- Navigation section -->
-    <section class="bg-[#F0EEE9]">
-      <div class="py-6 px-[165px] container mx-auto md:py-10">
-        <nav class="container mx-auto flex justify-between items-center">
-          <div class="flex-1 flex gap-3 items-center">
-            <div class="cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                  fill="#0B0500"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                  fill="#0B0500"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
-                  fill="#0B0500"
-                />
-              </svg>
-            </div>
-            <img src="./images/logo.png" alt="" />
-          </div>
-          <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
-            <img src="./images/icons/location.svg" alt="" />
-            <img src="./images/icons/search.svg" alt="" />
-            <img src="./images/icons/user.svg" alt="" />
-            <img src="./images/icons/cart.svg" alt="" />
-          </ul>
-        </nav>
+  <!-- jQuery (Required) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Anek Devanagari;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Announcement Bar-->
+  <div class="bg-black text-white p-4 text-center">
+    <h1 class="text-lg font-medium container mx-auto">
+      Free Shipping from $399 at BARF
+    </h1>
+  </div>
+  <!-- Navigation section -->
+  <section class="bg-[#F0EEE9] py-6 px-6 md:px-[165px] md:py-8">
+    <nav class="flex justify-between items-center container mx-auto">
+      <div class="flex-1 flex gap-3 items-center">
+        <!-- Menu Button -->
+        <button id="menu-btn" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+              fill="#0B0500" />
+          </svg>
+        </button>
+        <img src="./images/logo.png" alt="Logo">
       </div>
-    </section>
-    <!-- banner section --  -->
-    <section
-      class="bg-[url('./images/about-images/image.png')] bg-cover flex items-center justify-center bg-center bg-no-repeat min-h-[440px] w-full"
-    >
-      <div class="flex items-center justify-center flex-col gap-[16px]">
-        <h2
-          style="
-            color: var(--text-white, #fff);
-            text-align: center;
-            font-size: 56px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 72px;
-          "
-          class="max-w-[800px]"
-        >
-          Displays premium raw dog food with bundles, subscriptions, and upsell
-          options.
-        </h2>
 
-        <div
-          style="
+      <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+        <img src="./images/icons/location.svg" alt="Location">
+        <img src="./images/icons/search.svg" alt="Search">
+        <img src="./images/icons/user.svg" alt="User">
+        <img src="./images/icons/cart.svg" alt="Cart">
+      </ul>
+    </nav>
+  </section>
+
+  <!-- Side Menu -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black opacity-20 hidden"></div>
+  <div id="side-menu"
+    class="fixed left-0 top-0 h-full w-48 md:w-72  bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50">
+    <button id="close-menu" class="text-lg cursor-pointer">✖</button>
+    <ul class="space-y-3">
+      <li class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#" class="font-semibold flex justify-between">
+          Online Store
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+              fill="#3E2C1C" />
+          </svg>
+        </a>
+        <ul class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-48 md:w-72 p-3 space-y-2">
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8">
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">Barf Diet</p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8">
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">Barf Diet</p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8">
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">Barf Diet</p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+        </ul>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Product</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Collection</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Recipes</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">How it works</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Calculator</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">About Us</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">FAQs</a></li>
+    </ul>
+  </div>
+  <!-- banner section --  -->
+  <section
+    class="bg-[url('./images/about-images/image.png')] bg-cover flex items-center justify-center bg-center bg-no-repeat min-h-[440px] w-full">
+    <div class="flex items-center justify-center flex-col gap-4">
+      <h2
+        class="w-full md:max-w-[800px] text-5xl md:text-[56px] font-semibold leading-[48px] md:leading-[76px] text-center text-white">
+        Displays premium raw dog food with bundles, subscriptions, and upsell
+        options.
+      </h2>
+
+      <div style="
             color: var(--text-white, #fff);
             font-size: var(--Typeface-size-h6, 20px);
             font-style: normal;
             font-weight: 400;
             line-height: var(--Typeface-lineheight-h6, 30px);
-          "
-          class="flex items-center gap-[12px]"
-        >
-          <span> Home </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="20"
-            viewBox="0 0 21 20"
-            fill="none"
-          >
-            <path
-              d="M14.25 9.99996C14.2501 10.082 14.234 10.1633 14.2026 10.2392C14.1711 10.315 14.125 10.3839 14.0669 10.4418L7.81691 16.6918C7.5727 16.9361 7.17723 16.9361 6.93316 16.6918C6.6891 16.4476 6.68895 16.0521 6.93316 15.8081L12.7413 9.99996L6.93316 4.19184C6.68894 3.94762 6.68894 3.55215 6.93316 3.30809C7.17738 3.06402 7.57285 3.06387 7.81691 3.30809L14.0669 9.55809C14.125 9.61605 14.1711 9.68492 14.2026 9.76075C14.234 9.83658 14.2501 9.91788 14.25 9.99996Z"
-              fill="white"
-            />
-          </svg>
-          <span> Recipes </span>
-        </div>
+          " class="flex items-center gap-[12px]">
+        <span> Home </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+          <path
+            d="M14.25 9.99996C14.2501 10.082 14.234 10.1633 14.2026 10.2392C14.1711 10.315 14.125 10.3839 14.0669 10.4418L7.81691 16.6918C7.5727 16.9361 7.17723 16.9361 6.93316 16.6918C6.6891 16.4476 6.68895 16.0521 6.93316 15.8081L12.7413 9.99996L6.93316 4.19184C6.68894 3.94762 6.68894 3.55215 6.93316 3.30809C7.17738 3.06402 7.57285 3.06387 7.81691 3.30809L14.0669 9.55809C14.125 9.61605 14.1711 9.68492 14.2026 9.76075C14.234 9.83658 14.2501 9.91788 14.25 9.99996Z"
+            fill="white" />
+        </svg>
+        <span> Recipes </span>
       </div>
-    </section>
-    <!-- Marque Section -->
-    <section
-      class="marquee-slider bg-[#3E2C1C] py-5 text-white text-lg md:text-xl overflow-hidden"
-    >
-      <div class="marquee-item flex items-center gap-2 px-4">
-        <div class="bg-white rounded-full size-2"></div>
-        <p>9 out of 10 dogs reduce allergies with our diet.</p>
-      </div>
-      <div class="marquee-item flex items-center gap-2 px-4">
-        <div class="bg-white rounded-full size-2"></div>
-        <p>95% of dogs improve their digestion in 1 month</p>
-      </div>
-      <div class="marquee-item flex items-center gap-2 px-4">
-        <div class="bg-white rounded-full size-2"></div>
-        <p>90% of dogs love the taste from day one</p>
-      </div>
-    </section>
+    </div>
+  </section>
+  <!-- Marque Section -->
+  <section class="marquee-slider bg-[#3E2C1C] py-5 text-white text-lg md:text-xl overflow-hidden">
+    <div class="marquee-item flex items-center gap-2 px-4">
+      <div class="bg-white rounded-full size-2"></div>
+      <p>9 out of 10 dogs reduce allergies with our diet.</p>
+    </div>
+    <div class="marquee-item flex items-center gap-2 px-4">
+      <div class="bg-white rounded-full size-2"></div>
+      <p>95% of dogs improve their digestion in 1 month</p>
+    </div>
+    <div class="marquee-item flex items-center gap-2 px-4">
+      <div class="bg-white rounded-full size-2"></div>
+      <p>90% of dogs love the taste from day one</p>
+    </div>
+  </section>
 
-    <main class="px-[165px] mx-auto container">
-      <!-- Recipes ---  -->
-      <section class="my-[120px]">
-        <h1
-          style="
+  <main class="px-6 md:px-[165px] mx-auto container">
+    <!-- Recipes ---  -->
+    <section class="my-12 md:my-[120px]">
+      <h1 style="
             color: var(--text-primary, #1e293b);
             text-align: center;
             font-size: var(--Typeface-size-h1-xl, 56px);
             font-style: normal;
             font-weight: 600;
             line-height: var(--Typeface-lineheight-h1-xl, 70px); /* 125% */
-          "
-        >
-          Recipes
-        </h1>
+          ">
+        Recipes
+      </h1>
 
-        <!-- heading --  -->
+      <!-- heading --  -->
 
-        <div class="my-[40px] flex justify-center items-center gap-[16px]">
-          <button
-            style="
+      <div class="my-[40px] flex justify-center items-center gap-[16px] overflow-x-auto">
+        <button style="
               border-radius: 1000px;
               border: 1px solid var(--Gray-300, #e2e1e0);
               background: var(--Gray-100, #fbfbfb);
@@ -180,26 +201,15 @@
               justify-content: center;
               align-items: center;
               gap: 10px;
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
-            >
-              <path
-                d="M16.0312 18.9698C16.1009 19.0395 16.1562 19.1222 16.1939 19.2132C16.2316 19.3043 16.251 19.4019 16.251 19.5004C16.251 19.599 16.2316 19.6965 16.1939 19.7876C16.1562 19.8786 16.1009 19.9614 16.0312 20.031C15.9615 20.1007 15.8788 20.156 15.7878 20.1937C15.6967 20.2314 15.5991 20.2508 15.5006 20.2508C15.402 20.2508 15.3045 20.2314 15.2134 20.1937C15.1224 20.156 15.0396 20.1007 14.97 20.031L7.46996 12.531C7.40023 12.4614 7.34491 12.3787 7.30717 12.2876C7.26943 12.1966 7.25 12.099 7.25 12.0004C7.25 11.9019 7.26943 11.8043 7.30717 11.7132C7.34491 11.6222 7.40023 11.5394 7.46996 11.4698L14.97 3.96979C15.1107 3.82906 15.3016 3.75 15.5006 3.75C15.6996 3.75 15.8905 3.82906 16.0312 3.96979C16.1719 4.11052 16.251 4.30139 16.251 4.50042C16.251 4.69944 16.1719 4.89031 16.0312 5.03104L9.0609 12.0004L16.0312 18.9698Z"
-                fill="#0B0704"
-              />
-            </svg>
-          </button>
-          <div
-            class="flex items-center bg-[#D4D1CD] w-fit rounded-r-[32px] rounded-l-[32px]"
-          >
-            <button
-              style="
+            ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path
+              d="M16.0312 18.9698C16.1009 19.0395 16.1562 19.1222 16.1939 19.2132C16.2316 19.3043 16.251 19.4019 16.251 19.5004C16.251 19.599 16.2316 19.6965 16.1939 19.7876C16.1562 19.8786 16.1009 19.9614 16.0312 20.031C15.9615 20.1007 15.8788 20.156 15.7878 20.1937C15.6967 20.2314 15.5991 20.2508 15.5006 20.2508C15.402 20.2508 15.3045 20.2314 15.2134 20.1937C15.1224 20.156 15.0396 20.1007 14.97 20.031L7.46996 12.531C7.40023 12.4614 7.34491 12.3787 7.30717 12.2876C7.26943 12.1966 7.25 12.099 7.25 12.0004C7.25 11.9019 7.26943 11.8043 7.30717 11.7132C7.34491 11.6222 7.40023 11.5394 7.46996 11.4698L14.97 3.96979C15.1107 3.82906 15.3016 3.75 15.5006 3.75C15.6996 3.75 15.8905 3.82906 16.0312 3.96979C16.1719 4.11052 16.251 4.30139 16.251 4.50042C16.251 4.69944 16.1719 4.89031 16.0312 5.03104L9.0609 12.0004L16.0312 18.9698Z"
+              fill="#0B0704" />
+          </svg>
+        </button>
+        <div class="flex items-center bg-[#D4D1CD] w-fit rounded-r-[32px] rounded-l-[32px]">
+          <button style="
                 color: var(--text-white, #fff);
                 text-align: center;
                 font-size: var(--Typeface-size-p-18pt, 18px);
@@ -215,12 +225,10 @@
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-              "
-            >
-              Chicken
-            </button>
-            <button
-              style="
+              ">
+            Chicken
+          </button>
+          <button style="
                 color: var(--Primary-700, #181009);
                 text-align: center;
                 font-size: var(--Typeface-size-p-18pt, 18px);
@@ -234,12 +242,10 @@
                 align-items: center;
                 gap: 10px;
                 border-radius: 32px;
-              "
-            >
-              Turkey
-            </button>
-            <button
-              style="
+              ">
+            Turkey
+          </button>
+          <button style="
                 color: var(--Primary-700, #181009);
                 text-align: center;
                 font-size: var(--Typeface-size-p-18pt, 18px);
@@ -253,12 +259,10 @@
                 align-items: center;
                 gap: 10px;
                 border-radius: 32px;
-              "
-            >
-              Pig
-            </button>
-            <button
-              style="
+              ">
+            Pig
+          </button>
+          <button style="
                 color: var(--Primary-700, #181009);
                 text-align: center;
                 font-size: var(--Typeface-size-p-18pt, 18px);
@@ -272,13 +276,11 @@
                 align-items: center;
                 gap: 10px;
                 border-radius: 32px;
-              "
-            >
-              Hake
-            </button>
-          </div>
-          <button
-            style="
+              ">
+            Hake
+          </button>
+        </div>
+        <button style="
               border-radius: 1000px;
               border: 1px solid var(--Gray-300, #e2e1e0);
               background: var(--Gray-100, #fbfbfb);
@@ -287,40 +289,29 @@
               justify-content: center;
               align-items: center;
               gap: 10px;
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
-            >
-              <path
-                d="M8.96878 18.9698C8.8991 19.0395 8.84383 19.1222 8.80612 19.2132C8.7684 19.3043 8.74899 19.4019 8.74899 19.5004C8.74899 19.599 8.7684 19.6965 8.80612 19.7876C8.84383 19.8786 8.8991 19.9614 8.96878 20.031C9.03847 20.1007 9.12119 20.156 9.21224 20.1937C9.30328 20.2314 9.40086 20.2508 9.49941 20.2508C9.59796 20.2508 9.69554 20.2314 9.78658 20.1937C9.87763 20.156 9.96035 20.1007 10.03 20.031L17.53 12.531C17.5998 12.4614 17.6551 12.3787 17.6928 12.2876C17.7306 12.1966 17.75 12.099 17.75 12.0004C17.75 11.9019 17.7306 11.8043 17.6928 11.7132C17.6551 11.6222 17.5998 11.5394 17.53 11.4698L10.03 3.96979C9.8893 3.82906 9.69843 3.75 9.49941 3.75C9.30039 3.75 9.10952 3.82906 8.96878 3.96979C8.82805 4.11052 8.74899 4.30139 8.74899 4.50042C8.74899 4.69944 8.82805 4.89031 8.96878 5.03104L15.9391 12.0004L8.96878 18.9698Z"
-                fill="#0B0704"
-              />
-            </svg>
-          </button>
-        </div>
+            ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path
+              d="M8.96878 18.9698C8.8991 19.0395 8.84383 19.1222 8.80612 19.2132C8.7684 19.3043 8.74899 19.4019 8.74899 19.5004C8.74899 19.599 8.7684 19.6965 8.80612 19.7876C8.84383 19.8786 8.8991 19.9614 8.96878 20.031C9.03847 20.1007 9.12119 20.156 9.21224 20.1937C9.30328 20.2314 9.40086 20.2508 9.49941 20.2508C9.59796 20.2508 9.69554 20.2314 9.78658 20.1937C9.87763 20.156 9.96035 20.1007 10.03 20.031L17.53 12.531C17.5998 12.4614 17.6551 12.3787 17.6928 12.2876C17.7306 12.1966 17.75 12.099 17.75 12.0004C17.75 11.9019 17.7306 11.8043 17.6928 11.7132C17.6551 11.6222 17.5998 11.5394 17.53 11.4698L10.03 3.96979C9.8893 3.82906 9.69843 3.75 9.49941 3.75C9.30039 3.75 9.10952 3.82906 8.96878 3.96979C8.82805 4.11052 8.74899 4.30139 8.74899 4.50042C8.74899 4.69944 8.82805 4.89031 8.96878 5.03104L15.9391 12.0004L8.96878 18.9698Z"
+              fill="#0B0704" />
+          </svg>
+        </button>
+      </div>
 
-        <div class="flex items-start gap-[48px] justify-center">
-          <img src="./images//recipes-images/Frame 1000003025.png" alt="" />
-          <div class="space-y-[40px]">
-            <div class="max-w-[439px] space-y-[16px]">
-              <h2
-                style="
+      <div class="flex flex-col md:flex-row items-start gap-[48px] justify-center">
+        <img src="./images//recipes-images/Frame 1000003025.png" alt="" />
+        <div class="space-y-[40px]">
+          <div class="max-w-[439px] space-y-[16px]">
+            <h2 style="
                   color: var(--text-primary, #1e293b);
                   font-size: 32px;
                   font-style: normal;
                   font-weight: 600;
                   line-height: var(--Typeface-lineheight-h5, 36px); /* 112.5% */
-                "
-              >
-                Chicken menu
-              </h2>
-              <p
-                style="
+                ">
+              Chicken menu
+            </h2>
+            <p style="
                   color: var(--text-secondary, #5f5f5f);
                   font-size: var(--Typeface-size-p-16pt, 16px);
                   font-style: normal;
@@ -329,657 +320,498 @@
                     --Typeface-lineheight-p-16pt,
                     24px
                   ); /* 150% */
-                "
-              >
-                This recipe is designed to start with the barf diet, chicken is
-                an ingredient with a source of protein and fat. Ideal to start
-                with raw food.
-              </p>
-            </div>
-            <button
-              class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-[2px] cursor-pointer"
-            >
-              I want to get started
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
+                ">
+              This recipe is designed to start with the barf diet, chicken is
+              an ingredient with a source of protein and fat. Ideal to start
+              with raw food.
+            </p>
           </div>
+          <button
+            class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-[2px] cursor-pointer">
+            I want to get started
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
+                fill="white" />
+            </svg>
+          </button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Natural and High Quality Ingredients section --  -->
-      <section class="my-[120px]">
-        <h2
-          style="
+    <!-- Natural and High Quality Ingredients section --  -->
+    <section class="my-12 md:my-[120px]">
+      <h2 style="
             color: var(--text-primary, #1e293b);
             font-size: var(--Typeface-size-h1-xl, 56px);
             font-style: normal;
             font-weight: 600;
             text-align: center;
             line-height: var(--Typeface-lineheight-h1-xl, 70px); /* 125% */
-          "
-        >
-          Natural and High Quality Ingredients
-        </h2>
-        <p
-          style="
+          ">
+        Natural and High Quality Ingredients
+      </h2>
+      <p style="
             color: #5f5f5f;
             text-align: center;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
             line-height: var(--Typeface-lineheight-h5, 36px); /* 150% */
-          "
-        >
-          Chicken
-        </p>
+          ">
+        Chicken
+      </p>
 
-        <div class="mt-[80px] grid grid-cols-3 gap-[40px]">
-          <!-- part 1  -->
-          <div class="space-y-[56px]">
-            <!-- card 1  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005806.png" alt="" />
-              <div class="space-y-[8px]">
-                <h4
-                  style="
+      <div class="mt-[80px] grid grid-cols-1 md:grid-cols-3 gap-[40px]">
+        <!-- part 1  -->
+        <div class="space-y-[56px]">
+          <!-- card 1  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005806.png" alt="" />
+            <div class="space-y-[8px]">
+              <h4 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 28px */
-                  "
-                >
-                  42.13% FLESHY BONE
-                </h4>
-                <p
-                  style="
+                  ">
+                42.13% FLESHY BONE
+              </h4>
+              <p style="
                     color: var(--text-secondary, #5f5f5f);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 27px; /* 168.75% */
-                  "
-                  class="space-x-[8px]"
-                >
-                  <span>Housings with neck</span>
-                  <svg
-                    class="inline"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="21"
-                    viewBox="0 0 16 21"
-                    fill="none"
-                  >
-                    <path
-                      d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                      fill="#7D7A77"
-                    />
-                  </svg>
-                </p>
-              </div>
-            </div>
-            <!-- card 2  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005807.png" alt="" />
-              <div class="space-y-[8px]">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  29.87% Chicken breast
-                </h4>
-                <p
-                  style="
-                    color: var(--text-secondary, #5f5f5f);
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 27px; /* 168.75% */
-                  "
-                  class="space-x-[8px]"
-                >
-                  <span>Chicken wings</span>
-                  <svg
-                    class="inline"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="21"
-                    viewBox="0 0 16 21"
-                    fill="none"
-                  >
-                    <path
-                      d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                      fill="#7D7A77"
-                    />
-                  </svg>
-                </p>
-              </div>
-            </div>
-            <!-- card 3  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005808.png" alt="" />
-              <div class="space-y-[8px]">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  8% Viscera
-                </h4>
-                <p
-                  style="
-                    color: var(--text-secondary, #5f5f5f);
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 27px; /* 168.75% */
-                  "
-                  class="space-x-[8px]"
-                >
-                  <span>Liver, Heart</span>
-                  <svg
-                    class="inline"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="21"
-                    viewBox="0 0 16 21"
-                    fill="none"
-                  >
-                    <path
-                      d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                      fill="#7D7A77"
-                    />
-                  </svg>
-                </p>
-              </div>
-            </div>
-            <!-- card 4  -->
-            <div class="flex gap-[12px] items-start">
-              <img src="./images/recipes-images/Group 1000005809.png" alt="" />
-              <div class="space-y-[8px]">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  SUPERFOODS
-                </h4>
-                <p
-                  style="
-                    color: var(--text-secondary, #5f5f5f);
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 27px; /* 168.75% */
-                  "
-                  class="space-x-[8px]"
-                >
-                  <span
-                    >Parsley, Psyllium, spirulina, ascophillium nodosum, hemp
-                    seeds and chia</span
-                  >
-                  <svg
-                    class="inline"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="21"
-                    viewBox="0 0 16 21"
-                    fill="none"
-                  >
-                    <path
-                      d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                      fill="#7D7A77"
-                    />
-                    <path
-                      d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                      fill="#7D7A77"
-                    />
-                  </svg>
-                </p>
-              </div>
+                  " class="space-x-[8px]">
+                <span>Housings with neck</span>
+                <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                  fill="none">
+                  <path
+                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                    fill="#7D7A77" />
+                  <path
+                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                    fill="#7D7A77" />
+                  <path
+                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                    fill="#7D7A77" />
+                </svg>
+              </p>
             </div>
           </div>
-          <!-- part 2   -->
-          <div class="space-y-[56px]">
-            <!-- card -1  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005810.png" alt="" />
-              <div class="flex justify-between w-full">
-                <h4
-                  style="
+          <!-- card 2  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005807.png" alt="" />
+            <div class="space-y-[8px]">
+              <h4 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 28px */
-                  "
-                >
-                  8% PUMPKIN
-                </h4>
-                <svg
-                  class="inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="21"
-                  viewBox="0 0 16 21"
-                  fill="none"
-                >
-                  <path
-                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                    fill="#7D7A77"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- card -2  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005811.png" alt="" />
-              <div class="flex justify-between w-full">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
+                  ">
+                29.87% Chicken breast
+              </h4>
+              <p style="
+                    color: var(--text-secondary, #5f5f5f);
+                    font-size: 16px;
                     font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  3% PEAS
-                </h4>
-                <svg
-                  class="inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="21"
-                  viewBox="0 0 16 21"
-                  fill="none"
-                >
+                    font-weight: 400;
+                    line-height: 27px; /* 168.75% */
+                  " class="space-x-[8px]">
+                <span>Chicken wings</span>
+                <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                  fill="none">
                   <path
                     d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                    fill="#7D7A77"
-                  />
+                    fill="#7D7A77" />
                   <path
                     d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                    fill="#7D7A77"
-                  />
+                    fill="#7D7A77" />
                   <path
                     d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                    fill="#7D7A77"
-                  />
+                    fill="#7D7A77" />
                 </svg>
-              </div>
-            </div>
-            <!-- card -3  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005812.png" alt="" />
-              <div class="flex justify-between w-full">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  1.5% VE OLIVE OIL
-                </h4>
-                <svg
-                  class="inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="21"
-                  viewBox="0 0 16 21"
-                  fill="none"
-                >
-                  <path
-                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                    fill="#7D7A77"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- card -4  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005813.png" alt="" />
-              <div class="flex justify-between w-full">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  7% AppleL
-                </h4>
-                <svg
-                  class="inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="21"
-                  viewBox="0 0 16 21"
-                  fill="none"
-                >
-                  <path
-                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                    fill="#7D7A77"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- card -5  -->
-            <div class="flex gap-[12px] items-center">
-              <img src="./images/recipes-images/Group 1000005814.png" alt="" />
-              <div class="flex justify-between w-full">
-                <h4
-                  style="
-                    color: var(--text-primary, #1e293b);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%; /* 28px */
-                  "
-                >
-                  DEHYDRATED EGG
-                </h4>
-                <svg
-                  class="inline"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="21"
-                  viewBox="0 0 16 21"
-                  fill="none"
-                >
-                  <path
-                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
-                    fill="#7D7A77"
-                  />
-                  <path
-                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
-                    fill="#7D7A77"
-                  />
-                </svg>
-              </div>
+              </p>
             </div>
           </div>
-
-          <!-- part 3 images  -->
-          <img src="./images/recipes-images/Frame 1000003067.png" alt="" />
+          <!-- card 3  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005808.png" alt="" />
+            <div class="space-y-[8px]">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                8% Viscera
+              </h4>
+              <p style="
+                    color: var(--text-secondary, #5f5f5f);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 27px; /* 168.75% */
+                  " class="space-x-[8px]">
+                <span>Liver, Heart</span>
+                <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                  fill="none">
+                  <path
+                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                    fill="#7D7A77" />
+                  <path
+                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                    fill="#7D7A77" />
+                  <path
+                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                    fill="#7D7A77" />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <!-- card 4  -->
+          <div class="flex gap-[12px] items-start">
+            <img src="./images/recipes-images/Group 1000005809.png" alt="" />
+            <div class="space-y-[8px]">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                SUPERFOODS
+              </h4>
+              <p style="
+                    color: var(--text-secondary, #5f5f5f);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 27px; /* 168.75% */
+                  " class="space-x-[8px]">
+                <span>Parsley, Psyllium, spirulina, ascophillium nodosum, hemp
+                  seeds and chia</span>
+                <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                  fill="none">
+                  <path
+                    d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                    fill="#7D7A77" />
+                  <path
+                    d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                    fill="#7D7A77" />
+                  <path
+                    d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                    fill="#7D7A77" />
+                </svg>
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
+        <!-- part 2   -->
+        <div class="space-y-[56px]">
+          <!-- card -1  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005810.png" alt="" />
+            <div class="flex justify-between w-full">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                8% PUMPKIN
+              </h4>
+              <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                fill="none">
+                <path
+                  d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                  fill="#7D7A77" />
+              </svg>
+            </div>
+          </div>
+          <!-- card -2  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005811.png" alt="" />
+            <div class="flex justify-between w-full">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                3% PEAS
+              </h4>
+              <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                fill="none">
+                <path
+                  d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                  fill="#7D7A77" />
+              </svg>
+            </div>
+          </div>
+          <!-- card -3  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005812.png" alt="" />
+            <div class="flex justify-between w-full">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                1.5% VE OLIVE OIL
+              </h4>
+              <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                fill="none">
+                <path
+                  d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                  fill="#7D7A77" />
+              </svg>
+            </div>
+          </div>
+          <!-- card -4  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005813.png" alt="" />
+            <div class="flex justify-between w-full">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                7% AppleL
+              </h4>
+              <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                fill="none">
+                <path
+                  d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                  fill="#7D7A77" />
+              </svg>
+            </div>
+          </div>
+          <!-- card -5  -->
+          <div class="flex gap-[12px] items-center">
+            <img src="./images/recipes-images/Group 1000005814.png" alt="" />
+            <div class="flex justify-between w-full">
+              <h4 style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%; /* 28px */
+                  ">
+                DEHYDRATED EGG
+              </h4>
+              <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21"
+                fill="none">
+                <path
+                  d="M6.80609 10.9547C6.68341 10.9662 6.56025 10.9385 6.45427 10.8756C6.37683 10.7961 6.3397 10.6857 6.35337 10.5756C6.35623 10.4839 6.36717 10.3927 6.38609 10.3029C6.40439 10.1999 6.42804 10.098 6.45698 9.99744L6.7788 8.89015C6.81199 8.78087 6.83393 8.66846 6.84427 8.55469C6.84427 8.43197 6.86063 8.34741 6.86063 8.29833C6.86747 8.07959 6.77407 7.86969 6.60698 7.72833C6.40146 7.57055 6.14552 7.493 5.88698 7.51015C5.70171 7.51294 5.51787 7.54327 5.34152 7.60015C5.1488 7.66015 4.94606 7.73197 4.73334 7.81562L4.64062 8.17561C4.70334 8.15379 4.77973 8.12926 4.86698 8.10197C4.95023 8.07732 5.03653 8.06445 5.12334 8.06379C5.24513 8.0506 5.3677 8.08051 5.4697 8.14833C5.53898 8.231 5.57149 8.33839 5.5597 8.44561C5.5594 8.53733 5.54934 8.62876 5.5297 8.71833C5.5106 8.8138 5.48606 8.91469 5.45606 9.02105L5.13152 10.1338C5.10537 10.2372 5.08444 10.3419 5.0688 10.4474C5.05605 10.5378 5.04968 10.6289 5.0497 10.7201C5.04837 10.9404 5.14908 11.1488 5.32242 11.2847C5.53111 11.4449 5.7907 11.5243 6.05332 11.5083C6.23824 11.5121 6.42253 11.4854 6.59878 11.4292C6.75333 11.3765 6.9597 11.301 7.21788 11.2028L7.30516 10.8592C7.23523 10.8882 7.1632 10.9119 7.0897 10.9301C6.99675 10.9513 6.90131 10.9596 6.80609 10.9547Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M7.14521 5.70479C6.99679 5.56848 6.80122 5.49514 6.59975 5.50025C6.3984 5.4957 6.20303 5.56897 6.05429 5.70479C5.78167 5.93987 5.75122 6.35145 5.98632 6.6241C6.00728 6.64841 6.02999 6.67112 6.05429 6.69207C6.36489 6.96987 6.83462 6.96987 7.14519 6.69207C7.41782 6.45467 7.44639 6.04123 7.20899 5.76861C7.18925 5.7459 7.16793 5.72457 7.14521 5.70479Z"
+                  fill="#7D7A77" />
+                <path
+                  d="M6 2.5C2.68629 2.5 0 5.18629 0 8.5C0 11.8137 2.68629 14.5 6 14.5C9.31371 14.5 12 11.8137 12 8.5C12 5.18629 9.31371 2.5 6 2.5ZM6 13.9545C2.98753 13.9545 0.545461 11.5125 0.545461 8.5C0.545461 5.48753 2.98753 3.04546 6 3.04546C9.01247 3.04546 11.4545 5.48753 11.4545 8.5C11.4545 11.5125 9.01247 13.9545 6 13.9545Z"
+                  fill="#7D7A77" />
+              </svg>
+            </div>
+          </div>
+        </div>
 
-      <!-- Nutritional Values section --  -->
+        <!-- part 3 images  -->
+        <img src="./images/recipes-images/Frame 1000003067.png" alt="" />
+      </div>
+    </section>
 
-      <section class="my-[120px]">
-        <h2
-          style="
+    <!-- Nutritional Values section --  -->
+
+    <section class="my-12 md:my-[120px]">
+      <h2 style="
             color: var(--text-primary, #1e293b);
             text-align: center;
             font-size: var(--Typeface-size-h1-xl, 56px);
             font-style: normal;
             font-weight: 600;
             line-height: var(--Typeface-lineheight-h1-xl, 70px); /* 125% */
-          "
-        >
-          Nutritional Values
-        </h2>
+          ">
+        Nutritional Values
+      </h2>
 
-        <div class="mt-[80px] flex justify-between">
-          <!-- 1st part --  -->
-          <div class="flex gap-[24px]">
-            <svg
-              width="8"
-              height="513"
-              viewBox="0 0 8 513"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="8" height="513" rx="4" fill="#F0EEE9" />
-              <rect width="8" height="70" rx="4" fill="#8E837A" />
-            </svg>
-            <div class="space-y-[28px]">
-              <!-- card 1  -->
-              <div class="space-y-[8px]">
-                <h2
-                  style="
+      <div class="mt-[80px] flex flex-col md:flex-row justify-between">
+        <!-- 1st part --  -->
+        <div class="flex gap-[24px]">
+          <svg width="8" height="513" viewBox="0 0 8 513" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="8" height="513" rx="4" fill="#F0EEE9" />
+            <rect width="8" height="70" rx="4" fill="#8E837A" />
+          </svg>
+          <div class="space-y-[28px]">
+            <!-- card 1  -->
+            <div class="space-y-[8px]">
+              <h2 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 33.6px */
-                  "
-                >
-                  Vitamina A
-                </h2>
-                <p
-                  style="
+                  ">
+                Vitamina A
+              </h2>
+              <p style="
                     color: var(--text-secondary, #5f5f5f);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                >
-                  700 mg
-                </p>
-              </div>
-              <!-- card 2  -->
-              <div class="space-y-[8px]">
-                <h2
-                  style="
+                  ">
+                700 mg
+              </p>
+            </div>
+            <!-- card 2  -->
+            <div class="space-y-[8px]">
+              <h2 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 33.6px */
-                  "
-                >
-                  Vitamina B1
-                </h2>
-                <p
-                  style="
+                  ">
+                Vitamina B1
+              </h2>
+              <p style="
                     color: var(--text-secondary, #5f5f5f);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                >
-                  0,40 mg
-                </p>
-              </div>
-              <!-- card 3  -->
-              <div class="space-y-[8px]">
-                <h2
-                  style="
+                  ">
+                0,40 mg
+              </p>
+            </div>
+            <!-- card 3  -->
+            <div class="space-y-[8px]">
+              <h2 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 33.6px */
-                  "
-                >
-                  Vitamina B12
-                </h2>
-                <p
-                  style="
+                  ">
+                Vitamina B12
+              </h2>
+              <p style="
                     color: var(--text-secondary, #5f5f5f);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                >
-                  1, 3 mg
-                </p>
-              </div>
-              <!-- card 4  -->
-              <div class="space-y-[8px]">
-                <h2
-                  style="
+                  ">
+                1, 3 mg
+              </p>
+            </div>
+            <!-- card 4  -->
+            <div class="space-y-[8px]">
+              <h2 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 33.6px */
-                  "
-                >
-                  Vitamina D3
-                </h2>
-              </div>
-              <!-- card 6  -->
-              <div class="space-y-[8px]">
-                <h2
-                  style="
+                  ">
+                Vitamina D3
+              </h2>
+            </div>
+            <!-- card 6  -->
+            <div class="space-y-[8px]">
+              <h2 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 33.6px */
-                  "
-                >
-                  Vitamina E
-                </h2>
-                <p
-                  style="
+                  ">
+                Vitamina E
+              </h2>
+              <p style="
                     color: var(--text-secondary, #5f5f5f);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                >
-                  0, 7 mg
-                </p>
-              </div>
-              <!-- card 5  -->
-              <div class="space-y-[8px]">
-                <h2
-                  style="
+                  ">
+                0, 7 mg
+              </p>
+            </div>
+            <!-- card 5  -->
+            <div class="space-y-[8px]">
+              <h2 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 140%; /* 33.6px */
-                  "
-                >
-                  Vitamina E
-                </h2>
-                <p
-                  style="
+                  ">
+                Vitamina E
+              </h2>
+              <p style="
                     color: var(--text-secondary, #5f5f5f);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                >
-                  0, 7 mg
-                </p>
-              </div>
+                  ">
+                0, 7 mg
+              </p>
             </div>
           </div>
-          <!-- 2nd part images  -->
-          <img src="./images/recipes-images/Frame 1000003143.png" alt="" />
+        </div>
+        <!-- 2nd part images  -->
+        <img src="./images/recipes-images/Frame 1000003143.png" alt="" />
 
-          <!-- 3rd part  -->
-          <div class="space-y-[40px]">
-            <div class="max-w-[297px] space-y-[24px]">
-              <h2
-                style="
+        <!-- 3rd part  -->
+        <div class="space-y-[40px]">
+          <div class="max-w-[297px] space-y-[24px]">
+            <h2 style="
                   color: var(--text-primary, #1e293b);
                   font-size: 32px;
                   font-style: normal;
                   font-weight: 600;
                   line-height: var(--Typeface-lineheight-h5, 36px); /* 112.5% */
-                "
-              >
-                Instructions for use
-              </h2>
-              <p
-                style="
+                ">
+              Instructions for use
+            </h2>
+            <p style="
                   color: var(--text-secondary, #5f5f5f);
                   font-size: var(--Typeface-size-p-16pt, 16px);
                   font-style: normal;
@@ -988,139 +820,147 @@
                     --Typeface-lineheight-p-16pt,
                     24px
                   ); /* 150% */
-                "
-              >
-                Store at temperatures below -18ºC. Defrost in the refrigerator
-                12 hours before consuming. Once defrosted, consume within 48
-                hours. Clean and disinfect the feeder after each meal. Do not
-                refreeze after defrosting. Serve the product raw.
-              </p>
+                ">
+              Store at temperatures below -18ºC. Defrost in the refrigerator
+              12 hours before consuming. Once defrosted, consume within 48
+              hours. Clean and disinfect the feeder after each meal. Do not
+              refreeze after defrosting. Serve the product raw.
+            </p>
+          </div>
+          <button
+            class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-[2px] cursor-pointer">
+            I want to start
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
+                fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="bg-[#3E2C1C] pt-[64px] px-6 md:px-[165px]">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <img src="./images/footerLogo.png" alt="">
+        <div class="flex md:-ml-32 gap-[41px] md:gap-[166px] w-full mt-6 md:mt-0">
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
             </div>
-            <button
-              class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-[2px] cursor-pointer"
-            >
-              I want to start
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
+          </div>
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-
-       <!-- Footer section -->
-       <footer class="bg-[#3E2C1C] py-[64px] px-[165px] ">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                <img src="./images/footerLogo.png" alt="">
-                <div>
-                    <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
-                    <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
-                    </div>
-                </div>
-                <div>
-                    <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
-                    <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
-                        <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
-                    </div>
-                </div>
+      </div>
+      <div class="pt-6 md:pt-[185px]">
+        <div class="h-[1px] bg-[#5B4C3E]"></div>
+        <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
+          <div class="flex justify-center items-center gap-3 flex-wrap">
+            <p>C© 2025, Crude Natural pet food</p>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Refund Policy</p>
             </div>
-            <div class="pt-[185px]">
-                <div class="h-[1px] bg-[#5B4C3E]"></div>
-                <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
-                    <div class="flex justify-center items-center gap-3 flex-wrap">
-                        <p>C© 2025, Crude Natural pet food</p>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Refund Policy</p>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Privacy Policy</p>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Terms of Service</p>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Shipping Policy</p>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Contact information</p>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Legal notice</p>
-                        </div>
-                        <div class="flex gap-1 items-center">
-                            <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                            <p>Cancellation Policy</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center items-center gap-2 *:cursor-pointer ">
-                    <img src="./images/americanExpress.png" alt="">
-                    <div class="bg-white p-2 rounded-md">
-                        <img src="./images/applepay.png" alt="">
-                    </div>
-                    <div class="bg-white p-2 rounded-md">
-                        <img src="./images/googlepay.png" alt="">
-                    </div>
-                    <img src="./images/masterCard.png" alt="">
-                    <img src="./images/visa.png" alt="">
-                </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Privacy Policy</p>
             </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Terms of Service</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Shipping Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Contact information</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Legal notice</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Cancellation Policy</p>
+            </div>
+          </div>
         </div>
-    </footer>
-    <section class="bg-white p-4 flex justify-center items-center">
-        <img src="./images/footerbottom.png" alt="">
-    </section>
+        <div class="flex justify-center items-center gap-2 *:cursor-pointer pb-6">
+          <img src="./images/americanExpress.png" alt="">
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/applepay.png" alt="">
+          </div>
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/googlepay.png" alt="">
+          </div>
+          <img src="./images/masterCard.png" alt="">
+          <img src="./images/visa.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <section class="bg-white p-4 flex justify-center items-center">
+    <img src="./images/footerbottom.png" alt="">
+  </section>
 
-    <!-- jQuery (Required) -->
-    <script>
-      $(document).ready(function () {
-        $(".marquee-slider").slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 5000, // Adjust scrolling speed
-          cssEase: "linear",
-          infinite: true,
-          variableWidth: true, // Allow different widths
-          arrows: false, // Hide arrows
-          dots: false, // Hide dots
-        });
+  <!-- jQuery (Required) -->
+  <script>
 
-        // Ensure flex styles apply properly to Slick's cloned elements
-        $(".marquee-item").css({
-          display: "flex",
-          "align-items": "center",
-          gap: "10px", // Adjust gap if needed
-        });
+    // Nav toggle
+    $(document).ready(function () {
+      $("#menu-btn").click(function () {
+        $("#side-menu").removeClass("-translate-x-full");
+        $("#menu-overlay").removeClass("hidden");
       });
-    </script>
-  </body>
+
+      $("#close-menu, #menu-overlay").click(function () {
+        $("#side-menu").addClass("-translate-x-full");
+        $("#menu-overlay").addClass("hidden");
+      });
+    });
+
+    $(document).ready(function () {
+      $(".marquee-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 5000, // Adjust scrolling speed
+        cssEase: "linear",
+        infinite: true,
+        variableWidth: true, // Allow different widths
+        arrows: false, // Hide arrows
+        dots: false, // Hide dots
+      });
+
+      // Ensure flex styles apply properly to Slick's cloned elements
+      $(".marquee-item").css({
+        display: "flex",
+        "align-items": "center",
+        gap: "10px", // Adjust gap if needed
+      });
+    });
+  </script>
+</body>
+
 </html>
