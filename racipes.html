@@ -178,118 +178,36 @@
   <main class="py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8 mx-auto container">
     <!-- Recipes ---  -->
     <section class="my-12 md:my-[120px]">
-      <h1 style="
-            color: var(--text-primary, #1e293b);
-            text-align: center;
-            font-size: var(--Typeface-size-h1-xl, 56px);
-            font-style: normal;
-            font-weight: 600;
-            line-height: var(--Typeface-lineheight-h1-xl, 70px); /* 125% */
-          ">
+      <h1 class="text-center text-5xl font-semibold text-gray-900">
         Recipes
       </h1>
 
-      <!-- heading --  -->
-
+      <!-- Slider Navigation -->
       <div class="my-[40px] flex justify-center items-center gap-[16px] overflow-x-auto">
-        <button style="
-              border-radius: 1000px;
-              border: 1px solid var(--Gray-300, #e2e1e0);
-              background: var(--Gray-100, #fbfbfb);
-              display: flex;
-              padding: 14px;
-              justify-content: center;
-              align-items: center;
-              gap: 10px;
-            ">
+        <button id="prevButton" class="rounded-full border border-gray-300 bg-gray-100 p-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
             <path
               d="M16.0312 18.9698C16.1009 19.0395 16.1562 19.1222 16.1939 19.2132C16.2316 19.3043 16.251 19.4019 16.251 19.5004C16.251 19.599 16.2316 19.6965 16.1939 19.7876C16.1562 19.8786 16.1009 19.9614 16.0312 20.031C15.9615 20.1007 15.8788 20.156 15.7878 20.1937C15.6967 20.2314 15.5991 20.2508 15.5006 20.2508C15.402 20.2508 15.3045 20.2314 15.2134 20.1937C15.1224 20.156 15.0396 20.1007 14.97 20.031L7.46996 12.531C7.40023 12.4614 7.34491 12.3787 7.30717 12.2876C7.26943 12.1966 7.25 12.099 7.25 12.0004C7.25 11.9019 7.26943 11.8043 7.30717 11.7132C7.34491 11.6222 7.40023 11.5394 7.46996 11.4698L14.97 3.96979C15.1107 3.82906 15.3016 3.75 15.5006 3.75C15.6996 3.75 15.8905 3.82906 16.0312 3.96979C16.1719 4.11052 16.251 4.30139 16.251 4.50042C16.251 4.69944 16.1719 4.89031 16.0312 5.03104L9.0609 12.0004L16.0312 18.9698Z"
               fill="#0B0704" />
           </svg>
         </button>
-        <div class="flex items-center bg-[#D4D1CD] w-fit rounded-r-[32px] rounded-l-[32px]">
-          <button style="
-                color: var(--text-white, #fff);
-                text-align: center;
-                font-size: var(--Typeface-size-p-18pt, 18px);
-                font-style: normal;
-                font-weight: 500;
-                line-height: var(--Typeface-lineheight-p-18pt, 28px);
-                border-radius: 32px;
-                background: var(--Primary-400, #5b4c3e);
-                display: flex;
-                padding: 12px 24px;
-                width: 164px;
 
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-              ">
+        <div id="slider" class="flex items-center bg-[#D4D1CD] w-fit rounded-r-[32px] rounded-l-[32px]">
+          <button class="text-white text-center text-lg font-medium bg-[#5b4c3e] rounded-full px-6 py-3 w-40">
             Chicken
           </button>
-          <button style="
-                color: var(--Primary-700, #181009);
-                text-align: center;
-                font-size: var(--Typeface-size-p-18pt, 18px);
-                font-style: normal;
-                font-weight: 500;
-                line-height: var(--Typeface-lineheight-p-18pt, 28px);
-                display: flex;
-                width: 164px;
-                padding: 12px 24px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                border-radius: 32px;
-              ">
+          <button class="text-[#181009] text-center text-lg font-medium px-6 py-3 w-40">
             Turkey
           </button>
-          <button style="
-                color: var(--Primary-700, #181009);
-                text-align: center;
-                font-size: var(--Typeface-size-p-18pt, 18px);
-                font-style: normal;
-                font-weight: 500;
-                line-height: var(--Typeface-lineheight-p-18pt, 28px);
-                display: flex;
-                width: 164px;
-                padding: 12px 24px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                border-radius: 32px;
-              ">
+          <button class="text-[#181009] text-center text-lg font-medium px-6 py-3 w-40">
             Pig
           </button>
-          <button style="
-                color: var(--Primary-700, #181009);
-                text-align: center;
-                font-size: var(--Typeface-size-p-18pt, 18px);
-                font-style: normal;
-                font-weight: 500;
-                line-height: var(--Typeface-lineheight-p-18pt, 28px);
-                display: flex;
-                width: 164px;
-                padding: 12px 24px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                border-radius: 32px;
-              ">
+          <button class="text-[#181009] text-center text-lg font-medium px-6 py-3 w-40">
             Hake
           </button>
         </div>
-        <button style="
-              border-radius: 1000px;
-              border: 1px solid var(--Gray-300, #e2e1e0);
-              background: var(--Gray-100, #fbfbfb);
-              display: flex;
-              padding: 14px;
-              justify-content: center;
-              align-items: center;
-              gap: 10px;
-            ">
+
+        <button id="nextButton" class="rounded-full border border-gray-300 bg-gray-100 p-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
             <path
               d="M8.96878 18.9698C8.8991 19.0395 8.84383 19.1222 8.80612 19.2132C8.7684 19.3043 8.74899 19.4019 8.74899 19.5004C8.74899 19.599 8.7684 19.6965 8.80612 19.7876C8.84383 19.8786 8.8991 19.9614 8.96878 20.031C9.03847 20.1007 9.12119 20.156 9.21224 20.1937C9.30328 20.2314 9.40086 20.2508 9.49941 20.2508C9.59796 20.2508 9.69554 20.2314 9.78658 20.1937C9.87763 20.156 9.96035 20.1007 10.03 20.031L17.53 12.531C17.5998 12.4614 17.6551 12.3787 17.6928 12.2876C17.7306 12.1966 17.75 12.099 17.75 12.0004C17.75 11.9019 17.7306 11.8043 17.6928 11.7132C17.6551 11.6222 17.5998 11.5394 17.53 11.4698L10.03 3.96979C9.8893 3.82906 9.69843 3.75 9.49941 3.75C9.30039 3.75 9.10952 3.82906 8.96878 3.96979C8.82805 4.11052 8.74899 4.30139 8.74899 4.50042C8.74899 4.69944 8.82805 4.89031 8.96878 5.03104L15.9391 12.0004L8.96878 18.9698Z"
@@ -298,36 +216,22 @@
         </button>
       </div>
 
+      <!-- Content Section -->
       <div class="flex flex-col md:flex-row items-start gap-[48px] justify-center">
-        <img src="./images//recipes-images/Frame 1000003025.png" alt="" />
+        <img src="./images/recipes-images/Frame 1000003025.png" alt="Chicken Menu" class="w-full md:w-auto" />
         <div class="space-y-[40px]">
           <div class="max-w-[439px] space-y-[16px]">
-            <h2 style="
-                  color: var(--text-primary, #1e293b);
-                  font-size: 32px;
-                  font-style: normal;
-                  font-weight: 600;
-                  line-height: var(--Typeface-lineheight-h5, 36px); /* 112.5% */
-                ">
+            <h2 class="text-3xl font-semibold text-gray-900">
               Chicken menu
             </h2>
-            <p style="
-                  color: var(--text-secondary, #5f5f5f);
-                  font-size: var(--Typeface-size-p-16pt, 16px);
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: var(
-                    --Typeface-lineheight-p-16pt,
-                    24px
-                  ); /* 150% */
-                ">
+            <p class="text-gray-600 text-base font-normal">
               This recipe is designed to start with the barf diet, chicken is
               an ingredient with a source of protein and fat. Ideal to start
               with raw food.
             </p>
           </div>
           <button
-            class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-[2px] cursor-pointer">
+            class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-sm cursor-pointer">
             I want to get started
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path
@@ -960,6 +864,7 @@
         gap: "10px", // Adjust gap if needed
       });
     });
+  
   </script>
 </body>
 
