@@ -20,6 +20,7 @@
       box-sizing: border-box;
       font-family: Anek Devanagari;
     }
+    
   </style>
 </head>
 
@@ -28,7 +29,6 @@
   <div class="bg-black text-white p-4 text-center">
     <h1 class="text-lg font-medium ">Free Shipping from $399 at BARF</h1>
   </div>
-
   <!-- Navigation section -->
   <section class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
     <nav class="flex justify-between items-center container mx-auto">
@@ -785,13 +785,16 @@
           </div>
         </div>
       </div>
-      <div class="w-full md:w-[366px]  space-y-4">
-        <img src="./images/product-details/dog.png" alt="">
-        <div>
-          <h1 class="text-[#3E2C1C] text-xl font-semibold">Thor</h1>
-          <p class="text-base font-medium text-[#3E2C1C]">2 years - AMERICAN S.</p>
-        </div>
-        <p class="text-[#5F5F5F] text-sm font-normal">Thor is a 28-kilo American S., with food and environmental allergies, his owner, Xavi decided to try a healthier alternative and has been able to reduce his allergy medication by up to 80%.</p>
+      <div class="slider" >
+
+          <div class="w-full md:w-[366px]  space-y-4">
+            <img src="./images/product-details/dog.png" alt="">
+            <div>
+              <h1 class="text-[#3E2C1C] text-xl font-semibold">Thor</h1>
+              <p class="text-base font-medium text-[#3E2C1C]">2 years - AMERICAN S.</p>
+            </div>
+            <p class="text-[#5F5F5F] text-sm font-normal">Thor is a 28-kilo American S., with food and environmental allergies, his owner, Xavi decided to try a healthier alternative and has been able to reduce his allergy medication by up to 80%.</p>
+          </div>
       </div>
     </div>
   </section>
@@ -1327,6 +1330,20 @@
         }
       });
     });
+
+
+    $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true
+            });
+        });
   </script>
 </body>
 
