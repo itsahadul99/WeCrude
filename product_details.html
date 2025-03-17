@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeCrude | Products Details</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Slick Slider CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+
+    <!-- jQuery (Required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Anek Devanagari";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Announcement Bar-->
+    <div class="bg-black text-white p-4 text-center">
+      <h1 class="text-lg font-medium container mx-auto">
+        Free Shipping from $399 at BARF
+      </h1>
+    </div>
+
+    <!-- Navigation section -->
+    <section
+      class="bg-[#FBFBFA] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8"
+    >
+      <nav class="flex justify-between items-center container mx-auto">
+        <div class="flex-1 flex gap-3 items-center">
+          <!-- Menu Button -->
+          <button id="menu-btn" class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+                fill="#0B0500"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                fill="#0B0500"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+                fill="#0B0500"
+              />
+            </svg>
+          </button>
+          <img src="./images/logo.png" alt="Logo" />
+        </div>
+
+        <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+          <img src="./images/icons/location.svg" alt="Location" />
+          <img src="./images/icons/search.svg" alt="Search" />
+          <img src="./images/icons/user.svg" alt="User" />
+          <img src="./images/icons/cart.svg" alt="Cart" />
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Side Menu -->
+    <div
+      id="menu-overlay"
+      class="fixed inset-0 bg-black opacity-20 hidden"
+    ></div>
+    <div
+      id="side-menu"
+      class="fixed left-0 top-0 h-full w-48 md:w-72 bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50"
+    >
+      <button id="close-menu" class="text-lg cursor-pointer">✖</button>
+      <ul class="space-y-3">
+        <li
+          class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"
+        >
+          <a href="#" class="font-semibold flex justify-between">
+            Online Store
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C"
+              />
+            </svg>
+          </a>
+          <ul
+            class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-48 md:w-72 p-3 space-y-2"
+          >
+            <div
+              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
+            >
+              <div class="flex gap-2 items-center">
+                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+                <div>
+                  <p class="text-base text-[#1E293B] font-semibold">
+                    Barf Diet
+                  </p>
+                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                  fill="#3E2C1C"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
+            >
+              <div class="flex gap-2 items-center">
+                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+                <div>
+                  <p class="text-base text-[#1E293B] font-semibold">
+                    Barf Diet
+                  </p>
+                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                  fill="#3E2C1C"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
+            >
+              <div class="flex gap-2 items-center">
+                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+                <div>
+                  <p class="text-base text-[#1E293B] font-semibold">
+                    Barf Diet
+                  </p>
+                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                  fill="#3E2C1C"
+                />
+              </svg>
+            </div>
+          </ul>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">Product</a>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">Collection</a>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">Recipes</a>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">How it works</a>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">Calculator</a>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">About Us</a>
+        </li>
+        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+          <a href="#">FAQs</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- BARF DIET STARTER PACK section --  -->
+    <section style="background: #f0eee9; padding: 48px 165px 80px 165px">
+      <div class="space-y-[32px]">
+        <!-- header div  -->
+        <div class="flex items-center gap-3">
+          <span
+            style="
+              color: var(--Base-Black, #000);
+              text-align: center;
+              font-size: var(--Typeface-size-p-18pt, 18px);
+              font-style: normal;
+              font-weight: 500;
+              line-height: var(--Typeface-lineheight-p-18pt, 28px);
+            "
+          >
+            Home
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M7.5 15L12.5 10L7.5 5"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span
+            style="
+              color: var(--Base-Black, #000);
+              text-align: center;
+              font-size: var(--Typeface-size-p-18pt, 18px);
+              font-style: normal;
+              font-weight: 500;
+              line-height: var(
+                --Typeface-lineheight-p-18pt,
+                28px
+              ); /* 155.556% */
+            "
+          >
+            Online Store
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M7.5 15L12.5 10L7.5 5"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span
+            style="
+              color: var(--Gray-600, #7d7a77);
+              font-size: var(--Typeface-size-p-18pt, 18px);
+              font-style: normal;
+              font-weight: 500;
+              line-height: var(--Typeface-lineheight-p-18pt, 28px);
+            "
+            >BARF DIET STARTER PACK</span
+          >
+        </div>
+        <!-- content div  -->
+        <div class="flex items-start gap-[32px]">
+          <!-- left side   -->
+          <div class="space-y-3 min-w-fit">
+            <img src="./images/product-details/image 192.png" alt="product" />
+            <div class="flex items-center gap-3">
+              <!-- <img src="/images/product-details/image 192.png" alt="product"> -->
+              <img
+                src="/images/product-details/Frame 2085669481.png"
+                alt="product"
+              />
+              <img
+                class="rounded-[8px]"
+                src="/images/product-details/image 214.png"
+                alt="product"
+              />
+              <img
+                class="rounded-[8px]"
+                src="/images/product-details/image 214.png"
+                alt="product"
+              />
+              <img
+                class="rounded-[8px]"
+                src="/images/product-details/image 214.png"
+                alt="product"
+              />
+            </div>
+          </div>
+          <!-- right side --  -->
+          <div>
+            <!-- part 1 -  -->
+            <div class="space-y-2">
+              <h3
+                style="
+                  color: var(--text-primary, #1e293b);
+                  font-size: var(--Typeface-size-h6, 20px);
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
+                "
+              >
+                2KG CHICKEN BARF BURGER WITH PUMPKIN AND PEAS
+              </h3>
+              <p
+                style="
+                  color: var(--text-secondary, #5f5f5f);
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 24px; /* 150% */
+                "
+              >
+                Chicken protein is easily digestible and essential in the BARF
+                diet for dogs, ideal for those dogs who are just starting out.
+                Fruits and vegetables add a variety of nutrients, from fiber in
+                apples to antioxidants.
+              </p>
+            </div>
+
+            <!-- part 2  -->
+            <div
+              style="
+                border-radius: 8px;
+                border: 1px solid #f2f2ed;
+                background: var(--text-white, #fff);
+
+                padding: 12px 20px 12px 12px;
+              "
+              class="flex items-center gap-4 mt-5"
+            >
+              <img
+                class="rounded-sm"
+                src="./images/product-details/image1234.png"
+                alt="product"
+              />
+              <p
+                style="
+                  color: var(--text-primary, #1e293b);
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 24px; /* 150% */
+                  max-width: 236px;
+                "
+              >
+                2kg Burger barf chicken with pumpkin and peas
+              </p>
+            </div>
+
+            <!-- part 3  -->
+            <div
+              style="
+                border-radius: 16px;
+                border: 1px solid #f2f2ed;
+                padding: 24px;
+                background: #fff;
+              "
+              class="mt-5"
+            >
+              <!-- 1st  -->
+              <div class="flex items-center justify-between">
+                <!-- left  -->
+                <div class="flex gap-2">
+                  <svg
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="0.666667"
+                      y="1.16667"
+                      width="14.6667"
+                      height="14.6667"
+                      rx="7.33333"
+                      stroke="#1E293B"
+                      stroke-width="1.33333"
+                    />
+                  </svg>
+
+                  <span> Subscribe and save </span>
+                </div>
+
+                <!-- right   -->
+                <div class="space-x-2">
+                  <span
+                    style="
+                      color: var(--text-secondary, #5f5f5f);
+                      font-size: var(--Typeface-size-p-18pt, 18px);
+                      text-align: right;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: var(
+                        --Typeface-lineheight-p-18pt,
+                        28px
+                      ); /* 155.556% */
+                      text-decoration-line: strikethrough;
+                    "
+                  >
+                    €44.14
+                  </span>
+                  <span
+                    style="
+                      color: var(--text-primary, #1e293b);
+                      text-align: right;
+                      font-size: var(--Typeface-size-h6, 20px);
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: var(
+                        --Typeface-lineheight-h6,
+                        30px
+                      ); /* 150% */
+                    "
+                  >
+                    €44.14
+                  </span>
+                </div>
+              </div>
+              <!-- 2nd   -->
+              <ul class="mt-[24px] space-y-3">
+                <li class="flex items-center gap-2">
+                  <span class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                        fill="#00B67A"
+                      />
+                    </svg>
+                  </span>
+                  <span class="">Save 15% on every order</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                        fill="#00B67A"
+                      />
+                    </svg>
+                  </span>
+                  <span class="">Special promotions</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                        fill="#00B67A"
+                      />
+                    </svg>
+                  </span>
+                  <span class="">Edit your subscription any time</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                        fill="#00B67A"
+                      />
+                    </svg>
+                  </span>
+                  <span class="">Cancel anytime with no fees</span>
+                </li>
+              </ul>
+
+              <!-- 3rd  -->
+              <div class="mt-[24px]">
+                <!-- heading  -->
+                <h4
+                  style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 27px; /* 168.75% */
+                  "
+                >
+                  Select delivery frequency
+                </h4>
+
+                <select
+                  style="
+                    color: var(--text-primary, #1e293b);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 27px; /* 168.75% */
+                  "
+                  class="border border-[#F0F0ED] mt-2 rounded-[8px] py-[11px] pr-[12px] w-full pl-[16px]"
+                  name=""
+                  id=""
+                >
+                  <option value="">Delivery every 4 weeks with 15%</option>
+                  <option value="">Delivery every 4 weeks with 15%</option>
+                  <option value="">Delivery every 4 weeks with 15%</option>
+                </select>
+
+                <div class="flex items-center justify-between">
+                  <!-- left  -->
+                  <div class="flex gap-2">
+                    <svg
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="0.666667"
+                        y="1.16667"
+                        width="14.6667"
+                        height="14.6667"
+                        rx="7.33333"
+                        stroke="#1E293B"
+                        stroke-width="1.33333"
+                      />
+                    </svg>
+
+                    <span> One time purchase </span>
+                  </div>
+
+                  <!-- right   -->
+                  <div class="mt-[17px]">
+                    <span
+                      style="
+                        color: var(--text-primary, #1e293b);
+                        text-align: right;
+                        font-size: var(--Typeface-size-h6, 20px);
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: var(
+                          --Typeface-lineheight-h6,
+                          30px
+                        ); /* 150% */
+                      "
+                    >
+                      €44.14
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              style="
+                border-radius: 4px;
+                background: var(--primary-500-main, #3e2c1c);
+                color: var(--text-white, #fff);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px; /* 150% */
+              "
+              class="w-full flex justify-center items-center gap-2 py-[14px] my-[24px]"
+            >
+              <span>Add to Cart</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M4.66808 11.6667H15.6145C16.4585 11.6667 16.8806 11.6667 17.2165 11.5093C17.5125 11.3707 17.7611 11.1481 17.9316 10.8693C18.1251 10.5528 18.1717 10.1334 18.2649 9.29451L18.7524 4.90697C18.7809 4.65076 18.7951 4.52265 18.7539 4.42349C18.7177 4.3364 18.653 4.26416 18.5705 4.21858C18.4765 4.16669 18.3476 4.16669 18.0898 4.16669H4.25142M2.16797 1.66669H3.20833C3.42885 1.66669 3.53911 1.66669 3.62538 1.70862C3.70132 1.74554 3.76425 1.80467 3.80583 1.87816C3.85307 1.96163 3.85995 2.07168 3.8737 2.29177L4.6289 14.3749C4.64266 14.595 4.64953 14.7051 4.69677 14.7886C4.73836 14.862 4.80129 14.9212 4.87723 14.9581C4.96349 15 5.07375 15 5.29427 15H16.3346M6.7513 17.9167H6.75964M14.2513 17.9167H14.2596M7.16797 17.9167C7.16797 18.1468 6.98142 18.3334 6.7513 18.3334C6.52118 18.3334 6.33464 18.1468 6.33464 17.9167C6.33464 17.6866 6.52118 17.5 6.7513 17.5C6.98142 17.5 7.16797 17.6866 7.16797 17.9167ZM14.668 17.9167C14.668 18.1468 14.4814 18.3334 14.2513 18.3334C14.0212 18.3334 13.8346 18.1468 13.8346 17.9167C13.8346 17.6866 14.0212 17.5 14.2513 17.5C14.4814 17.5 14.668 17.6866 14.668 17.9167Z"
+                  stroke="#F0EEE9"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
