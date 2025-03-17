@@ -1,274 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeCrude | Products Details</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- Slick Slider CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
-    />
 
-    <!-- jQuery (Required) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeCrude | Product Details</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
 
-    <!-- Slick Slider JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: "Anek Devanagari";
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Announcement Bar-->
-    <div class="bg-black text-white p-4 text-center">
-      <h1 class="text-lg font-medium container mx-auto">
-        Free Shipping from $399 at BARF
-      </h1>
-    </div>
+  <!-- jQuery (Required) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Navigation section -->
-    <section
-      class="bg-[#FBFBFA] py-6 px-6 md:px-8 container mx-auto lg:px-12 xl:px-[165px] md:py-8"
-    >
-      <nav class="flex justify-between items-center container mx-auto">
-        <div class="flex-1 flex gap-3 items-center">
-          <!-- Menu Button -->
-          <button id="menu-btn" class="cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                fill="#0B0500"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                fill="#0B0500"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
-                fill="#0B0500"
-              />
-            </svg>
-          </button>
-          <img src="./images/logo.png" alt="Logo" />
-        </div>
+  <!-- Slick Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Anek Devanagari;
+    }
+  </style>
+</head>
 
-        <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
-          <img src="./images/icons/location.svg" alt="Location" />
-          <img src="./images/icons/search.svg" alt="Search" />
-          <img src="./images/icons/user.svg" alt="User" />
-          <img src="./images/icons/cart.svg" alt="Cart" />
-        </ul>
-      </nav>
-    </section>
+<body>
+  <!-- Announcement Bar-->
+  <div class="bg-black text-white p-4 text-center">
+    <h1 class="text-lg font-medium ">Free Shipping from $399 at BARF</h1>
+  </div>
 
-    <!-- Side Menu -->
-    <div
-      id="menu-overlay"
-      class="fixed inset-0 bg-black opacity-20 hidden"
-    ></div>
-    <div
-      id="side-menu"
-      class="fixed left-0 top-0 h-full w-48 md:w-72 bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50"
-    >
-      <button id="close-menu" class="text-lg cursor-pointer">✖</button>
-      <ul class="space-y-3">
-        <li
-          class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"
-        >
-          <a href="#" class="font-semibold flex justify-between">
-            Online Store
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                fill="#3E2C1C"
-              />
-            </svg>
-          </a>
-          <ul
-            class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-48 md:w-72 p-3 space-y-2"
-          >
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-          </ul>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Product</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Collection</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Recipes</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">How it works</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Calculator</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">About Us</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">FAQs</a>
-        </li>
+  <!-- Navigation section -->
+  <section class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
+    <nav class="flex justify-between items-center container mx-auto">
+      <div class="flex-1 flex gap-3 items-center">
+        <!-- Menu Button -->
+        <button id="menu-btn" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+              fill="#0B0500" />
+          </svg>
+        </button>
+        <img src="./images/logo.png" alt="Logo">
+      </div>
+
+      <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+        <img src="./images/icons/location.svg" alt="Location">
+        <img src="./images/icons/search.svg" alt="Search">
+        <img src="./images/icons/user.svg" alt="User">
+        <img src="./images/icons/cart.svg" alt="Cart">
       </ul>
-    </div>
+    </nav>
+  </section>
+  </section>
 
-    <!-- BARF DIET STARTER PACK section --  -->
-    <section
-      class="px-6 md:px-8 pt-[24px] pb-[34px] container mx-auto lg:px-[165px] lg:pt-[48px]  lg:pb-[80px]"
-      style="background: #f0eee9;"
-    >
-      <div class=" space-y-[22px] md:space-y-[32px]">
-        <!-- header div  -->
-        <div class="flex items-center gap-2 lg:gap-3">
-          <span
-            style="
+  <!-- Side Menu -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black opacity-20 hidden"></div>
+  <div id="side-menu"
+    class="fixed left-0 top-0 h-full w-72  bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50">
+    <button id="close-menu" class="text-lg cursor-pointer">✖</button>
+    <ul class="space-y-3">
+      <li class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#" class="font-semibold flex justify-between">
+          Online Store
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+              fill="#3E2C1C" />
+          </svg>
+        </a>
+        <ul class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-72 p-3 space-y-2">
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8">
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">Barf Diet</p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8">
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">Barf Diet</p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8">
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">Barf Diet</p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+        </ul>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Product</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Collection</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Recipes</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">How it works</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">Calculator</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">About Us</a></li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"><a href="#">FAQs</a></li>
+    </ul>
+  </div>
+
+  <!-- BARF DIET STARTER PACK section --  -->
+  <section class="px-6 md:px-8 pt-[24px] pb-[34px] lg:px-[165px] lg:pt-[48px]  lg:pb-[80px]"
+    style="background: #f0eee9;">
+    <div class="container mx-auto  space-y-[22px] md:space-y-[32px]">
+      <!-- header div  -->
+      <div class="flex items-center gap-2 lg:gap-3">
+        <span style="
               color: var(--Base-Black, #000);
               text-align: center;
               
               font-style: normal;
               font-weight: 500;
               line-height: var(--Typeface-lineheight-p-18pt, 28px);
-            "
-            class="text-[16px]  lg:text-[18px]"
-          >
-            Home
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <path
-              d="M7.5 15L12.5 10L7.5 5"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <span
-            style="
+            " class="text-[16px]  lg:text-[18px]">
+          Home
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7.5 15L12.5 10L7.5 5" stroke="black" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <span style="
               color: var(--Base-Black, #000);
               text-align: center;
               font-style: normal;
@@ -277,166 +159,106 @@
                 --Typeface-lineheight-p-18pt,
                 28px
               ); /* 155.556% */
-            "
-            class="text-[16px]  lg:text-[18px]"
-          >
-            Online Store
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <path
-              d="M7.5 15L12.5 10L7.5 5"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <span
-            style="
+            " class="text-[16px]  lg:text-[18px]">
+          Online Store
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7.5 15L12.5 10L7.5 5" stroke="black" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <span style="
               color: var(--Gray-600, #7d7a77);
               font-style: normal;
               font-weight: 500;
               line-height: var(--Typeface-lineheight-p-18pt, 28px);
-            "
-            class="text-[16px]  lg:text-[18px]"
-            >BARF DIET STARTER PACK</span
-          >
-        </div>
-        <!-- content div  -->
-        <div class="flex lg:flex-row flex-col items-start gap-[32px]">
-          <!-- left side   -->
-          <div class="space-y-3 min-w-fit">
-            <img src="./images/product-details/image 192.png" alt="product" />
-            <div class="flex items-center gap-3">
-              <!-- <img src="/images/product-details/image 192.png" alt="product"> -->
-              <img
-              class="max-w-[80px] lg:max-w-full"
-                src="/images/product-details/Frame 2085669481.png"
-                alt="product"
-              />
-              <img
-                class="rounded-[8px] max-w-[80px] lg:max-w-full"
-                src="/images/product-details/image 214.png"
-                alt="product"
-              />
-              <img
-                class="rounded-[8px] max-w-[80px] lg:max-w-full"
-                src="/images/product-details/image 214.png"
-                alt="product"
-              />
-              <img
-                class="rounded-[8px] max-w-[80px] lg:max-w-full"
-                src="/images/product-details/image 214.png"
-                alt="product"
-              />
-            </div>
+            " class="text-[16px]  lg:text-[18px]">BARF DIET STARTER PACK</span>
+      </div>
+      <!-- content div  -->
+      <div class="flex lg:flex-row flex-col items-start gap-[32px]">
+        <!-- left side   -->
+        <div class="space-y-3 min-w-fit">
+          <img src="./images/product-details/image 192.png" alt="product" />
+          <div class="flex items-center gap-3">
+            <!-- <img src="/images/product-details/image 192.png" alt="product"> -->
+            <img class="max-w-[80px] lg:max-w-full" src="/images/product-details/Frame 2085669481.png" alt="product" />
+            <img class="rounded-[8px] max-w-[80px] lg:max-w-full" src="/images/product-details/image 214.png"
+              alt="product" />
+            <img class="rounded-[8px] max-w-[80px] lg:max-w-full" src="/images/product-details/image 214.png"
+              alt="product" />
+            <img class="rounded-[8px] max-w-[80px] lg:max-w-full" src="/images/product-details/image 214.png"
+              alt="product" />
           </div>
-          <!-- right side --  -->
-          <div>
-            <!-- part 1 -  -->
-            <div class="space-y-2">
-              <h3
-                style="
+        </div>
+        <!-- right side --  -->
+        <div>
+          <!-- part 1 -  -->
+          <div class="space-y-2">
+            <h3 style="
                   color: var(--text-primary, #1e293b);
                   font-size: var(--Typeface-size-h6, 20px);
                   font-style: normal;
                   font-weight: 600;
                   line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
-                "
-              >
-                2KG CHICKEN BARF BURGER WITH PUMPKIN AND PEAS
-              </h3>
-              <p
-                style="
+                ">
+              2KG CHICKEN BARF BURGER WITH PUMPKIN AND PEAS
+            </h3>
+            <p style="
                   color: var(--text-secondary, #5f5f5f);
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 24px; /* 150% */
-                "
-              >
-                Chicken protein is easily digestible and essential in the BARF
-                diet for dogs, ideal for those dogs who are just starting out.
-                Fruits and vegetables add a variety of nutrients, from fiber in
-                apples to antioxidants.
-              </p>
-            </div>
+                ">
+              Chicken protein is easily digestible and essential in the BARF
+              diet for dogs, ideal for those dogs who are just starting out.
+              Fruits and vegetables add a variety of nutrients, from fiber in
+              apples to antioxidants.
+            </p>
+          </div>
 
-            <!-- part 2  -->
-            <div
-              style="
+          <!-- part 2  -->
+          <div style="
                 border-radius: 8px;
                 border: 1px solid #f2f2ed;
                 background: var(--text-white, #fff);
 
                 padding: 12px 20px 12px 12px;
-              "
-              class="flex items-center gap-4 mt-5"
-            >
-              <img
-                class="rounded-sm"
-                src="./images/product-details/image1234.png"
-                alt="product"
-              />
-              <p
-                style="
+              " class="flex items-center gap-4 mt-5">
+            <img class="rounded-sm" src="./images/product-details/image1234.png" alt="product" />
+            <p style="
                   color: var(--text-primary, #1e293b);
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 24px; /* 150% */
                   max-width: 236px;
-                "
-              >
-                2kg Burger barf chicken with pumpkin and peas
-              </p>
-            </div>
+                ">
+              2kg Burger barf chicken with pumpkin and peas
+            </p>
+          </div>
 
-            <!-- part 3  -->
-            <div
-              style="
+          <!-- part 3  -->
+          <div style="
                 border-radius: 16px;
                 border: 1px solid #f2f2ed;
                 padding: 24px;
                 background: #fff;
-              "
-              class="mt-5"
-            >
-              <!-- 1st  -->
-              <div class="flex items-center justify-between">
-                <!-- left  -->
-                <div class="flex gap-2">
-                  <svg
-                    width="16"
-                    height="17"
-                    viewBox="0 0 16 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="0.666667"
-                      y="1.16667"
-                      width="14.6667"
-                      height="14.6667"
-                      rx="7.33333"
-                      stroke="#1E293B"
-                      stroke-width="1.33333"
-                    />
-                  </svg>
+              " class="mt-5">
+            <!-- 1st  -->
+            <div class="flex items-center justify-between">
+              <!-- left  -->
+              <div class="flex gap-2">
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.666667" y="1.16667" width="14.6667" height="14.6667" rx="7.33333" stroke="#1E293B"
+                    stroke-width="1.33333" />
+                </svg>
 
-                  <span> Subscribe and save </span>
-                </div>
+                <span> Subscribe and save </span>
+              </div>
 
-                <!-- right   -->
-                <div class="space-x-2">
-                  <span
-                    style="
+              <!-- right   -->
+              <div class="space-x-2">
+                <span style="
                       color: var(--text-secondary, #5f5f5f);
                       font-size: var(--Typeface-size-p-18pt, 18px);
                       text-align: right;
@@ -447,12 +269,10 @@
                         28px
                       ); /* 155.556% */
                       text-decoration-line: strikethrough;
-                    "
-                  >
-                    €44.14
-                  </span>
-                  <span
-                    style="
+                    ">
+                  €44.14
+                </span>
+                <span style="
                       color: var(--text-primary, #1e293b);
                       text-align: right;
                       font-size: var(--Typeface-size-h6, 20px);
@@ -462,152 +282,95 @@
                         --Typeface-lineheight-h6,
                         30px
                       ); /* 150% */
-                    "
-                  >
-                    €44.14
-                  </span>
-                </div>
+                    ">
+                  €44.14
+                </span>
               </div>
-              <!-- 2nd   -->
-              <ul class="mt-[24px] space-y-3">
-                <li class="flex items-center gap-2">
-                  <span class="">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
-                        fill="#00B67A"
-                      />
-                    </svg>
-                  </span>
-                  <span class="">Save 15% on every order</span>
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
-                        fill="#00B67A"
-                      />
-                    </svg>
-                  </span>
-                  <span class="">Special promotions</span>
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
-                        fill="#00B67A"
-                      />
-                    </svg>
-                  </span>
-                  <span class="">Edit your subscription any time</span>
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
-                        fill="#00B67A"
-                      />
-                    </svg>
-                  </span>
-                  <span class="">Cancel anytime with no fees</span>
-                </li>
-              </ul>
+            </div>
+            <!-- 2nd   -->
+            <ul class="mt-[24px] space-y-3">
+              <li class="flex items-center gap-2">
+                <span class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                      fill="#00B67A" />
+                  </svg>
+                </span>
+                <span class="">Save 15% on every order</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                      fill="#00B67A" />
+                  </svg>
+                </span>
+                <span class="">Special promotions</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                      fill="#00B67A" />
+                  </svg>
+                </span>
+                <span class="">Edit your subscription any time</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.0013 0.666626C3.95121 0.666626 0.667969 3.94987 0.667969 7.99996C0.667969 12.05 3.95121 15.3333 8.0013 15.3333C12.0514 15.3333 15.3346 12.05 15.3346 7.99996C15.3346 3.94987 12.0514 0.666626 8.0013 0.666626ZM11.4727 6.47136C11.7331 6.21101 11.7331 5.7889 11.4727 5.52855C11.2124 5.26821 10.7902 5.26821 10.5299 5.52855L7.0013 9.05715L5.47271 7.52855C5.21236 7.2682 4.79025 7.2682 4.5299 7.52855C4.26955 7.7889 4.26955 8.21101 4.5299 8.47136L6.5299 10.4714C6.79025 10.7317 7.21236 10.7317 7.47271 10.4714L11.4727 6.47136Z"
+                      fill="#00B67A" />
+                  </svg>
+                </span>
+                <span class="">Cancel anytime with no fees</span>
+              </li>
+            </ul>
 
-              <!-- 3rd  -->
-              <div class="mt-[24px]">
-                <!-- heading  -->
-                <h4
-                  style="
+            <!-- 3rd  -->
+            <div class="mt-[24px]">
+              <!-- heading  -->
+              <h4 style="
                     color: var(--text-primary, #1e293b);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                >
-                  Select delivery frequency
-                </h4>
+                  ">
+                Select delivery frequency
+              </h4>
 
-                <select
-                  style="
+              <select style="
                     color: var(--text-primary, #1e293b);
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 27px; /* 168.75% */
-                  "
-                  class="border border-[#F0F0ED] mt-2 rounded-[8px] py-[11px] pr-[12px] w-full pl-[16px]"
-                  name=""
-                  id=""
-                >
-                  <option value="">Delivery every 4 weeks with 15%</option>
-                  <option value="">Delivery every 4 weeks with 15%</option>
-                  <option value="">Delivery every 4 weeks with 15%</option>
-                </select>
+                  " class="border border-[#F0F0ED] mt-2 rounded-[8px] py-[11px] pr-[12px] w-full pl-[16px]" name=""
+                id="">
+                <option value="">Delivery every 4 weeks with 15%</option>
+                <option value="">Delivery every 4 weeks with 15%</option>
+                <option value="">Delivery every 4 weeks with 15%</option>
+              </select>
 
-                <div class="flex items-center justify-between">
-                  <!-- left  -->
-                  <div class="flex gap-2">
-                    <svg
-                      width="16"
-                      height="17"
-                      viewBox="0 0 16 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="0.666667"
-                        y="1.16667"
-                        width="14.6667"
-                        height="14.6667"
-                        rx="7.33333"
-                        stroke="#1E293B"
-                        stroke-width="1.33333"
-                      />
-                    </svg>
+              <div class="flex items-center justify-between">
+                <!-- left  -->
+                <div class="flex gap-2">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.666667" y="1.16667" width="14.6667" height="14.6667" rx="7.33333" stroke="#1E293B"
+                      stroke-width="1.33333" />
+                  </svg>
 
-                    <span> One time purchase </span>
-                  </div>
+                  <span> One time purchase </span>
+                </div>
 
-                  <!-- right   -->
-                  <div class="mt-[17px]">
-                    <span
-                      style="
+                <!-- right   -->
+                <div class="mt-[17px]">
+                  <span style="
                         color: var(--text-primary, #1e293b);
                         text-align: right;
                         font-size: var(--Typeface-size-h6, 20px);
@@ -617,16 +380,14 @@
                           --Typeface-lineheight-h6,
                           30px
                         ); /* 150% */
-                      "
-                    >
-                      €44.14
-                    </span>
-                  </div>
+                      ">
+                    €44.14
+                  </span>
                 </div>
               </div>
             </div>
-            <button
-              style="
+          </div>
+          <button style="
                 border-radius: 4px;
                 background: var(--primary-500-main, #3e2c1c);
                 color: var(--text-white, #fff);
@@ -634,29 +395,903 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 24px; /* 150% */
-              "
-              class="w-full flex justify-center items-center gap-2 py-[14px] my-[24px]"
-            >
-              <span>Add to Cart</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-              >
-                <path
-                  d="M4.66808 11.6667H15.6145C16.4585 11.6667 16.8806 11.6667 17.2165 11.5093C17.5125 11.3707 17.7611 11.1481 17.9316 10.8693C18.1251 10.5528 18.1717 10.1334 18.2649 9.29451L18.7524 4.90697C18.7809 4.65076 18.7951 4.52265 18.7539 4.42349C18.7177 4.3364 18.653 4.26416 18.5705 4.21858C18.4765 4.16669 18.3476 4.16669 18.0898 4.16669H4.25142M2.16797 1.66669H3.20833C3.42885 1.66669 3.53911 1.66669 3.62538 1.70862C3.70132 1.74554 3.76425 1.80467 3.80583 1.87816C3.85307 1.96163 3.85995 2.07168 3.8737 2.29177L4.6289 14.3749C4.64266 14.595 4.64953 14.7051 4.69677 14.7886C4.73836 14.862 4.80129 14.9212 4.87723 14.9581C4.96349 15 5.07375 15 5.29427 15H16.3346M6.7513 17.9167H6.75964M14.2513 17.9167H14.2596M7.16797 17.9167C7.16797 18.1468 6.98142 18.3334 6.7513 18.3334C6.52118 18.3334 6.33464 18.1468 6.33464 17.9167C6.33464 17.6866 6.52118 17.5 6.7513 17.5C6.98142 17.5 7.16797 17.6866 7.16797 17.9167ZM14.668 17.9167C14.668 18.1468 14.4814 18.3334 14.2513 18.3334C14.0212 18.3334 13.8346 18.1468 13.8346 17.9167C13.8346 17.6866 14.0212 17.5 14.2513 17.5C14.4814 17.5 14.668 17.6866 14.668 17.9167Z"
-                  stroke="#F0EEE9"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              " class="w-full flex justify-center items-center gap-2 py-[14px] my-[24px]">
+            <span>Add to Cart</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <path
+                d="M4.66808 11.6667H15.6145C16.4585 11.6667 16.8806 11.6667 17.2165 11.5093C17.5125 11.3707 17.7611 11.1481 17.9316 10.8693C18.1251 10.5528 18.1717 10.1334 18.2649 9.29451L18.7524 4.90697C18.7809 4.65076 18.7951 4.52265 18.7539 4.42349C18.7177 4.3364 18.653 4.26416 18.5705 4.21858C18.4765 4.16669 18.3476 4.16669 18.0898 4.16669H4.25142M2.16797 1.66669H3.20833C3.42885 1.66669 3.53911 1.66669 3.62538 1.70862C3.70132 1.74554 3.76425 1.80467 3.80583 1.87816C3.85307 1.96163 3.85995 2.07168 3.8737 2.29177L4.6289 14.3749C4.64266 14.595 4.64953 14.7051 4.69677 14.7886C4.73836 14.862 4.80129 14.9212 4.87723 14.9581C4.96349 15 5.07375 15 5.29427 15H16.3346M6.7513 17.9167H6.75964M14.2513 17.9167H14.2596M7.16797 17.9167C7.16797 18.1468 6.98142 18.3334 6.7513 18.3334C6.52118 18.3334 6.33464 18.1468 6.33464 17.9167C6.33464 17.6866 6.52118 17.5 6.7513 17.5C6.98142 17.5 7.16797 17.6866 7.16797 17.9167ZM14.668 17.9167C14.668 18.1468 14.4814 18.3334 14.2513 18.3334C14.0212 18.3334 13.8346 18.1468 13.8346 17.9167C13.8346 17.6866 14.0212 17.5 14.2513 17.5C14.4814 17.5 14.668 17.6866 14.668 17.9167Z"
+                stroke="#F0EEE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div>
+            <div class="flex justify-between items-center" style="border-radius: 12px 12px 0px 0px;
+            border-top: 1px solid var(--Gray-300, #E2E1E0);
+            border-right: 1px solid var(--Gray-300, #E2E1E0);
+            border-left: 1px solid var(--Gray-300, #E2E1E0);
+            padding: 17px 20px;
+            background: #FFF;">
+              <h1>Calculate Dosage from my Dog</h1>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 15L12 9L6 15" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
-            </button>
+            </div>
+            <div class="bg-[#F0EEE9] md:bg-white border border-[#E2DED4] rounded-b-3xl p-6">
+              <h1 class="text-[#1E293B] font-semibold text-[32px] text-center">What is your weight?</h1>
+              <div
+                class="mt-3 px-5 py-[18px] rounded-xl bg-white border border-[#E2E1E0] w-full md:w-fit mx-auto flex justify-between gap-3 items-center">
+                <input class="text-[#1E293B] text-xl md:text-2xl font-medium" type="number" placeholder="24">
+                <p class="text-[#5F5F5F] text-xl md:text-2xl font-medium">KG</p>
+              </div>
+              <p class="mt-3 text-center text-[#5F5F5F] text-xl">Knowing your Dog’s Weight is Essential to Calculate
+                It’s
+                Daily Ration</p>
+              <div class="mt-12">
+                <h1 class="text-[#1E293B] font-semibold text-[32px] text-center">What physical activity do you have?
+                </h1>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-5 mt-[37px]">
+                  <div class="p-5 rounded-[20px] border border-[#3E2C1C] text-center w-full md:w-[155px] h-[250px]">
+                    <div class="flex justify-center items-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 40 48" fill="none">
+                        <path
+                          d="M13.988 43.4998C13.988 41.6594 10.9207 42.7329 9.38705 43.4998C9.80474 47.8915 5.62321 48.519 2.48621 47.6825C-0.650799 46.8459 5.20494 41.1993 5.20494 37.8534C5.20494 34.5074 1.85823 24.8869 5.20494 19.4494C8.55166 14.012 6.87744 12.9663 1.85823 9.41102C-3.16098 5.85574 6.45917 0 15.2428 0C24.0264 0 22.7716 5.85574 19.2163 9.41102C15.6611 12.9663 17.9615 17.7764 19.8437 18.1948C21.7259 18.6132 23.6081 14.0121 29.0456 8.78377C34.4831 3.55543 43.685 8.57464 37.411 8.78377C31.1369 8.99291 24.4447 14.8486 24.6538 18.1948C24.8629 21.5409 28.8365 27.6058 29.0456 37.8534C29.2547 48.1009 26.536 46.2187 25.6995 45.5913C24.8629 44.9639 25.9086 34.0888 25.2812 31.9975C21.5168 27.8148 19.8437 34.5071 19.0072 39.5263C18.1707 44.5455 18.1707 48.1008 15.4519 47.8916C12.7332 47.6825 13.988 45.8002 13.988 43.4998Z"
+                          fill="#3E2C1C" />
+                        <path
+                          d="M12.1301 39.2886C9.25347 39.7934 10.0483 33.4691 10.8053 30.2438C11.2496 28.3507 14.0973 29.6549 15.9141 30.6645C18.1851 31.9266 15.7258 38.6576 12.1301 39.2886Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h1 class="text-xl text-[#1E293B] font-semibold mb-1">Low</h1>
+                      <p class="text-base text-[#5F5F5F] w-full md:w-2/3 mx-auto">Regular 30-minute walks on a leash.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-5 rounded-[20px] border bg-[#3E2C1C] text-center text-white w-full md:w-[155px] h-[250px]">
+                    <div class="flex justify-center items-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 36 48" fill="none">
+                        <path
+                          d="M6.30652 41.2415C7.52961 43.8942 2.61179 43.9072 0 43.5821C6.87984 50.409 22.5506 47.288 30.1949 47.288C37.8391 47.288 35.3548 44.9474 32.8704 43.5821C30.386 42.2168 32.297 39.0958 34.017 36.1701C35.737 33.2443 33.6348 25.4422 30.1949 20.7609C26.7549 16.0796 28.2838 10.6182 30.1949 12.5688C38.4125 18.8105 36.8836 4.57154 31.9148 1.64576C26.9461 -1.28003 22.1684 -0.30477 15.2885 4.57154C8.4087 9.44786 16.2441 17.055 18.7285 12.5688C21.2129 8.08254 19.4929 18.2253 17.7729 21.3461C16.053 24.467 16.4352 34.0245 11.6575 34.8047C6.87984 35.5849 4.77767 37.9256 6.30652 41.2415Z"
+                          fill="white" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h1 class="text-xl font-semibold mb-1">Average</h1>
+                      <p class="text-base w-full md:w-2/3 mx-auto">Go out for a run at least 1 hour a day</p>
+                    </div>
+                  </div>
+                  <div class="p-5 rounded-[20px] border border-[#3E2C1C] text-center w-full md:w-[155px] h-[250px]">
+                    <div class="flex justify-center items-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="54" height="48" viewBox="0 0 54 48" fill="none">
+                        <path
+                          d="M17.1702 48C20.6259 48 21.0468 43.6548 20.8253 41.4821C20.7699 40.7022 20.6259 38.7748 20.493 37.3041C20.3268 35.4657 21.1575 34.1287 21.3237 32.1232C21.4898 30.1177 27.3048 30.1177 32.2891 27.2766C37.2734 24.4355 34.9474 30.452 37.938 32.6246C40.9285 34.7972 42.4238 38.9754 41.427 41.4821C40.4301 43.9889 35.1135 45.3261 37.938 45.6604C40.7624 45.9946 43.2545 42.3179 44.5837 39.9781C45.9128 37.6384 42.7561 35.2986 42.4238 31.9561C42.0915 28.6136 46.5774 33.7945 49.4018 39.4767C52.2262 45.159 49.568 44.1562 48.2388 45.9946C46.9097 47.833 52.0601 48 53.057 47.3316C54.0538 46.6632 53.057 44.4905 53.057 41.148C53.057 37.8055 52.0601 37.8055 50.731 36.1342C49.4018 34.463 49.0695 30.452 49.0695 28.2794C49.0695 26.1067 46.5774 21.2601 47.242 19.756C49.9002 17.5834 51.2294 13.071 49.0695 9.06C46.9097 5.049 42.9222 3.712 44.0852 4.71475C45.2482 5.7175 47.5742 8.89287 48.5711 13.071C49.568 17.2491 38.2702 16.2464 31.1261 15.4107C23.982 14.5751 20.493 11.901 17.8347 5.21602C15.1764 -1.46898 6.37081 -0.633356 5.70624 1.70639C5.04167 4.04614 3.04885 5.04889 1.71971 5.21602C0.390562 5.38314 -0.938581 8.89276 4.0457 10.564C9.02999 12.2353 8.69771 11.5668 10.193 17.249C11.6883 22.9313 13.8481 29.1149 15.3426 33.1259C16.837 37.1369 16.1733 43.4876 15.3426 44.6575C13.1827 45.9945 12.8504 48 17.1702 48Z"
+                          fill="#4A361F" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h1 class="text-xl text-[#1E293B] font-semibold mb-1">High</h1>
+                      <p class="text-base text-[#5F5F5F] w-full md:w-11/12 mx-auto">Sporty dog that runs marathon
+                        2 hours day</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="flex mx-auto mt-12 w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+                <p>Calculate Dosage</p>
+                <img src="./images/icons/arrow-right.svg" alt="">
+              </button>
+
+              <div class="flex gap-5 mt-8 overflow-x-auto max-w-[650px]">
+                <div class="bg-white relative w-[270px] border border-[#E2E1E0] rounded-xl">
+                  <div class="absolute top-2 right-2 p-2 text-[#090502] text-sm rounded-lg bg-[#F0E9E2]">
+                    Limited edition
+                  </div>
+                  <img class="rounded-xl w-full" src="./images/product-details/imgCrude.png" alt="">
+                  <div class="p-5 text-[#5F5F5F] text-sm font-normal space-y-1">
+                    <h1 class="text-lg text-[#1E293B] font-semibold max-w-full w-10/12">Customized barf diet pack for
+                      dogs</h1>
+                    <p>6kg - 60 Burgers</p>
+                    <p>3 Bags of 2kg (from €7.20/kg)</p>
+                    <p style="border-bottom: 0.5px solid #5F5F5F;">+ Details</p>
+                    <div class="flex justify-between items-center text-[#3E2C1C] text-base font-semibold">
+                      <h1>51,00€ <span class="text-[#ACAAA8] text-xs font-medium">$57,00</span></h1>
+                      <div class="flex items-center gap-2 mt-2">
+                        <button class="flex justify-center items-center p-2 bg-[#F0EEE9] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.89062 9.36363C2.89062 8.97312 3.20719 8.65656 3.5977 8.65656H13.4967C13.8872 8.65656 14.2038 8.97312 14.2038 9.36363C14.2038 9.75413 13.8872 10.0707 13.4967 10.0707H3.5977C3.20719 10.0707 2.89062 9.75413 2.89062 9.36363Z"
+                              fill="#5F5F5F" />
+                          </svg>
+                        </button>
+                        <h1>0</h1>
+                        <button class="flex justify-center items-center p-2 bg-[#3E2C1C] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path
+                              d="M9.43395 4.41413C9.43395 4.02363 9.11738 3.70706 8.72688 3.70706C8.33637 3.70706 8.01981 4.02363 8.01981 4.41413V8.65656H3.77738C3.38688 8.65656 3.07031 8.97312 3.07031 9.36363C3.07031 9.75413 3.38688 10.0707 3.77738 10.0707H8.01981V14.3131C8.01981 14.7036 8.33637 15.0202 8.72688 15.0202C9.11738 15.0202 9.43395 14.7036 9.43395 14.3131V10.0707H13.6764C14.0669 10.0707 14.3834 9.75413 14.3834 9.36363C14.3834 8.97312 14.0669 8.65656 13.6764 8.65656H9.43395V4.41413Z"
+                              fill="white" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white relative w-[270px] border border-[#E2E1E0] rounded-xl">
+                  <div class="absolute top-2 right-2 p-2 text-[#090502] text-sm rounded-lg bg-[#F0E9E2]">
+                    Limited edition
+                  </div>
+                  <img class="rounded-xl w-full" src="./images/product-details/imgCrude.png" alt="">
+                  <div class="p-5 text-[#5F5F5F] text-sm font-normal space-y-1">
+                    <h1 class="text-lg text-[#1E293B] font-semibold max-w-full w-10/12">Customized barf diet pack for
+                      dogs</h1>
+                    <p>6kg - 60 Burgers</p>
+                    <p>3 Bags of 2kg (from €7.20/kg)</p>
+                    <p style="border-bottom: 0.5px solid #5F5F5F;">+ Details</p>
+                    <div class="flex justify-between items-center text-[#3E2C1C] text-base font-semibold">
+                      <h1>51,00€ <span class="text-[#ACAAA8] text-xs font-medium">$57,00</span></h1>
+                      <div class="flex items-center gap-2 mt-2">
+                        <button class="flex justify-center items-center p-2 bg-[#F0EEE9] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.89062 9.36363C2.89062 8.97312 3.20719 8.65656 3.5977 8.65656H13.4967C13.8872 8.65656 14.2038 8.97312 14.2038 9.36363C14.2038 9.75413 13.8872 10.0707 13.4967 10.0707H3.5977C3.20719 10.0707 2.89062 9.75413 2.89062 9.36363Z"
+                              fill="#5F5F5F" />
+                          </svg>
+                        </button>
+                        <h1>0</h1>
+                        <button class="flex justify-center items-center p-2 bg-[#3E2C1C] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path
+                              d="M9.43395 4.41413C9.43395 4.02363 9.11738 3.70706 8.72688 3.70706C8.33637 3.70706 8.01981 4.02363 8.01981 4.41413V8.65656H3.77738C3.38688 8.65656 3.07031 8.97312 3.07031 9.36363C3.07031 9.75413 3.38688 10.0707 3.77738 10.0707H8.01981V14.3131C8.01981 14.7036 8.33637 15.0202 8.72688 15.0202C9.11738 15.0202 9.43395 14.7036 9.43395 14.3131V10.0707H13.6764C14.0669 10.0707 14.3834 9.75413 14.3834 9.36363C14.3834 8.97312 14.0669 8.65656 13.6764 8.65656H9.43395V4.41413Z"
+                              fill="white" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white relative w-[270px] border border-[#E2E1E0] rounded-xl">
+                  <div class="absolute top-2 right-2 p-2 text-[#090502] text-sm rounded-lg bg-[#F0E9E2]">
+                    Limited edition
+                  </div>
+                  <img class="rounded-xl w-full" src="./images/product-details/imgCrude.png" alt="">
+                  <div class="p-5 text-[#5F5F5F] text-sm font-normal space-y-1">
+                    <h1 class="text-lg text-[#1E293B] font-semibold max-w-full w-10/12">Customized barf diet pack for
+                      dogs</h1>
+                    <p>6kg - 60 Burgers</p>
+                    <p>3 Bags of 2kg (from €7.20/kg)</p>
+                    <p style="border-bottom: 0.5px solid #5F5F5F;">+ Details</p>
+                    <div class="flex justify-between items-center text-[#3E2C1C] text-base font-semibold">
+                      <h1>51,00€ <span class="text-[#ACAAA8] text-xs font-medium">$57,00</span></h1>
+                      <div class="flex items-center gap-2 mt-2">
+                        <button class="flex justify-center items-center p-2 bg-[#F0EEE9] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.89062 9.36363C2.89062 8.97312 3.20719 8.65656 3.5977 8.65656H13.4967C13.8872 8.65656 14.2038 8.97312 14.2038 9.36363C14.2038 9.75413 13.8872 10.0707 13.4967 10.0707H3.5977C3.20719 10.0707 2.89062 9.75413 2.89062 9.36363Z"
+                              fill="#5F5F5F" />
+                          </svg>
+                        </button>
+                        <h1>0</h1>
+                        <button class="flex justify-center items-center p-2 bg-[#3E2C1C] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path
+                              d="M9.43395 4.41413C9.43395 4.02363 9.11738 3.70706 8.72688 3.70706C8.33637 3.70706 8.01981 4.02363 8.01981 4.41413V8.65656H3.77738C3.38688 8.65656 3.07031 8.97312 3.07031 9.36363C3.07031 9.75413 3.38688 10.0707 3.77738 10.0707H8.01981V14.3131C8.01981 14.7036 8.33637 15.0202 8.72688 15.0202C9.11738 15.0202 9.43395 14.7036 9.43395 14.3131V10.0707H13.6764C14.0669 10.0707 14.3834 9.75413 14.3834 9.36363C14.3834 8.97312 14.0669 8.65656 13.6764 8.65656H9.43395V4.41413Z"
+                              fill="white" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white relative w-[270px] border border-[#E2E1E0] rounded-xl">
+                  <div class="absolute top-2 right-2 p-2 text-[#090502] text-sm rounded-lg bg-[#F0E9E2]">
+                    Limited edition
+                  </div>
+                  <img class="rounded-xl w-full" src="./images/product-details/imgCrude.png" alt="">
+                  <div class="p-5 text-[#5F5F5F] text-sm font-normal space-y-1">
+                    <h1 class="text-lg text-[#1E293B] font-semibold max-w-full w-10/12">Customized barf diet pack for
+                      dogs</h1>
+                    <p>6kg - 60 Burgers</p>
+                    <p>3 Bags of 2kg (from €7.20/kg)</p>
+                    <p style="border-bottom: 0.5px solid #5F5F5F;">+ Details</p>
+                    <div class="flex justify-between items-center text-[#3E2C1C] text-base font-semibold">
+                      <h1>51,00€ <span class="text-[#ACAAA8] text-xs font-medium">$57,00</span></h1>
+                      <div class="flex items-center gap-2 mt-2">
+                        <button class="flex justify-center items-center p-2 bg-[#F0EEE9] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.89062 9.36363C2.89062 8.97312 3.20719 8.65656 3.5977 8.65656H13.4967C13.8872 8.65656 14.2038 8.97312 14.2038 9.36363C14.2038 9.75413 13.8872 10.0707 13.4967 10.0707H3.5977C3.20719 10.0707 2.89062 9.75413 2.89062 9.36363Z"
+                              fill="#5F5F5F" />
+                          </svg>
+                        </button>
+                        <h1>0</h1>
+                        <button class="flex justify-center items-center p-2 bg-[#3E2C1C] rounded-md">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <path
+                              d="M9.43395 4.41413C9.43395 4.02363 9.11738 3.70706 8.72688 3.70706C8.33637 3.70706 8.01981 4.02363 8.01981 4.41413V8.65656H3.77738C3.38688 8.65656 3.07031 8.97312 3.07031 9.36363C3.07031 9.75413 3.38688 10.0707 3.77738 10.0707H8.01981V14.3131C8.01981 14.7036 8.33637 15.0202 8.72688 15.0202C9.11738 15.0202 9.43395 14.7036 9.43395 14.3131V10.0707H13.6764C14.0669 10.0707 14.3834 9.75413 14.3834 9.36363C14.3834 8.97312 14.0669 8.65656 13.6764 8.65656H9.43395V4.41413Z"
+                              fill="white" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+
+  <!-- What will notice section -->
+  <section class="bg-white py-[48px] md:py-[120px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] mx-auto w-full md:w-3/5">What will
+          you notice in the first days eating barf?</h1>
+      </div>
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-[56px] mt-[32px] md:mt-[80px] overflow-x-auto">
+        <div class="text-[#5F5F5F] text-2xl font-normal text-right space-y-[56px]">
+          <div class="flex gap-2 items-center">
+            <p>Changes in your stool</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#5B4C3E" />
+            </svg>
+          </div>
+          <div class="flex gap-2 items-center">
+            <p>Drink less water</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#5B4C3E" />
+            </svg>
+          </div>
+          <div class="flex gap-2 items-center">
+            <p>Your body deflates</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#5B4C3E" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <img class="w-full md:w-[328px]" src="./images/product-details/roundedDog.png" alt="">
+        </div>
+        <div class="text-[#5F5F5F] text-2xl font-normal space-y-[56px] text-right">
+          <div class="flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#5B4C3E" />
+            </svg>
+            <p>You will have more appetite</p>
+          </div>
+          <div class="flex gap-2 items-center justify-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#5B4C3E" />
+            </svg>
+            <p>Skin and coat changes</p>
+          </div>
+          <div class="flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <circle cx="6" cy="6" r="6" fill="#5B4C3E" />
+            </svg>
+            <p>Increased vitality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Does Crude works section -->
+  <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-[56px] font-semibold md:font-bold text-[#1E293B] md:text-[#090502]">How does
+          CRUDE® work?</h1>
+        <p class="text-[#5F5F5F] text-base md:text-xl mt-2">Choose the Perfect Menu for your Dog</p>
+      </div>
+      <div class="flex flex-col md:flex-row  justify-center items-center gap-4 mt-[40px] w-full">
+        <div class="w-full bg-[#F0EEE9] rounded-2xl h-[545px]">
+          <div class="relative">
+            <img class="mx-auto w-full" src="./images/work1.png" alt="">
+            <div
+              class="absolute -bottom-4 left-[45%] bg-[#3E2C1C] size-[50px] rounded-full flex justify-center items-center text-xl text-white">
+              <p>1</p>
+            </div>
+          </div>
+          <div class="p-5 text-center rounded-b-lg">
+            <h4 class="text-[#090502] font-bold text-xl w-full">Step 1: Place your order in
+              minutes</h4>
+            <p class="text-[#5F5F5F] text-base mt-3">It's very simple, you just have to choose how much food
+              you want for your dog and what
+              flavors are his favorites.</p>
+          </div>
+        </div>
+        <div class="w-full bg-[#F0EEE9] rounded-2xl h-[545px]">
+          <div class="relative">
+            <img class="mx-auto w-full" src="./images/work2.png" alt="">
+            <div
+              class="absolute -bottom-4 left-[45%] bg-[#3E2C1C] size-[50px] rounded-full flex justify-center items-center text-xl text-white">
+              <p>2</p>
+            </div>
+          </div>
+          <div class="p-5 text-center rounded-b-lg">
+            <h4 class="text-[#090502] font-bold text-xl w-full">Step 2: Receive your order
+              directly at home</h4>
+            <p class="text-[#5F5F5F] text-base mt-3">It's very simple, you just have to choose how much food
+              you want for your dog and what flavors are his favorites.</p>
+          </div>
+        </div>
+        <div class="w-full bg-[#F0EEE9] rounded-2xl h-[545px]">
+          <div class="relative">
+            <img class="mx-auto w-full" src="./images/work1.png" alt="">
+            <div
+              class="absolute -bottom-4 left-[45%] bg-[#3E2C1C] size-[50px] rounded-full flex justify-center items-center text-xl text-white">
+              <p>3</p>
+            </div>
+          </div>
+          <div class="p-5 text-center rounded-b-lg">
+            <h4 class="text-[#090502] font-bold text-xl w-full">Step 4: Prepare and <br> Serve
+              Easily</h4>
+            <p class="text-[#5F5F5F] text-base mt-3">Defrost your dog's portion and serve it in the bowl.
+              You will soon see your dog devouring it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[24px] md:mt-[48px]">
+        <button
+          class="flex mx-auto w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+          I want to start now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+            fill="none">
+            <path
+              d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502]">More opinions from our
+          clients</h1>
+      </div>
+      <div class="testimonial-carousel mt-[80px] w-full">
+        <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
+          <div class="flex gap-[2px]">
+            <img src="./images/icons/fiveStar.svg" alt="">
+            <p class="text-[#666D80] text-base">4.8</p>
+          </div>
+          <p class="text-[#5F5F5F] text-base font-normal mt-3">“Ganttify has revolutionized the way we manage
+            our projects. Connecting tasks and workflows to our overall company goals has never been
+            easier.”.</p>
+          <div class="flex gap-4 mt-7 md:mt-10">
+            <img src="./images/avater.png" alt="">
+            <div>
+              <h4 class="text-[#0D0D12] text-base font-medium">Charolette Hanlin</h4>
+              <p class="text-[#666D80] text-sm">Co-Founder, Heroes Digital</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
+          <div class="flex gap-[2px]">
+            <img src="./images/icons/fiveStar.svg" alt="">
+            <p class="text-[#666D80] text-base">4.8</p>
+          </div>
+          <p class="text-[#5F5F5F] text-base font-normal mt-3">“Ganttify has revolutionized the way we manage
+            our projects. Connecting tasks and workflows to our overall company goals has never been
+            easier.”.</p>
+          <div class="flex gap-4 mt-7 md:mt-10">
+            <img src="./images/avater.png" alt="">
+            <div>
+              <h4 class="text-[#0D0D12] text-base font-medium">Charolette Hanlin</h4>
+              <p class="text-[#666D80] text-sm">Co-Founder, Heroes Digital</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
+          <div class="flex gap-[2px]">
+            <img src="./images/icons/fiveStar.svg" alt="">
+            <p class="text-[#666D80] text-base">4.8</p>
+          </div>
+          <p class="text-[#5F5F5F] text-base font-normal mt-3">“Ganttify has revolutionized the way we manage
+            our projects. Connecting tasks and workflows to our overall company goals has never been
+            easier.”.</p>
+          <div class="flex gap-4 mt-7 md:mt-10">
+            <img src="./images/avater.png" alt="">
+            <div>
+              <h4 class="text-[#0D0D12] text-base font-medium">Charolette Hanlin</h4>
+              <p class="text-[#666D80] text-sm">Co-Founder, Heroes Digital</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
+          <div class="flex gap-[2px]">
+            <img src="./images/icons/fiveStar.svg" alt="">
+            <p class="text-[#666D80] text-base">4.8</p>
+          </div>
+          <p class="text-[#5F5F5F] text-base font-normal mt-3">“Ganttify has revolutionized the way we manage
+            our projects. Connecting tasks and workflows to our overall company goals has never been
+            easier.”.</p>
+          <div class="flex gap-4 mt-7 md:mt-10">
+            <img src="./images/avater.png" alt="">
+            <div>
+              <h4 class="text-[#0D0D12] text-base font-medium">Charolette Hanlin</h4>
+              <p class="text-[#666D80] text-sm">Co-Founder, Heroes Digital</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 rounded-lg bg-white border border-[#8E837A] w-[354px] mx-4">
+          <div class="flex gap-[2px]">
+            <img src="./images/icons/fiveStar.svg" alt="">
+            <p class="text-[#666D80] text-base">4.8</p>
+          </div>
+          <p class="text-[#5F5F5F] text-base font-normal mt-3">“Ganttify has revolutionized the way we manage
+            our projects. Connecting tasks and workflows to our overall company goals has never been
+            easier.”.</p>
+          <div class="flex gap-4 mt-7 md:mt-10">
+            <img src="./images/avater.png" alt="">
+            <div>
+              <h4 class="text-[#0D0D12] text-base font-medium">Charolette Hanlin</h4>
+              <p class="text-[#666D80] text-sm">Co-Founder, Heroes Digital</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-4 mt-8">
+        <button class="testimonial-prev border border-[#E2E1E0] rounded-full p-3 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M20 24L12 16L20 8" stroke="#56524F" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button
+          class="testimonial-next border border-[#E2E1E0] rounded-full p-3 cursor-pointer bg-[#3E2C1C] text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M12 24L20 16L12 8" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- We Carefully selected the ingredients to improve your dog’s health Section -->
+  <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-[56px] font-bold text-[#1E293B] md:text-[#090502] mx-auto w-full md:w-11/12">We
+          Carefully selected the ingredients to improve your dog’s health</h1>
+      </div>
+      <div class="mt-[80px] flex flex-col md:flex-row gap-[131px]">
+        <!-- 1st part --  -->
+        <div class="flex gap-[24px]">
+          <svg width="8" height="362" viewBox="0 0 8 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="8" height="362" rx="4" fill="#F0EEE9" />
+            <rect width="8" height="70" rx="4" fill="#8E837A" />
+          </svg>
+          <!-- card 1  -->
+          <div class="space-y-7">
+            <h2 class="text-black text-2xl font-medium w-full md:w-2/3">
+              PUMPKIN - Regulates your digestion
+            </h2>
+            <h2 class="text-black text-2xl font-medium w-full md:w-2/3">
+              SPIRULINA - Improves your immunity
+            </h2>
+            <h2 class="text-black text-2xl font-medium w-full md:w-2/3">
+              CHICKEN - Protein Source
+            </h2>
+            <h2 class="text-black text-2xl font-medium w-full md:w-2/3">
+              HEMP SEEDS - Source of vitamins
+            </h2>
+          </div>
+        </div>
+        <!-- 2nd part images  -->
+        <img class="size-full md:size-[286px]" src="./images/product-details/carefullguidence.png" alt="" />
+
+        <!-- 3rd part  -->
+        <div class="space-y-[40px]">
+          <div class="max-w-[297px] space-y-[24px]">
+            <h2 class="text-[#3E2C1C] text-xl font-semibold">
+              PUMPKIN - Regulates your digestion
+            </h2>
+            <p class="text-[#5f5f5f] text-base font-normal">High in fiber: Pumpkin is rich in dietary fiber, which helps
+              regulate the dog's digestive system, promoting healthy digestion and helping to prevent constipation or
+              diarrhea
+            </p>
+          </div>
+          <button
+            class="flex w-full md:w-fit justify-center items-center gap-3 text-white bg-[#3E2C1C] py-3 px-5 rounded-[2px] cursor-pointer">
+            I want to start
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M10.5893 3.57739C10.2638 3.25195 9.73619 3.25195 9.41075 3.57739C9.08532 3.90283 9.08532 4.43047 9.41075 4.7559L13.8215 9.16665H4.16668C3.70644 9.16665 3.33334 9.53974 3.33334 9.99998C3.33334 10.4602 3.70644 10.8333 4.16668 10.8333H13.8215L9.41075 15.2441C9.08532 15.5695 9.08532 16.0971 9.41075 16.4226C9.73619 16.748 10.2638 16.748 10.5893 16.4226L16.4226 10.5892C16.748 10.2638 16.748 9.73616 16.4226 9.41072L10.5893 3.57739Z"
+                fill="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- How Does Crude works section -->
+  <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="container mx-auto">
+      <div class="text-center">
+        <h1
+          class="text-5xl md:text-[56px] font-semibold md:font-bold text-[#1E293B] md:text-[#090502] w-full md:w-1/2 mx-auto">
+          The Most Sustainable Frozen Shipment</h1>
+        <p class="text-[#5F5F5F] text-base md:text-xl mt-4 w-full md:w-3/5 mx-auto">Our product cannot lose the cold
+          chain, so we have decided that they travel in our own containers that keep it for up to 48 hours.</p>
+      </div>
+      <div class="flex flex-col md:flex-row  justify-center items-center gap-4 mt-[40px] w-full">
+        <div class="w-full bg-[#F0EEE9] rounded-2xl">
+          <div class="relative">
+            <img class="mx-auto w-full max-h-[328px]" src="./images/product-details/img1.png" alt="">
+            <div
+              class="absolute -bottom-4 left-[45%] bg-[#3E2C1C] size-[50px] rounded-full flex justify-center items-center text-xl text-white">
+              <p>1</p>
+            </div>
+          </div>
+          <div class="p-5 text-center rounded-b-lg">
+            <h4 class="text-[#3E2C1C] font-semibold text-xl w-full md:w-2/3 mx-auto mt-6 pb-5">The refrigerator leaves
+              our premises</h4>
+          </div>
+        </div>
+        <div class="w-full bg-[#F0EEE9] rounded-2xl">
+          <div class="relative">
+            <img class="mx-auto w-full max-h-[328px]" src="./images/product-details/img1.png" alt="">
+            <div
+              class="absolute -bottom-4 left-[45%] bg-[#3E2C1C] size-[50px] rounded-full flex justify-center items-center text-xl text-white">
+              <p>2</p>
+            </div>
+          </div>
+          <div class="p-5 text-center rounded-b-lg">
+            <h4 class="text-[#3E2C1C] font-semibold text-xl w-full md:w-11/12 mx-auto mt-6 pb-5">The delivery person
+              knocks on your door, you take the contents inside</h4>
+          </div>
+        </div>
+        <div class="w-full bg-[#F0EEE9] rounded-2xl">
+          <div class="relative">
+            <img class="mx-auto w-full max-h-[328px]" src="./images/product-details/img3.png" alt="">
+            <div
+              class="absolute -bottom-4 left-[45%] bg-[#3E2C1C] size-[50px] rounded-full flex justify-center items-center text-xl text-white">
+              <p>3</p>
+            </div>
+          </div>
+          <div class="p-5 text-center rounded-b-lg">
+            <h4 class="text-[#3E2C1C] font-semibold text-xl w-full md:w-11/12 mx-auto mt-6 pb-5">He takes the empty
+              refrigerator away at the same time.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="mt-[24px] md:mt-[48px] flex justify-center">
+        <button class="mx-auto w-full md:w-fit text-center text-white bg-[#3E2C1C] py-3 px-5 rounded-lg cursor-pointer">
+          Backpack With Return
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A section -->
+  <section class="bg-[#FBFBFA] py-[48px] md:py-[120px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="container mx-auto">
+      <div class="flex items-center gap-6 justify-center flex-wrap text-sm md:text-base font-medium">
+        <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+          <div class="p-[2px] rounded-full bg-[#3E2C1C]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+              <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>Nutritional advice</p>
+        </button>
+        <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+          <div class="p-[2px] rounded-full bg-[#3E2C1C]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+              <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>Free shipping</p>
+        </button>
+        <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+          <div class="p-[2px] rounded-full bg-[#3E2C1C]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+              <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>Customized plan</p>
+        </button>
+        <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+          <div class="p-[2px] rounded-full bg-[#3E2C1C]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+              <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>Flexibility</p>
+        </button>
+        <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+          <div class="p-[2px] rounded-full bg-[#3E2C1C]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+              <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>No commitment</p>
+        </button>
+        <button class="text-[#3E2C1C] flex items-center justify-center py-[6px] px-3 rounded-full gap-2 bg-[#D4D1CD]">
+          <div class="p-[2px] rounded-full bg-[#3E2C1C]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+              <path d="M1.5 4.75L3.5 6.75L6.5 2.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>14 days trial</p>
+        </button>
+      </div>
+      <div class="text-center mt-6 md:mt-[80px]">
+        <h1
+          class="text-5xl md:text-[56px] font-bold text-[#3E2C1C] w-full md:max-w-3xl mx-auto leading-[56px] md:leading-[78.4px]">
+          Do you have any questions? Take a look here.</h1>
+        <p class="text-[#5F5F5F] text-base md:text-xl mt-2"> Frequently asked questions from our human customers
+        </p>
+      </div>
+      <div class="flex justify-center items-center gap-4 mt-5 flex-wrap text-sm md:text-base" id="faq-buttons">
+        <button class="text-[#3E2C1C] text-center py-2 px-6 rounded-full gap-2 bg-[#D4D1CD] cursor-pointer"
+          data-category="shipment">
+          Shipment
+        </button>
+        <button class="text-[#3E2C1C] text-center py-2 px-6 rounded-full gap-2 border border-[#E2E1E0] cursor-pointer"
+          data-category="dehydrated-snacks">
+          Dehydrated snacks
+        </button>
+        <button class="text-[#3E2C1C] text-center py-2 px-6 rounded-full gap-2 border border-[#E2E1E0] cursor-pointer"
+          data-category="barf-diet">
+          BARF diet
+        </button>
+        <button class="text-[#3E2C1C] text-center py-2 px-6 rounded-full gap-2 border border-[#E2E1E0] cursor-pointer"
+          data-category="subscription">
+          Subscription
+        </button>
+      </div>
+      <!-- FAQ Content -->
+      <div class="space-y-6 mt-6 md:mt-[64px] w-full" id="faq-content">
+        <!-- FAQ items will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="bg-[#3E2C1C] pt-[64px] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <img src="./images/footerLogo.png" alt="">
+        <div class="flex md:-ml-16 xl:-ml-32 gap-[41px] md:gap-12 lg:gap-[60px] xl:gap-[166px] w-full mt-6 md:mt-0">
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Dog snacks</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Frequently Asked Questions</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Access to subscription portal</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Track your shipment</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Calculate your daily ration</p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">Contact</h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">@wecrude</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">The blog</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">Blog Crude</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">info@wecrude.com</p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">+34 644 127 207 (Whatsapp)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 md:pt-[185px]">
+        <div class="h-[1px] bg-[#5B4C3E]"></div>
+        <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
+          <div class="flex justify-center items-center gap-3 flex-wrap">
+            <p>C© 2025, Crude Natural pet food</p>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Refund Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Privacy Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Terms of Service</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Shipping Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Contact information</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Legal notice</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Cancellation Policy</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-2 *:cursor-pointer pb-6">
+          <img src="./images/americanExpress.png" alt="">
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/applepay.png" alt="">
+          </div>
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/googlepay.png" alt="">
+          </div>
+          <img src="./images/masterCard.png" alt="">
+          <img src="./images/visa.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <section class="bg-white p-4 flex justify-center items-center">
+    <img src="./images/footerbottom.png" alt="">
+  </section>
+  <script>
+    // Nav toggle
+    $(document).ready(function () {
+      $("#menu-btn").click(function () {
+        $("#side-menu").removeClass("-translate-x-full");
+        $("#menu-overlay").removeClass("hidden");
+      });
+
+      $("#close-menu, #menu-overlay").click(function () {
+        $("#side-menu").addClass("-translate-x-full");
+        $("#menu-overlay").addClass("hidden");
+      });
+    });
+    // Testimonials carousel
+    $(document).ready(function () {
+      $('.testimonial-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: false,    // Disable center mode (no partial slides)
+        variableWidth: false,  // Disable variable width (all slides same width)
+        prevArrow: $('.testimonial-prev'),
+        nextArrow: $('.testimonial-next'),
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+
+    $(document).ready(function () {
+      // FAQ Data
+      const faqData = {
+        shipment: [
+          {
+            question: "How long does it take for my order to arrive?",
+            answer: "Orders typically arrive within 3-5 business days."
+          },
+          {
+            question: "How can I track my package?",
+            answer: "You can track your order via the link sent to your contact email."
+          }
+        ],
+        "dehydrated-snacks": [
+          {
+            question: "Are your dehydrated snacks organic?",
+            answer: "Yes, all our dehydrated snacks are made from organic ingredients."
+          },
+          {
+            question: "Do you offer international shipping for snacks?",
+            answer: "Yes, we ship our snacks internationally."
+          }
+        ],
+        "barf-diet": [
+          {
+            question: "What is the BARF diet?",
+            answer: "The BARF diet stands for Biologically Appropriate Raw Food, which is a diet for pets that mimics what they would eat in the wild."
+          },
+          {
+            question: "Is the BARF diet safe for all dogs?",
+            answer: "The BARF diet is generally safe for most dogs, but it's always best to consult with your vet before making any dietary changes."
+          }
+        ],
+        subscription: [
+          {
+            question: "How does the subscription work?",
+            answer: "You can choose a subscription plan and we will deliver your selected products on a regular basis."
+          },
+          {
+            question: "Can I cancel my subscription at any time?",
+            answer: "Yes, you can cancel your subscription at any time without any penalties."
+          }
+        ]
+      };
+
+      // Function to render FAQ items
+      function renderFAQ(category) {
+        const faqItems = faqData[category];
+        let faqHtml = '';
+
+        faqItems.forEach((item, index) => {
+          // Expand the second FAQ item by default
+          const isExpanded = index === 1; // Second item (index 1)
+          faqHtml += `
+                    <div class="py-5 px-6 rounded-[12px] border border-[#E2E1E0] faq-item">
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-lg md:text-xl font-semibold text-[#0B0500]">${item.question}</h2>
+                            <button class="cursor-pointer toggle-icon" data-index="${index}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="plus-icon ${isExpanded ? 'hidden' : ''}">
+                                    <path d="M17.5 10C17.5 10.1658 17.4342 10.3247 17.3169 10.4419C17.1997 10.5592 17.0408 10.625 16.875 10.625H10.625V16.875C10.625 17.0408 10.5592 17.1997 10.4419 17.3169C10.3247 17.4342 10.1658 17.5 10 17.5C9.83424 17.5 9.67527 17.4342 9.55806 17.3169C9.44085 17.1997 9.375 17.0408 9.375 16.875V10.625H3.125C2.95924 10.625 2.80027 10.5592 2.68306 10.4419C2.56585 10.3247 2.5 10.1658 2.5 10C2.5 9.83424 2.56585 9.67527 2.68306 9.55806C2.80027 9.44085 2.95924 9.375 3.125 9.375H9.375V3.125C9.375 2.95924 9.44085 2.80027 9.55806 2.68306C9.67527 2.56585 9.83424 2.5 10 2.5C10.1658 2.5 10.3247 2.56585 10.4419 2.68306C10.5592 2.80027 10.625 2.95924 10.625 3.125V9.375H16.875C17.0408 9.375 17.1997 9.44085 17.3169 9.55806C17.4342 9.67527 17.5 9.83424 17.5 10Z" fill="#0B0500"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="minus-icon ${isExpanded ? '' : 'hidden'}">
+                                    <path d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z" fill="#56524F"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="mt-1 md:mt-3 text-sm md:text-xl font-medium text-[#56524F] ${isExpanded ? '' : 'hidden'}">${item.answer}</p>
+                    </div>
+                `;
+        });
+
+        $('#faq-content').html(faqHtml);
+      }
+
+      // Initial render for the first category
+      renderFAQ('shipment');
+
+      // Event listener for category buttons
+      $('#faq-buttons button').on('click', function () {
+        const category = $(this).data('category');
+        $('#faq-buttons button').removeClass('bg-[#D4D1CD]').addClass('border border-[#E2E1E0]');
+        $(this).addClass('bg-[#D4D1CD]').removeClass('border border-[#E2E1E0]');
+        renderFAQ(category);
+      });
+
+      // Event listener for FAQ item toggle
+      $(document).on('click', '.toggle-icon', function () {
+        const $faqItem = $(this).closest('.faq-item');
+        const $answer = $faqItem.find('p');
+        const $plusIcon = $faqItem.find('.plus-icon');
+        const $minusIcon = $faqItem.find('.minus-icon');
+
+        // Collapse all other FAQ items
+        $('.faq-item p').addClass('hidden');
+        $('.plus-icon').removeClass('hidden');
+        $('.minus-icon').addClass('hidden');
+
+        // Toggle the clicked FAQ item
+        if ($answer.hasClass('hidden')) {
+          $answer.removeClass('hidden');
+          $plusIcon.addClass('hidden');
+          $minusIcon.removeClass('hidden');
+        } else {
+          $answer.addClass('hidden');
+          $plusIcon.removeClass('hidden');
+          $minusIcon.addClass('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>
