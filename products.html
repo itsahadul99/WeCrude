@@ -137,8 +137,7 @@
     <div class="container mx-auto">
       <h1 class="text-[#1E293B] text-2xl md:text-[32px] font-semibold text-center">Barf Diet</h1>
       <div class="mt-4 flex justify-center gap-[14px] overflow-x-auto *:text-nowrap">
-        <button
-        id="barf-diet"
+        <button id="barf-diet" onclick="handleClick('barf-diet')"
           class="flex justify-between items-center px-4 py-2 gap-3 text-base font-medium rounded-xl bg-[#5B4C3E] text-white cursor-pointer">
           <p class="p-1 bg-white rounded-[3px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -180,8 +179,7 @@
           </p>
           <p>Barf Diet</p>
         </button>
-        <button
-        id="barf-menu"
+        <button id="barf-menu" onclick="handleClick('barf-menu')"
           class="flex justify-between items-center px-4 py-2 gap-3 text-[#1E293B] text-base font-medium border border-[#F2F2F2] rounded-xl cursor-pointer">
           <p class="p-1 bg-[#F2F2F2] rounded-[3px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -205,8 +203,7 @@
           </p>
           <p>Barf menu</p>
         </button>
-        <button
-        id="barf-packs"
+        <button id="barf-packs" onclick="handleClick('barf-packs')"
           class="flex justify-between items-center px-4 py-2 gap-3 text-[#1E293B] text-base font-medium border border-[#F2F2F2] rounded-xl cursor-pointer">
           <p class="p-1 bg-[#F2F2F2] rounded-[3px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -220,8 +217,7 @@
           </p>
           <p>Barf packs</p>
         </button>
-        <button
-        id="starter-pack"
+        <button id="starter-pack" onclick="handleClick('starter-pack')"
           class="flex justify-between items-center px-4 py-2 gap-3 text-[#1E293B] text-base font-medium border border-[#F2F2F2] rounded-xl cursor-pointer">
           <p class="p-1 bg-[#F2F2F2] rounded-[3px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -239,8 +235,7 @@
           </p>
           <p>Starter pack</p>
         </button>
-        <button
-        id="customize-barf"
+        <button id="customize-barf" onclick="handleClick('customize-barf')"
           class="flex justify-between items-center px-4 py-2 gap-3 text-[#1E293B] text-base font-medium border border-[#F2F2F2] rounded-xl cursor-pointer">
           <p class="p-1 bg-[#F2F2F2] rounded-[3px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -374,7 +369,8 @@
               <p>Limited Edition</p>
             </div>
             <div class="flex justify-between items-center">
-              <button class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+              <button id="details-button"
+                class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path
                     d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
@@ -593,7 +589,15 @@
           </div>
         </div>
       </div>
-
+      <!-- Modal -->
+      <div id="modal" class="fixed inset-0 bg-opacity-50 hidden z-50 ">
+        <div class="bg-white p-6 rounded-lg w-80">
+          <h2 class="text-lg font-semibold">Product Details</h2>
+          <p class="text-sm text-gray-600 mt-2">Here are the details of the 2kg Turkey burger with pumpkin and apple.
+          </p>
+          <button id="close-modal" class="mt-4 px-4 py-2 bg-red-500 text-white rounded cursor-pointer">Close</button>
+        </div>
+      </div>
       <div class="py-10 justify-between items-start bg-[#F0EEE9] px-6 rounded-xl hidden md:flex">
         <div class="flex items-center gap-3">
           <button class="px-4 py-[22px] border rounded-md border-[#EBEBEB] flex gap-2 relative h-fit bg-white">
@@ -799,61 +803,63 @@
       });
     });
 
-    $(document).ready(function() {
-        // Define the content for each button
-        const content = {
-            'barf-diet': {
-                title: 'Personalized barf diet pack for dogs',
-                description: 'Are you looking for a natural and balanced feeding plan for your dog? The BARF Diet Starter Pack is the perfect choice! It contains essential nutrients, no additives, only 100% natural ingredients.',
-                features: [
-                    'For all types of dogs',
-                    'Burger 100gr',
-                    'Veterinary formulation'
-                ]
-            },
-            'barf-menu': {
-                title: 'Barf Menu',
-                description: 'Customize your dog\'s diet with our BARF menu options.',
-                features: [
-                    'Customizable meal plans',
-                    'Fresh ingredients',
-                    'Balanced nutrition'
-                ]
-            },
-            'barf-packs': {
-                title: 'Barf Packs',
-                description: 'Pre-packaged BARF meals for your convenience.',
-                features: [
-                    'Pre-portioned meals',
-                    'Easy to store',
-                    'Variety of options'
-                ]
-            },
-            'starter-pack': {
-                title: 'Starter Pack',
-                description: 'Get started with our BARF diet with this starter pack.',
-                features: [
-                    'Includes all essentials',
-                    'Perfect for beginners',
-                    'Guided instructions'
-                ]
-            },
-            'customize-barf': {
-                title: 'Customize Your Barf',
-                description: 'Tailor the BARF diet to your dog\'s specific needs.',
-                features: [
-                    'Personalized meal plans',
-                    'Consultation with experts',
-                    'Flexible options'
-                ]
-            }
-        };
+    $(document).ready(function () {
+    // Define the content for each button
+    const content = {
+        'barf-diet': {
+            title: 'Personalized barf diet pack for dogs',
+            description: 'Are you looking for a natural and balanced feeding plan for your dog? The BARF Diet Starter Pack is the perfect choice! It contains essential nutrients, no additives, only 100% natural ingredients.',
+            features: [
+                'For all types of dogs',
+                'Burger 100gr',
+                'Veterinary formulation'
+            ]
+        },
+        'barf-menu': {
+            title: 'Barf Menu',
+            description: 'Customize your dog\'s diet with our BARF menu options.',
+            features: [
+                'Customizable meal plans',
+                'Fresh ingredients',
+                'Balanced nutrition'
+            ]
+        },
+        'barf-packs': {
+            title: 'Barf Packs',
+            description: 'Pre-packaged BARF meals for your convenience.',
+            features: [
+                'Pre-portioned meals',
+                'Easy to store',
+                'Variety of options'
+            ]
+        },
+        'starter-pack': {
+            title: 'Starter Pack',
+            description: 'Get started with our BARF diet with this starter pack.',
+            features: [
+                'Includes all essentials',
+                'Perfect for beginners',
+                'Guided instructions'
+            ]
+        },
+        'customize-barf': {
+            title: 'Customize Your Barf',
+            description: 'Tailor the BARF diet to your dog\'s specific needs.',
+            features: [
+                'Personalized meal plans',
+                'Consultation with experts',
+                'Flexible options'
+            ]
+        }
+    };
 
-        // Function to update the content
-        function updateContent(id) {
-            const data = content[id];
-            $('h1.text-2xl').text(data.title);
-            $('div.space-y-3').html(`
+    let activeButton = null; // Track the currently active button
+
+    // Function to update the content
+    function updateContent(id) {
+        const data = content[id];
+        $('h1.text-2xl').text("Personalized barf diet pack for dogs");
+        $('div.space-y-3').html(`
                 <div class="flex gap-2 text-[#5F5F5F] text-base font-normal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.09115 0.666687C4.04106 0.666687 0.757812 3.94993 0.757812 8.00002C0.757812 12.0501 4.04106 15.3334 8.09115 15.3334C12.1412 15.3334 15.4245 12.0501 15.4245 8.00002C15.4245 3.94993 12.1412 0.666687 8.09115 0.666687ZM11.5626 6.47142C11.8229 6.21108 11.8229 5.78896 11.5626 5.52862C11.3022 5.26827 10.8801 5.26827 10.6197 5.52862L7.09115 9.05721L5.56255 7.52862C5.3022 7.26827 4.88009 7.26827 4.61974 7.52862C4.35939 7.78896 4.35939 8.21107 4.61974 8.47143L6.61974 10.4714C6.88009 10.7318 7.3022 10.7318 7.56255 10.4714L11.5626 6.47142Z" fill="#00B67A"/>
@@ -871,22 +877,26 @@
             `);
         }
 
-        // Function to update button styles
-        function updateButtonStyles(clickedButton) {
-            $('button').removeClass('active bg-[#5B4C3E] text-white').addClass('text-[#1E293B] border border-[#F2F2F2]');
-            $(clickedButton).addClass('active bg-[#5B4C3E] text-white').removeClass('text-[#1E293B] border border-[#F2F2F2]');
+    // Function to update button styles
+    function updateButtonStyles(clickedButton) {
+        if (activeButton) {
+            $(activeButton).removeClass('bg-[#5B4C3E] text-white').addClass('text-[#1E293B] border border-[#F2F2F2]');
         }
+        $(clickedButton).addClass('bg-[#5B4C3E] text-white').removeClass('text-[#1E293B] border border-[#F2F2F2]');
+        activeButton = clickedButton; // Update the active button
+    }
 
-        // Attach click event to buttons
-        $('button').click(function() {
-            const id = $(this).attr('id');
-            updateContent(id);
-            updateButtonStyles(this);
-        });
+    // Function to handle button click
+    window.handleClick = function(id) {
+        updateContent(id);
+        updateButtonStyles(document.getElementById(id));
+    };
 
-        // Initialize with the first button's content
-        updateContent('barf-diet');
-    });
+    // Initialize with the first button's content
+    handleClick('barf-diet');
+});
+
+
   </script>
 </body>
 
