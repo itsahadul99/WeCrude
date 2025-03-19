@@ -1,319 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeCrude | Individual Purchase Product</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- Slick Slider CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
-    />
 
-    <!-- jQuery (Required) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeCrude | Individual Purchase Product</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
 
-    <!-- Slick Slider JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: Anek Devanagari;
-      }
+  <!-- jQuery (Required) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-      .slick-dots {
-        /* text-align: ; */
-        bottom: -50px;
-      }
+  <!-- Slick Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Anek Devanagari;
+    }
 
-      .slick-dots li button:before {
-        font-size: 12px;
-      }
+    .slick-dots {
+      /* text-align: ; */
+      bottom: -50px;
+    }
 
-      .slick-dots li {
-        margin: 0;
-      }
+    .slick-dots li button:before {
+      font-size: 12px;
+    }
 
-      .testimonial-next:hover svg path {
-        stroke: white;
-      }
+    .slick-dots li {
+      margin: 0;
+    }
 
-      .testimonial-prev:hover svg path {
-        stroke: white;
-      }
+    .testimonial-next:hover svg path {
+      stroke: white;
+    }
+
+    .testimonial-prev:hover svg path {
+      stroke: white;
+    }
+
+    .slide {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
       .slide {
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        gap: 12px !important;
+
       }
+    }
+  </style>
+</head>
 
-      @media (max-width: 768px) {
-  .slide {
-    flex-direction: column;
-    gap: 12px !important;
+<body>
+  <!-- Announcement Bar-->
+  <div class="bg-black text-white p-4 text-center">
+    <h1 class="text-lg font-medium">Free Shipping from $399 at BARF</h1>
+  </div>
+  <!-- Navigation section -->
+  <section class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
+    <nav class="flex justify-between items-center container mx-auto">
+      <div class="flex-1 flex gap-3 items-center">
+        <!-- Menu Button -->
+        <button id="menu-btn" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+              fill="#0B0500" />
+          </svg>
+        </button>
+        <img src="./images/logo.png" alt="Logo" />
+      </div>
 
-  }
-}
-
-      
-    </style>
-  </head>
-  <body>
-    <!-- Announcement Bar-->
-    <div class="bg-black text-white p-4 text-center">
-      <h1 class="text-lg font-medium">Free Shipping from $399 at BARF</h1>
-    </div>
-    <!-- Navigation section -->
-    <section
-      class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8"
-    >
-      <nav class="flex justify-between items-center container mx-auto">
-        <div class="flex-1 flex gap-3 items-center">
-          <!-- Menu Button -->
-          <button id="menu-btn" class="cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                fill="#0B0500"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                fill="#0B0500"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
-                fill="#0B0500"
-              />
-            </svg>
-          </button>
-          <img src="./images/logo.png" alt="Logo" />
-        </div>
-
-        <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
-          <img src="./images/icons/location.svg" alt="Location" />
-          <img src="./images/icons/search.svg" alt="Search" />
-          <img src="./images/icons/user.svg" alt="User" />
-          <img src="./images/icons/cart.svg" alt="Cart" />
-        </ul>
-      </nav>
-    </section>
-
-    <!-- Side Menu -->
-    <div
-      id="menu-overlay"
-      class="fixed inset-0 bg-black opacity-20 hidden"
-    ></div>
-    <div
-      id="side-menu"
-      class="fixed left-0 top-0 h-full w-72 bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50"
-    >
-      <button id="close-menu" class="text-lg cursor-pointer">✖</button>
-      <ul class="space-y-3">
-        <li
-          class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"
-        >
-          <a href="#" class="font-semibold flex justify-between">
-            Online Store
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                fill="#3E2C1C"
-              />
-            </svg>
-          </a>
-          <ul
-            class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-72 p-3 space-y-2"
-          >
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-          </ul>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Product</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Collection</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Recipes</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">How it works</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Calculator</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">About Us</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">FAQs</a>
-        </li>
+      <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+        <img src="./images/icons/location.svg" alt="Location" />
+        <img src="./images/icons/search.svg" alt="Search" />
+        <img src="./images/icons/user.svg" alt="User" />
+        <img src="./images/icons/cart.svg" alt="Cart" />
       </ul>
-    </div>
-    <main class="bg-[#F0EEE9] py-[80px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
-      <div class="space-y-[120px]">
-        <!-- section 1  -->
+    </nav>
+  </section>
 
-        <section class="space-y-[40px] max-w-[732px] mx-auto">
-          <div class="flex item-center justify-between">
-            <h4
-              style="
+  <!-- Side Menu -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black opacity-20 hidden"></div>
+  <div id="side-menu"
+    class="fixed left-0 top-0 h-full w-72 bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50">
+    <button id="close-menu" class="text-lg cursor-pointer">✖</button>
+    <ul class="space-y-3">
+      <li class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#" class="font-semibold flex justify-between">
+          Online Store
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+              fill="#3E2C1C" />
+          </svg>
+        </a>
+        <ul class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-72 p-3 space-y-2">
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">
+                  Barf Diet
+                </p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">
+                  Barf Diet
+                </p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">
+                  Barf Diet
+                </p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+        </ul>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Product</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Collection</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Recipes</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">How it works</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Calculator</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">About Us</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">FAQs</a>
+      </li>
+    </ul>
+  </div>
+  <main class="bg-[#F0EEE9] py-[80px] px-6 md:px-8 lg:px-12 xl:px-[165px]">
+    <div class="space-y-[120px]  container mx-auto">
+      <!-- section 1  -->
+
+      <section class="space-y-[40px] max-w-[732px] mx-auto">
+        <div class="flex item-center justify-between">
+          <h4 style="
                 color: var(--text-primary, #1e293b);
                 font-style: normal;
                 font-weight: 600;
                 line-height: 140%; /* 44.8px */
-              "
-              class=" text-[28px] lg:text-[32px] leading-[39.2px]  lg:leading-[44.8px]"
-            >
-              Individual Purchase
-            </h4>
+              " class=" text-[28px] lg:text-[32px] leading-[39.2px]  lg:leading-[44.8px]">
+            Individual Purchase
+          </h4>
 
-            <div class="flex items-center gap-[7px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M14.0004 8.00028C14.0004 8.13289 13.9477 8.26006 13.8539 8.35383C13.7602 8.4476 13.633 8.50028 13.5004 8.50028H3.70727L7.35414 12.1465C7.4006 12.193 7.43745 12.2481 7.46259 12.3088C7.48773 12.3695 7.50067 12.4346 7.50067 12.5003C7.50067 12.566 7.48773 12.631 7.46259 12.6917C7.43745 12.7524 7.4006 12.8076 7.35414 12.854C7.30769 12.9005 7.25254 12.9373 7.19184 12.9625C7.13115 12.9876 7.06609 13.0006 7.00039 13.0006C6.9347 13.0006 6.86964 12.9876 6.80895 12.9625C6.74825 12.9373 6.6931 12.9005 6.64664 12.854L2.14664 8.35403C2.10016 8.30759 2.06328 8.25245 2.03811 8.19175C2.01295 8.13105 2 8.06599 2 8.00028C2 7.93457 2.01295 7.86951 2.03811 7.80881C2.06328 7.74811 2.10016 7.69296 2.14664 7.64653L6.64664 3.14653C6.74046 3.05271 6.86771 3 7.00039 3C7.13308 3 7.26032 3.05271 7.35414 3.14653C7.44796 3.24035 7.50067 3.3676 7.50067 3.50028C7.50067 3.63296 7.44796 3.76021 7.35414 3.85403L3.70727 7.50028H13.5004C13.633 7.50028 13.7602 7.55296 13.8539 7.64672C13.9477 7.74049 14.0004 7.86767 14.0004 8.00028Z"
-                  fill="#1E293B"
-                />
-              </svg>
+          <div class="flex items-center gap-[7px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M14.0004 8.00028C14.0004 8.13289 13.9477 8.26006 13.8539 8.35383C13.7602 8.4476 13.633 8.50028 13.5004 8.50028H3.70727L7.35414 12.1465C7.4006 12.193 7.43745 12.2481 7.46259 12.3088C7.48773 12.3695 7.50067 12.4346 7.50067 12.5003C7.50067 12.566 7.48773 12.631 7.46259 12.6917C7.43745 12.7524 7.4006 12.8076 7.35414 12.854C7.30769 12.9005 7.25254 12.9373 7.19184 12.9625C7.13115 12.9876 7.06609 13.0006 7.00039 13.0006C6.9347 13.0006 6.86964 12.9876 6.80895 12.9625C6.74825 12.9373 6.6931 12.9005 6.64664 12.854L2.14664 8.35403C2.10016 8.30759 2.06328 8.25245 2.03811 8.19175C2.01295 8.13105 2 8.06599 2 8.00028C2 7.93457 2.01295 7.86951 2.03811 7.80881C2.06328 7.74811 2.10016 7.69296 2.14664 7.64653L6.64664 3.14653C6.74046 3.05271 6.86771 3 7.00039 3C7.13308 3 7.26032 3.05271 7.35414 3.14653C7.44796 3.24035 7.50067 3.3676 7.50067 3.50028C7.50067 3.63296 7.44796 3.76021 7.35414 3.85403L3.70727 7.50028H13.5004C13.633 7.50028 13.7602 7.55296 13.8539 7.64672C13.9477 7.74049 14.0004 7.86767 14.0004 8.00028Z"
+                fill="#1E293B" />
+            </svg>
 
-              <span
-                style="
+            <span style="
                   color: var(--text-primary, #1e293b);
                   font-style: normal;
                   font-weight: 400;
                  
-                "
-                class="text-[16px] lg:text-[18px] leading-[22.4px] lg:leading-[25.2px]"
-              >
-                back
-              </span>
-            </div>
+                " class="text-[16px] lg:text-[18px] leading-[22.4px] lg:leading-[25.2px]">
+              back
+            </span>
           </div>
+        </div>
 
-          <!-- card  -->
-          <div
-            style="
+        <!-- card  -->
+        <div style="
               border-radius: 20px;
               background: #fff;
               box-shadow: 0px 0px 30px 0px rgba(62, 44, 28, 0.12);
-            "
-            class=" py-[24px] lg:py-[22.5px] px-[16px] lg:px-[24px] space-y-[16px]  lg:space-y-[24px]"
-          >
-            <button
-              style="
+            " class=" py-[24px] lg:py-[22.5px] px-[16px] lg:px-[24px] space-y-[16px]  lg:space-y-[24px]">
+          <button style="
                 color: #3e2c1c;
                 text-align: center;
                 font-size: var(--Typeface-size-p-14pt, 14px);
@@ -327,96 +235,79 @@
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-              "
-            >
-              Individual Purchase
-            </button>
-            <!-- inner card  -->
-            <div
-              style="
+              ">
+            Individual Purchase
+          </button>
+          <!-- inner card  -->
+          <div style="
                 border-radius: 16px;
                 border: 1px solid var(--Gray-300, #e2e1e0);
                 background: #fff;
-              "
-              class=" py-[18px]  lg:py-[24px] px-[12px] lg:px-[32px] flex items-center justify-between"
-            >
-              <!-- left side  -->
-              <div class="flex items-center gap-3 lg:gap-6">
-                <img class="max-w-[56px] lg:max-w-fit" src="./images/products/image.png" alt="" />
-                <p
-                  style="
+              " class=" py-[18px]  lg:py-[24px] px-[12px] lg:px-[32px] flex items-center justify-between">
+            <!-- left side  -->
+            <div class="flex items-center gap-3 lg:gap-6">
+              <img class="max-w-[56px] lg:max-w-fit" src="./images/products/image.png" alt="" />
+              <p style="
                     color: var(--text-primary, #1e293b);
                     /* font-size: 18px; */
                     font-style: normal;
                     font-weight: 500;
                   "
-                  class=" max-w-[135px] lg:max-w-[260px] text-[14px] lg:text-[18px] leading-[13.147px] lg:leading-[24px]"
-                >
-                  2kg Turkey burger with pumpkin and apple
-                </p>
-              </div>
-              <!-- right side  -->
-              <div class="flex items-center gap-[12px] lg:gap-[16px]">
-                <span
-                  style="
+                class=" max-w-[135px] lg:max-w-[260px] text-[14px] lg:text-[18px] leading-[13.147px] lg:leading-[24px]">
+                2kg Turkey burger with pumpkin and apple
+              </p>
+            </div>
+            <!-- right side  -->
+            <div class="flex items-center gap-[12px] lg:gap-[16px]">
+              <span style="
                     color: var(--Text-Disabled, #64748b);
                     /* font-size: 18px; */
                     font-style: normal;
                     font-weight: 500;
                     line-height: 24px; /* 133.333% */
-                  "
-                  class="text-[16px] lg:text-[18px]"
-                >
-                  x1
-                </span>
-                <span
-                  style="
+                  " class="text-[16px] lg:text-[18px]">
+                x1
+              </span>
+              <span style="
                     color: var(--text-primary, #1e293b);
                     text-align: right;
                     /* font-size: var(--Typeface-size-h4, 32px); */
                     font-style: normal;
                     font-weight: 600;
                     line-height: var(--Typeface-lineheight-h4, 40px); /* 125% */
-                  "
-                  class="text-[24px] lg:text-[32px]"
-                >
-                  51.00 €
-                </span>
-              </div>
+                  " class="text-[24px] lg:text-[32px]">
+                51.00 €
+              </span>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- section 2  -->
+      <!-- section 2  -->
 
-        <section class="space-y-5">
-          <!-- header  -->
-          <div class="space-y-[11px]">
-            <h3
-              style="
+      <section class="space-y-5">
+        <!-- header  -->
+        <div class="space-y-[11px]">
+          <h3 style="
                 color: var(--text-primary, #1e293b);
                 text-align: center;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 140%; /* 56px */
-              "
-            >
-              Related Products
-            </h3>
-            <p
-              style="
+              ">
+            Related Products
+          </h3>
+          <p style="
                 color: var(--text-primary, #1e293b);
                 text-align: center;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%; /* 22.4px */
-              "
-            >
-              <span>Product on Sale</span>
-              <span
-                style="
+              ">
+            <span>Product on Sale</span>
+            <span style="
                   color: var(--text-primary, #1e293b);
                   text-align: center;
 
@@ -424,778 +315,430 @@
                   font-style: normal;
                   font-weight: 500;
                   line-height: 140%; /* 28px */
-                "
-                >80+</span
-              >
-            </p>
-          </div>
+                ">80+</span>
+          </p>
+        </div>
 
-          <div class="slider min-w-full">
-            <div class="slide">
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
-                      </svg>
-                      <p>Details</p>
-                    </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+        <div class="slider min-w-full">
+          <div class="slide">
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
                 </div>
-              </div>
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
                       </svg>
-                      <p>Details</p>
                     </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                         <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
                       </svg>
-                      <p>Details</p>
                     </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div
-             class="slide"
-            >
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
-                      </svg>
-                      <p>Details</p>
-                    </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
                 </div>
-              </div>
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
                       </svg>
-                      <p>Details</p>
                     </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                         <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
                       </svg>
-                      <p>Details</p>
                     </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div
-            class="slide"
-            >
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
-                      </svg>
-                      <p>Details</p>
-                    </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
                 </div>
-              </div>
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
                       </svg>
-                      <p>Details</p>
                     </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2"
-              >
-                <img src="./images/products/demoProduct.png" alt="" />
-                <div class="space-y-1">
-                  <h1 class="text-[#1E293B] text-base font-medium">
-                    2kg Turkey burger with pumpkin and apple
-                  </h1>
-                  <p class="text-[#1E293B] font-semibold text-sm">
-                    51,00€
-                    <span class="text-xs font-medium text-[#64748B]"
-                      >$57,00</span
-                    >
-                  </p>
-                  <div
-                    class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit"
-                  >
-                    <p>Limited Edition</p>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <button
-                      id="details-button"
-                      class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                         <path
-                          d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
-                          fill="#3E2C1C"
-                        />
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
                       </svg>
-                      <p>Details</p>
                     </button>
-                    <div class="flex items-center gap-2 mt-2">
-                      <button
-                        class="flex justify-center items-center p-1 bg-white rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
-                            fill="#56524F"
-                          />
-                        </svg>
-                      </button>
-                      <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
-                      <button
-                        class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                        >
-                          <path
-                            d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </main>
+          <div class="slide">
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
+                      </svg>
+                    </button>
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
+                      </svg>
+                    </button>
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
+                      </svg>
+                    </button>
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
+                      </svg>
+                    </button>
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
+                      </svg>
+                    </button>
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#FFF] p-4 rounded-xl w-full max-w-[354px] flex gap-2">
+              <img src="./images/products/demoProduct.png" alt="" />
+              <div class="space-y-1">
+                <h1 class="text-[#1E293B] text-base font-medium">
+                  2kg Turkey burger with pumpkin and apple
+                </h1>
+                <p class="text-[#1E293B] font-semibold text-sm">
+                  51,00€
+                  <span class="text-xs font-medium text-[#64748B]">$57,00</span>
+                </p>
+                <div class="p-2 bg-[#F2E6DA] text-[#3E2C1C] text-[10px] font-normal rounded-lg px-2 w-fit">
+                  <p>Limited Edition</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <button id="details-button"
+                    class="flex gap-2 text-xs text-[#5F5F5F] pb-1 border-b border-[#5F5F5F] cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path
+                        d="M6.5 2.5C6.5 2.22386 6.27614 2 6 2C5.72386 2 5.5 2.22386 5.5 2.5V5.5H2.5C2.22386 5.5 2 5.72386 2 6C2 6.27614 2.22386 6.5 2.5 6.5H5.5V9.5C5.5 9.77614 5.72386 10 6 10C6.27614 10 6.5 9.77614 6.5 9.5V6.5H9.5C9.77614 6.5 10 6.27614 10 6C10 5.72386 9.77614 5.5 9.5 5.5H6.5V2.5Z"
+                        fill="#3E2C1C" />
+                    </svg>
+                    <p>Details</p>
+                  </button>
+                  <div class="flex items-center gap-2 mt-2">
+                    <button class="flex justify-center items-center p-1 bg-white rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.66797 7.49996C2.66797 7.17779 2.92914 6.91663 3.2513 6.91663H11.418C11.7401 6.91663 12.0013 7.17779 12.0013 7.49996C12.0013 7.82213 11.7401 8.08329 11.418 8.08329H3.2513C2.92914 8.08329 2.66797 7.82213 2.66797 7.49996Z"
+                          fill="#56524F" />
+                      </svg>
+                    </button>
+                    <h1 class="text-[#2C1E12] text-xs font-semibold">0</h1>
+                    <button class="flex justify-center items-center p-1 bg-[#3E2C1C] rounded-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path
+                          d="M7.91797 3.41671C7.91797 3.09454 7.6568 2.83337 7.33464 2.83337C7.01247 2.83337 6.7513 3.09454 6.7513 3.41671V6.91671H3.2513C2.92914 6.91671 2.66797 7.17788 2.66797 7.50004C2.66797 7.82221 2.92914 8.08337 3.2513 8.08337H6.7513V11.5834C6.7513 11.9055 7.01247 12.1667 7.33464 12.1667C7.6568 12.1667 7.91797 11.9055 7.91797 11.5834V8.08337H11.418C11.7401 8.08337 12.0013 7.82221 12.0013 7.50004C12.0013 7.17788 11.7401 6.91671 11.418 6.91671H7.91797V3.41671Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-    <div
-      class="py-[40px] px-6 lg:px-[165px] justify-between items-start bg-[#FFF] rounded-xl hidden md:flex"
-    >
+  <div class="py-[40px] px-6 lg:px-[165px] justify-between items-start bg-[#FFF] rounded-xl hidden md:flex">
+    <div class="container mx-auto">
       <div class="flex items-center gap-3">
-        <button
-          class="px-4 py-[22px] border rounded-md border-[#EBEBEB] flex gap-2 relative h-fit bg-white"
-        >
-          <div
-            class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit"
-            style="
+        <button class="px-4 py-[22px] border rounded-md border-[#EBEBEB] flex gap-2 relative h-fit bg-white">
+          <div class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit" style="
               display: flex;
               width: 10px;
               padding: 0px 3.667px 0px 3px;
               justify-content: center;
               align-items: center;
-            "
-          >
+            ">
             3
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
             <path
               d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+              stroke="#56524F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M18 15.5L12 9.5L6 15.5"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M18 15.5L12 9.5L6 15.5" stroke="#56524F" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </button>
         <div class="px-3 py-2 text-[#3E2C1C] text-base space-y-2">
@@ -1218,224 +761,180 @@
       </div>
       <div>
         <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
-        <button
-          class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer"
-        >
+        <button class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer">
           Select Plan
         </button>
       </div>
     </div>
-    <!-- For small device -->
-    <div class="py-10 px-6 border-t border-[#E2E1E0] block md:hidden space-y-4">
-      <div class="flex justify-between items-center gap-3">
-        <button class="px-4 py-[22px] flex gap-2 relative h-fit">
-          <div
-            class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit"
-            style="
+  </div>
+  <!-- For small device -->
+  <div class="py-10 px-6 border-t border-[#E2E1E0] block md:hidden space-y-4">
+    <div class="flex justify-between items-center gap-3">
+      <button class="px-4 py-[22px] flex gap-2 relative h-fit">
+        <div class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit" style="
               display: flex;
               width: 10px;
               padding: 0px 3.667px 0px 3px;
               justify-content: center;
               align-items: center;
-            "
-          >
-            3
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M18 15.5L12 9.5L6 15.5"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
+            ">
+          3
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path
+            d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
+            stroke="#56524F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M18 15.5L12 9.5L6 15.5" stroke="#56524F" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
+    </div>
+    <div class="space-y-2">
+      <div class="text-[#3E2C1C] text-base space-y-2">
+        <div class="flex gap-2">
+          <img class="object-contain" src="./images/products/car.png" alt="" />
+          <p>Buy today and receive it between March 7 and March 10.</p>
+        </div>
+        <div class="flex gap-2">
+          <img class="object-contain" src="./images/products/car.png" alt="" />
+          <p>
+            Free shipping within 24-48 hours + shipping insurance included.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <img class="object-contain" src="./images/products/car.png" alt="" />
+          <p class="text-[#18A20C]">$148 more to free delivery</p>
+        </div>
       </div>
-      <div class="space-y-2">
-        <div class="text-[#3E2C1C] text-base space-y-2">
-          <div class="flex gap-2">
-            <img
-              class="object-contain"
-              src="./images/products/car.png"
-              alt=""
-            />
-            <p>Buy today and receive it between March 7 and March 10.</p>
+      <button class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer w-full">
+        Select Plan
+      </button>
+    </div>
+  </div>
+  <!-- Footer section -->
+  <footer class="bg-[#3E2C1C] pt-[64px] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <img src="./images/footerLogo.png" alt="" />
+        <div class="flex md:-ml-16 xl:-ml-32 gap-[41px] md:gap-12 lg:gap-[60px] xl:gap-[166px] w-full mt-6 md:mt-0">
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Dog snacks
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Frequently Asked Questions
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Access to subscription portal
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Blog Crude
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Track your shipment
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Calculate your daily ration
+              </p>
+            </div>
           </div>
-          <div class="flex gap-2">
-            <img
-              class="object-contain"
-              src="./images/products/car.png"
-              alt=""
-            />
-            <p>
-              Free shipping within 24-48 hours + shipping insurance included.
-            </p>
-          </div>
-          <div class="flex gap-2">
-            <img
-              class="object-contain"
-              src="./images/products/car.png"
-              alt=""
-            />
-            <p class="text-[#18A20C]">$148 more to free delivery</p>
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">
+              Contact
+            </h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                @wecrude
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                The blog
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Blog Crude
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                info@wecrude.com
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                +34 644 127 207 (Whatsapp)
+              </p>
+            </div>
           </div>
         </div>
-        <button
-          class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer w-full"
-        >
-          Select Plan
-        </button>
+      </div>
+      <div class="pt-6 md:pt-[185px]">
+        <div class="h-[1px] bg-[#5B4C3E]"></div>
+        <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
+          <div class="flex justify-center items-center gap-3 flex-wrap">
+            <p>C© 2025, Crude Natural pet food</p>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Refund Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Privacy Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Terms of Service</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Shipping Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Contact information</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Legal notice</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Cancellation Policy</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-2 *:cursor-pointer pb-6">
+          <img src="./images/americanExpress.png" alt="" />
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/applepay.png" alt="" />
+          </div>
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/googlepay.png" alt="" />
+          </div>
+          <img src="./images/masterCard.png" alt="" />
+          <img src="./images/visa.png" alt="" />
+        </div>
       </div>
     </div>
-    <!-- Footer section -->
-    <footer
-      class="bg-[#3E2C1C] pt-[64px] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8"
-    >
-      <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <img src="./images/footerLogo.png" alt="" />
-          <div
-            class="flex md:-ml-16 xl:-ml-32 gap-[41px] md:gap-12 lg:gap-[60px] xl:gap-[166px] w-full mt-6 md:mt-0"
-          >
-            <div class="flex-1">
-              <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
-              <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Dog snacks
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Frequently Asked Questions
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Access to subscription portal
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Blog Crude
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Track your shipment
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Calculate your daily ration
-                </p>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h1 class="text-xl md:text-2xl font-semibold text-white">
-                Contact
-              </h1>
-              <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  @wecrude
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  The blog
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Blog Crude
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  info@wecrude.com
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  +34 644 127 207 (Whatsapp)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pt-6 md:pt-[185px]">
-          <div class="h-[1px] bg-[#5B4C3E]"></div>
-          <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
-            <div class="flex justify-center items-center gap-3 flex-wrap">
-              <p>C© 2025, Crude Natural pet food</p>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Refund Policy</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Privacy Policy</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Terms of Service</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Shipping Policy</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Contact information</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Legal notice</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Cancellation Policy</p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex justify-center items-center gap-2 *:cursor-pointer pb-6"
-          >
-            <img src="./images/americanExpress.png" alt="" />
-            <div class="bg-white p-2 rounded-md">
-              <img src="./images/applepay.png" alt="" />
-            </div>
-            <div class="bg-white p-2 rounded-md">
-              <img src="./images/googlepay.png" alt="" />
-            </div>
-            <img src="./images/masterCard.png" alt="" />
-            <img src="./images/visa.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </footer>
+  </footer>
 
-    <section class="bg-white p-4 flex justify-center items-center">
-      <img src="./images/footerbottom.png" alt="" />
-    </section>
+  <section class="bg-white p-4 flex justify-center items-center">
+    <img src="./images/footerbottom.png" alt="" />
+  </section>
 
-    <script>
-      $(document).ready(function () {
-        $(".slider").slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 3000,
-          arrows: true,
-        });
+  <script>
+    $(document).ready(function () {
+      $(".slider").slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
