@@ -1,231 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeCrude | Product Update</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- Slick Slider CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
-    />
 
-    <!-- jQuery (Required) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeCrude | Product Update</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
 
-    <!-- Slick Slider JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: Anek Devanagari;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Announcement Bar-->
-    <div class="bg-black text-white p-4 text-center">
-      <h1 class="text-lg font-medium">Free Shipping from $399 at BARF</h1>
-    </div>
-    <!-- Navigation section -->
-    <section
-      class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8"
-    >
-      <nav class="flex justify-between items-center container mx-auto">
-        <div class="flex-1 flex gap-3 items-center">
-          <!-- Menu Button -->
-          <button id="menu-btn" class="cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                fill="#0B0500"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                fill="#0B0500"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
-                fill="#0B0500"
-              />
-            </svg>
-          </button>
-          <img src="./images/logo.png" alt="Logo" />
-        </div>
+  <!-- jQuery (Required) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
-          <img src="./images/icons/location.svg" alt="Location" />
-          <img src="./images/icons/search.svg" alt="Search" />
-          <img src="./images/icons/user.svg" alt="User" />
-          <img src="./images/icons/cart.svg" alt="Cart" />
-        </ul>
-      </nav>
-    </section>
+  <!-- Slick Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Anek Devanagari;
+    }
+  </style>
+</head>
 
-    <!-- Side Menu -->
-    <div
-      id="menu-overlay"
-      class="fixed inset-0 bg-black opacity-20 hidden"
-    ></div>
-    <div
-      id="side-menu"
-      class="fixed left-0 top-0 h-full w-72 bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50"
-    >
-      <button id="close-menu" class="text-lg cursor-pointer">✖</button>
-      <ul class="space-y-3">
-        <li
-          class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2"
-        >
-          <a href="#" class="font-semibold flex justify-between">
-            Online Store
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                fill="#3E2C1C"
-              />
-            </svg>
-          </a>
-          <ul
-            class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-72 p-3 space-y-2"
-          >
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer"
-            >
-              <div class="flex gap-2 items-center">
-                <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
-                <div>
-                  <p class="text-base text-[#1E293B] font-semibold">
-                    Barf Diet
-                  </p>
-                  <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-            </div>
-          </ul>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Product</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Collection</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Recipes</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">How it works</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">Calculator</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">About Us</a>
-        </li>
-        <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
-          <a href="#">FAQs</a>
-        </li>
+<body>
+  <!-- Announcement Bar-->
+  <div class="bg-black text-white p-4 text-center">
+    <h1 class="text-lg font-medium">Free Shipping from $399 at BARF</h1>
+  </div>
+  <!-- Navigation section -->
+  <section class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
+    <nav class="flex justify-between items-center container mx-auto">
+      <div class="flex-1 flex gap-3 items-center">
+        <!-- Menu Button -->
+        <button id="menu-btn" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+              fill="#0B0500" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+              fill="#0B0500" />
+          </svg>
+        </button>
+        <img src="./images/logo.png" alt="Logo" />
+      </div>
+
+      <ul class="flex flex-1 gap-5 justify-end *:cursor-pointer">
+        <img src="./images/icons/location.svg" alt="Location" />
+        <img src="./images/icons/search.svg" alt="Search" />
+        <img src="./images/icons/user.svg" alt="User" />
+        <img src="./images/icons/cart.svg" alt="Cart" />
       </ul>
-    </div>
+    </nav>
+  </section>
 
-    <main class="bg-[#F0EEE9] lg:px-[354px] lg:py-[80px]">
-      <section style="border-radius: 24px; background: #fff" class="p-[32px]">
-        <button
-          style="
+  <!-- Side Menu -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black opacity-20 hidden"></div>
+  <div id="side-menu"
+    class="fixed left-0 top-0 h-full w-72 bg-white p-4 transform space-y-4 -translate-x-full transition-all duration-300 text-[#5F5F5F] text-base font-medium z-50">
+    <button id="close-menu" class="text-lg cursor-pointer">✖</button>
+    <ul class="space-y-3">
+      <li class="group relative border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#" class="font-semibold flex justify-between">
+          Online Store
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+              fill="#3E2C1C" />
+          </svg>
+        </a>
+        <ul class="absolute top-0 left-full bg-white shadow-md hidden group-hover:block w-72 p-3 space-y-2">
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">
+                  Barf Diet
+                </p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">
+                  Barf Diet
+                </p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+          <div class="flex justify-between items-center gap-4 bg-[#F4F4F4] p-2 rounded-md cursor-pointer">
+            <div class="flex gap-2 items-center">
+              <img src="./images/brief.png" alt="Barf Diet" class="w-8 h-8" />
+              <div>
+                <p class="text-base text-[#1E293B] font-semibold">
+                  Barf Diet
+                </p>
+                <p class="text-[#5F5F5F] text-sm">Lorem Barf Diet</p>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.91009 4.41073C7.23553 4.0853 7.76317 4.0853 8.0886 4.41073L13.0886 9.41073C13.414 9.73617 13.414 10.2638 13.0886 10.5892L8.0886 15.5892C7.76317 15.9147 7.23553 15.9147 6.91009 15.5892C6.58466 15.2638 6.58466 14.7362 6.91009 14.4107L11.3208 9.99999L6.91009 5.58925C6.58466 5.26381 6.58466 4.73617 6.91009 4.41073Z"
+                fill="#3E2C1C" />
+            </svg>
+          </div>
+        </ul>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Product</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Collection</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Recipes</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">How it works</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">Calculator</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">About Us</a>
+      </li>
+      <li class="border-b border-[#F2F2F2] hover:border-[#3E2C1C] pb-2">
+        <a href="#">FAQs</a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="bg-[#F0EEE9] py-6 px-6 md:px-8 lg:px-12 xl:px-[365px] md:py-8">
+    <section style="border-radius: 24px; background: #fff" class="p-[32px]">
+      <button style="
             color: var(--text-primary, #1e293b);
             font-size: var(--Typeface-size-p-14pt, 14px);
             font-style: normal;
@@ -238,73 +163,56 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-          "
-        >
-          Subscription
-        </button>
+          ">
+        Subscription
+      </button>
 
-        <!-- 2nd part --  -->
-        <div class="flex items-center justify-between mt-5">
-          <!-- left side  -->
-          <div class="flex items-center gap-4">
-            <img src="./images/product-update-images/image.png" alt="product" />
-            <p
-              style="
+      <!-- 2nd part --  -->
+      <div class="flex items-center justify-between mt-5">
+        <!-- left side  -->
+        <div class="flex items-center gap-4">
+          <img src="./images/product-update-images/image.png" alt="product" />
+          <p style="
                 color: var(--text-primary, #1e293b);
                 font-size: var(--Typeface-size-h6, 20px);
                 font-style: normal;
                 font-weight: 600;
                 line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
-              "
-            >
-              Creamy Cookie
-            </p>
-          </div>
-          <!-- right side  -->
+              ">
+            Creamy Cookie
+          </p>
+        </div>
+        <!-- right side  -->
 
-          <span
-            style="
+        <span style="
               color: var(--text-secondary, #5f5f5f);
               font-size: var(--Typeface-size-h6, 20px);
               font-style: normal;
               font-weight: 500;
               line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
-            "
-            >X1</span
-          >
-        </div>
+            ">X1</span>
+      </div>
 
-        <!-- 3rd part  -->
-        <div
-          style="
+      <!-- 3rd part  -->
+      <div style="
             border-radius: 20px;
             border: 1px solid #f2f2ed;
             background: #f2e6da;
-          "
-          class="space-y-[24px] p-6 mt-[32px]"
-        >
-          <!-- 1st ===  -->
-          <div class="flex items-center justify-between">
-            <!-- left side  -->
-            <div class="flex items-center gap-[6px]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-              >
-                <path
-                  d="M9 1.6875C7.55373 1.6875 6.13993 2.11637 4.9374 2.91988C3.73486 3.72339 2.7976 4.86544 2.24413 6.20163C1.69067 7.53781 1.54586 9.00811 1.82801 10.4266C2.11017 11.8451 2.80661 13.148 3.82928 14.1707C4.85196 15.1934 6.15492 15.8898 7.57341 16.172C8.99189 16.4541 10.4622 16.3093 11.7984 15.7559C13.1346 15.2024 14.2766 14.2651 15.0801 13.0626C15.8836 11.8601 16.3125 10.4463 16.3125 9C16.3105 7.06123 15.5394 5.20246 14.1685 3.83154C12.7975 2.46063 10.9388 1.68955 9 1.6875ZM9 15.1875C7.77623 15.1875 6.57994 14.8246 5.56241 14.1447C4.54488 13.4648 3.75182 12.4985 3.2835 11.3679C2.81518 10.2372 2.69265 8.99314 2.93139 7.79288C3.17014 6.59262 3.75944 5.49011 4.62478 4.62478C5.49012 3.75944 6.59262 3.17014 7.79288 2.93139C8.99314 2.69264 10.2372 2.81518 11.3679 3.2835C12.4985 3.75181 13.4648 4.54488 14.1447 5.56241C14.8246 6.57994 15.1875 7.77623 15.1875 9C15.1856 10.6405 14.5331 12.2132 13.3732 13.3732C12.2132 14.5331 10.6405 15.1856 9 15.1875ZM12.9375 9C12.9375 9.77876 12.7066 10.54 12.2739 11.1876C11.8413 11.8351 11.2263 12.3398 10.5068 12.6378C9.78733 12.9358 8.99564 13.0138 8.23184 12.8618C7.46804 12.7099 6.76644 12.3349 6.21577 11.7842C5.6651 11.2336 5.29009 10.532 5.13816 9.76817C4.98623 9.00437 5.06421 8.21267 5.36223 7.49318C5.66025 6.7737 6.16493 6.15875 6.81245 5.72609C7.45996 5.29343 8.22124 5.0625 9 5.0625C10.044 5.06362 11.0448 5.47882 11.783 6.217C12.5212 6.95518 12.9364 7.95605 12.9375 9Z"
-                  fill="#3E2C1C"
-                />
-              </svg>
-              <span>Subscribe and save</span>
-            </div>
-            <!-- right side  -->
-            <div class="space-x-2">
-              <span
-                style="
+          " class="space-y-[24px] p-6 mt-[32px]">
+        <!-- 1st ===  -->
+        <div class="flex items-center justify-between">
+          <!-- left side  -->
+          <div class="flex items-center gap-[6px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M9 1.6875C7.55373 1.6875 6.13993 2.11637 4.9374 2.91988C3.73486 3.72339 2.7976 4.86544 2.24413 6.20163C1.69067 7.53781 1.54586 9.00811 1.82801 10.4266C2.11017 11.8451 2.80661 13.148 3.82928 14.1707C4.85196 15.1934 6.15492 15.8898 7.57341 16.172C8.99189 16.4541 10.4622 16.3093 11.7984 15.7559C13.1346 15.2024 14.2766 14.2651 15.0801 13.0626C15.8836 11.8601 16.3125 10.4463 16.3125 9C16.3105 7.06123 15.5394 5.20246 14.1685 3.83154C12.7975 2.46063 10.9388 1.68955 9 1.6875ZM9 15.1875C7.77623 15.1875 6.57994 14.8246 5.56241 14.1447C4.54488 13.4648 3.75182 12.4985 3.2835 11.3679C2.81518 10.2372 2.69265 8.99314 2.93139 7.79288C3.17014 6.59262 3.75944 5.49011 4.62478 4.62478C5.49012 3.75944 6.59262 3.17014 7.79288 2.93139C8.99314 2.69264 10.2372 2.81518 11.3679 3.2835C12.4985 3.75181 13.4648 4.54488 14.1447 5.56241C14.8246 6.57994 15.1875 7.77623 15.1875 9C15.1856 10.6405 14.5331 12.2132 13.3732 13.3732C12.2132 14.5331 10.6405 15.1856 9 15.1875ZM12.9375 9C12.9375 9.77876 12.7066 10.54 12.2739 11.1876C11.8413 11.8351 11.2263 12.3398 10.5068 12.6378C9.78733 12.9358 8.99564 13.0138 8.23184 12.8618C7.46804 12.7099 6.76644 12.3349 6.21577 11.7842C5.6651 11.2336 5.29009 10.532 5.13816 9.76817C4.98623 9.00437 5.06421 8.21267 5.36223 7.49318C5.66025 6.7737 6.16493 6.15875 6.81245 5.72609C7.45996 5.29343 8.22124 5.0625 9 5.0625C10.044 5.06362 11.0448 5.47882 11.783 6.217C12.5212 6.95518 12.9364 7.95605 12.9375 9Z"
+                fill="#3E2C1C" />
+            </svg>
+            <span>Subscribe and save</span>
+          </div>
+          <!-- right side  -->
+          <div class="space-x-2">
+            <span style="
                   color: var(--text-secondary, #5f5f5f);
                   text-align: right;
                   font-size: var(--Typeface-size-p-18pt, 18px);
@@ -315,147 +223,92 @@
                     28px
                   ); /* 155.556% */
                   text-decoration-line: strikethrough;
-                "
-                >€44.14</span
-              >
-              <span
-                style="
+                ">€44.14</span>
+            <span style="
                   color: var(--text-active, #3e2c1c);
                   text-align: right;
                   font-size: var(--Typeface-size-h6, 20px);
                   font-style: normal;
                   font-weight: 600;
                   line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
-                "
-              >
-                €44.14
-              </span>
-            </div>
+                ">
+              €44.14
+            </span>
           </div>
-          <!-- 2nd ==  -->
-          <ul class="space-y-[12px]">
-            <li class="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
-                  fill="#00B67A"
-                />
-              </svg>
-              <span
-                style="
+        </div>
+        <!-- 2nd ==  -->
+        <ul class="space-y-[12px]">
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
+                fill="#00B67A" />
+            </svg>
+            <span style="
                   color: var(--text-primary, #1e293b);
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 27px; /* 168.75% */
-                "
-                >Save 15% on every order</span
-              >
-            </li>
-            <li class="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
-                  fill="#00B67A"
-                />
-              </svg>
-              <span
-                style="
+                ">Save 15% on every order</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
+                fill="#00B67A" />
+            </svg>
+            <span style="
                   color: var(--text-primary, #1e293b);
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 27px; /* 168.75% */
-                "
-                >Special promotions</span
-              >
-            </li>
-            <li class="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
-                  fill="#00B67A"
-                />
-              </svg>
-              <span
-                style="
+                ">Special promotions</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
+                fill="#00B67A" />
+            </svg>
+            <span style="
                   color: var(--text-primary, #1e293b);
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 27px; /* 168.75% */
-                "
-                >Edit your subscription any time</span
-              >
-            </li>
-            <li class="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
-                  fill="#00B67A"
-                />
-              </svg>
-              <span
-                style="
+                ">Edit your subscription any time</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.99935 0.666687C3.94926 0.666687 0.666016 3.94993 0.666016 8.00002C0.666016 12.0501 3.94926 15.3334 7.99935 15.3334C12.0494 15.3334 15.3327 12.0501 15.3327 8.00002C15.3327 3.94993 12.0494 0.666687 7.99935 0.666687ZM11.4708 6.47142C11.7311 6.21108 11.7311 5.78896 11.4708 5.52862C11.2104 5.26827 10.7883 5.26827 10.5279 5.52862L6.99935 9.05721L5.47075 7.52862C5.2104 7.26827 4.78829 7.26827 4.52794 7.52862C4.26759 7.78896 4.26759 8.21107 4.52794 8.47143L6.52794 10.4714C6.78829 10.7318 7.2104 10.7318 7.47075 10.4714L11.4708 6.47142Z"
+                fill="#00B67A" />
+            </svg>
+            <span style="
                   color: var(--text-primary, #1e293b);
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 27px; /* 168.75% */
-                "
-                >Cancel anytime with no fees</span
-              >
-            </li>
-          </ul>
+                ">Cancel anytime with no fees</span>
+          </li>
+        </ul>
 
-          <!-- 3rd ==  -->
-          <div class="space-y-2">
-            <h4
-              style="
+        <!-- 3rd ==  -->
+        <div class="space-y-2">
+          <h4 style="
                 color: var(--text-primary, #1e293b);
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 27px; /* 168.75% */
-              "
-            >
-              Select delivery frequency
-            </h4>
+              ">
+            Select delivery frequency
+          </h4>
 
-            <select
-              style="
+          <select style="
                 display: flex;
                 height: 48px;
                 padding: 11px 12px 11px 16px;
@@ -465,53 +318,30 @@
                 border-radius: 8px;
                 border: 1px solid #f0f0ed;
                 background: #fff;
-              "
-              class="w-full"
-              name=""
-              id=""
-            >
-              <option value="">Delivery every 4 weeks with 15%</option>
-              <option value="">Delivery every 4 weeks with 15%</option>
-              <option value="">Delivery every 4 weeks with 15%</option>
-            </select>
-          </div>
+              " class="w-full" name="" id="">
+            <option value="">Delivery every 4 weeks with 15%</option>
+            <option value="">Delivery every 4 weeks with 15%</option>
+            <option value="">Delivery every 4 weeks with 15%</option>
+          </select>
         </div>
+      </div>
 
-        <!-- 4th part  -->
+      <!-- 4th part  -->
 
-        <div class="flex items-center justify-between mt-[24px]">
-          <!-- left side  -->
-          <div class="flex items-center gap-2">
-            <span
-              style="
-                border-radius: 8px;
-                border: 1px solid var(--Gray-500, #acaaa8);
-                display: flex;
-                width: 12px;
-                height: 12px;
-                padding: 2px;
-                align-items: center;
-                gap: 10px;
-                aspect-ratio: 1/1;
-              "
-            >
-            </span>
-            <span
-              style="
+      <div class="flex items-center justify-between  border-b border-r border-l p-6 rounded-b-xl border-[#EBEBEB]">
+        <!-- left side  -->
+        <div class="flex items-center gap-2">
+          <input type="radio" class="accent-[#5B4C3E]">
+          <span style="
                 color: var(--text-primary, #1e293b);
                 font-size: var(--Typeface-size-p-16pt, 16px);
                 font-style: normal;
                 font-weight: 400;
                 line-height: var(--Typeface-lineheight-p-16pt, 24px); /* 150% */
-              "
-              >One - time purchase</span
-            >
-          </div>
-
-          <!-- right side  -->
-
-          <span
-            style="
+              ">One - time purchase</span>
+        </div>
+        <!-- right side  -->
+        <span style="
               color: var(--text-primary, #1e293b);
               font-size: var(--Typeface-size-p-18pt, 18px);
               font-style: normal;
@@ -520,17 +350,19 @@
                 --Typeface-lineheight-p-18pt,
                 28px
               ); /* 155.556% */
-            "
-            >24.94 €</span
-          >
+            ">24.94 €</span>
+      </div>
+
+      <!-- 5th part  coming soon ======== -->
+      <div class="mt-[33px] space-y-[10px]">
+        <h1 class="text-[#1E293B] text-base font-medium">Select Delivery Date</h1>
+        <div class="w-full px-4 py-[10px] rounded-full border border-[#E2E1E0]">
+          <input class="text-[#56524F] w-full h-full outline-none" type="date" placeholder="Select Date">
         </div>
-
-        <!-- 5th part  coming soon ======== -->
-
-        <!-- 6th part  -->
-        <div class="space-y-[16px] lg:space-y-[20px] mt-[33px]">
-          <button
-            style="
+      </div>
+      <!-- 6th part  -->
+      <div class="space-y-[16px] lg:space-y-[20px] mt-[33px]">
+        <button style="
               display: flex;
               border-radius: 81px;
               background: #f2e6da;
@@ -546,359 +378,269 @@
                 --Typeface-lineheight-p-14pt,
                 20px
               ); /* 142.857% */
-            "
-          >
-            Individual Purchase
-          </button>
-          <!-- inner card  -->
-          <div
-            style="
+            ">
+          Individual Purchase
+        </button>
+        <!-- inner card  -->
+        <div style="
               border-radius: 16px;
               border: 1px solid var(--Gray-300, #e2e1e0);
               background: #fff;
-            "
-            class="p-4 flex items-center justify-between"
-          >
-            <!-- left side  -->
-            <div class="flex items-center gap-4">
-              <img
-                class="max-w-[56px] lg:max-w-fit"
-                src="./images/products/image.png"
-                alt=""
-              />
-              <p
-                style="
+            " class="p-4 flex items-center justify-between">
+          <!-- left side  -->
+          <div class="flex items-center gap-4">
+            <img class="max-w-[56px] lg:max-w-fit" src="./images/products/image.png" alt="" />
+            <p style="
                   color: var(--text-primary, #1e293b);
                   font-size: var(--Typeface-size-h6, 20px);
                   font-style: normal;
                   font-weight: 600;
                   line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
-                "
-                class=""
-              >
-                Creamy Cookie
-              </p>
-            </div>
-            <!-- right side  -->
-            <span
-              style="
+                " class="">
+              Creamy Cookie
+            </p>
+          </div>
+          <!-- right side  -->
+          <span style="
                 color: var(--Gray-500, #acaaa8);
                 font-size: var(--Typeface-size-h6, 20px);
                 font-style: normal;
                 font-weight: 500;
                 line-height: var(--Typeface-lineheight-h6, 30px); /* 150% */
-              "
-            >
-              x1
-            </span>
-          </div>
+              ">
+            x1
+          </span>
         </div>
+      </div>
 
-        <!-- 7th part --  -->
+      <!-- 7th part --  -->
 
-        <div 
-        class="flex items-center mt-4 space-x-3"
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M19.5 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3ZM16.2806 10.2806L11.0306 15.5306C10.961 15.6004 10.8783 15.6557 10.7872 15.6934C10.6962 15.7312 10.5986 15.7506 10.5 15.7506C10.4014 15.7506 10.3038 15.7312 10.2128 15.6934C10.1217 15.6557 10.039 15.6004 9.96937 15.5306L7.71937 13.2806C7.57864 13.1399 7.49958 12.949 7.49958 12.75C7.49958 12.551 7.57864 12.3601 7.71937 12.2194C7.86011 12.0786 8.05098 11.9996 8.25 11.9996C8.44902 11.9996 8.63989 12.0786 8.78063 12.2194L10.5 13.9397L15.2194 9.21937C15.2891 9.14969 15.3718 9.09442 15.4628 9.0567C15.5539 9.01899 15.6515 8.99958 15.75 8.99958C15.8485 8.99958 15.9461 9.01899 16.0372 9.0567C16.1282 9.09442 16.2109 9.14969 16.2806 9.21937C16.3503 9.28906 16.4056 9.37178 16.4433 9.46283C16.481 9.55387 16.5004 9.65145 16.5004 9.75C16.5004 9.84855 16.481 9.94613 16.4433 10.0372C16.4056 10.1282 16.3503 10.2109 16.2806 10.2806Z" fill="#3E2C1C"/>
-              </svg>
+      <div class="flex items-center mt-4 space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M19.5 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3ZM16.2806 10.2806L11.0306 15.5306C10.961 15.6004 10.8783 15.6557 10.7872 15.6934C10.6962 15.7312 10.5986 15.7506 10.5 15.7506C10.4014 15.7506 10.3038 15.7312 10.2128 15.6934C10.1217 15.6557 10.039 15.6004 9.96937 15.5306L7.71937 13.2806C7.57864 13.1399 7.49958 12.949 7.49958 12.75C7.49958 12.551 7.57864 12.3601 7.71937 12.2194C7.86011 12.0786 8.05098 11.9996 8.25 11.9996C8.44902 11.9996 8.63989 12.0786 8.78063 12.2194L10.5 13.9397L15.2194 9.21937C15.2891 9.14969 15.3718 9.09442 15.4628 9.0567C15.5539 9.01899 15.6515 8.99958 15.75 8.99958C15.8485 8.99958 15.9461 9.01899 16.0372 9.0567C16.1282 9.09442 16.2109 9.14969 16.2806 9.21937C16.3503 9.28906 16.4056 9.37178 16.4433 9.46283C16.481 9.55387 16.5004 9.65145 16.5004 9.75C16.5004 9.84855 16.481 9.94613 16.4433 10.0372C16.4056 10.1282 16.3503 10.2109 16.2806 10.2806Z"
+            fill="#3E2C1C" />
+        </svg>
 
-              <p
-              style="color: var(--text-primary, #1E293B);
+        <p style="color: var(--text-primary, #1E293B);
               font-family: Archivo;
               font-size: 18px;
               font-style: normal;
               font-weight: 400;
-              line-height: 130%; /* 23.4px */"
-              >
-                <span>I agree with</span> <span
-                style="
+              line-height: 130%; /* 23.4px */">
+          <span>I agree with</span> <span style="
                 text-decoration-line: underline;
                 text-decoration-style: solid;
                 text-decoration-skip-ink: none;
                 text-decoration-thickness: auto;
                 text-underline-offset: auto;
-                text-underline-position: from-font;"
-                >termes et conditions</span>
-              </p>
-        </div>
-      </section>
-    </main>
-
-    <div
-      class="py-[40px] px-6 lg:px-[165px] justify-between items-start bg-[#FFF] rounded-xl hidden md:flex"
-    >
-      <div class="flex items-center gap-3">
-        <button
-          class="px-4 py-[22px] border rounded-md border-[#EBEBEB] flex gap-2 relative h-fit bg-white"
-        >
-          <div
-            class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit"
-            style="
-              display: flex;
-              width: 10px;
-              padding: 0px 3.667px 0px 3px;
-              justify-content: center;
-              align-items: center;
-            "
-          >
-            3
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M18 15.5L12 9.5L6 15.5"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <div class="px-3 py-2 text-[#3E2C1C] text-base space-y-2">
-          <div class="flex gap-2">
-            <img src="./images/products/car.png" alt="" />
-            <p>Buy today and receive it between March 7 and March 10.</p>
-          </div>
-          <div class="flex gap-2">
-            <img src="./images/products/car.png" alt="" />
-            <p>
-              Free shipping within 24-48 hours + shipping insurance included.
-            </p>
-          </div>
-          <div class="flex gap-2">
-            <img src="./images/products/car.png" alt="" />
-            <p class="text-[#18A20C]">$148 more to free delivery</p>
-          </div>
-          <input class="w-full" style="accent-color: #3e2c1c" type="range" />
-        </div>
+                text-underline-position: from-font;">termes et conditions</span>
+        </p>
       </div>
-      <div>
-        <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
-        <button
-          class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer"
-        >
-          Select Plan
-        </button>
-      </div>
-    </div>
-    <!-- For small device -->
-    <div class="py-10 px-6 border-t border-[#E2E1E0] block md:hidden space-y-4">
-      <div class="flex justify-between items-center gap-3">
-        <button class="px-4 py-[22px] flex gap-2 relative h-fit">
-          <div
-            class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit"
-            style="
-              display: flex;
-              width: 10px;
-              padding: 0px 3.667px 0px 3px;
-              justify-content: center;
-              align-items: center;
-            "
-          >
-            3
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-          >
-            <path
-              d="M18 15.5L12 9.5L6 15.5"
-              stroke="#56524F"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
-      </div>
-      <div class="space-y-2">
-        <div class="text-[#3E2C1C] text-base space-y-2">
-          <div class="flex gap-2">
-            <img
-              class="object-contain"
-              src="./images/products/car.png"
-              alt=""
-            />
-            <p>Buy today and receive it between March 7 and March 10.</p>
-          </div>
-          <div class="flex gap-2">
-            <img
-              class="object-contain"
-              src="./images/products/car.png"
-              alt=""
-            />
-            <p>
-              Free shipping within 24-48 hours + shipping insurance included.
-            </p>
-          </div>
-          <div class="flex gap-2">
-            <img
-              class="object-contain"
-              src="./images/products/car.png"
-              alt=""
-            />
-            <p class="text-[#18A20C]">$148 more to free delivery</p>
-          </div>
-        </div>
-        <button
-          class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer w-full"
-        >
-          Select Plan
-        </button>
-      </div>
-    </div>
-
-    <!-- Footer section -->
-    <footer
-      class="bg-[#3E2C1C] pt-[64px] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8"
-    >
-      <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <img src="./images/footerLogo.png" alt="" />
-          <div
-            class="flex md:-ml-16 xl:-ml-32 gap-[41px] md:gap-12 lg:gap-[60px] xl:gap-[166px] w-full mt-6 md:mt-0"
-          >
-            <div class="flex-1">
-              <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
-              <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Dog snacks
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Frequently Asked Questions
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Access to subscription portal
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Blog Crude
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Track your shipment
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Calculate your daily ration
-                </p>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h1 class="text-xl md:text-2xl font-semibold text-white">
-                Contact
-              </h1>
-              <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  @wecrude
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  The blog
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  Blog Crude
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  info@wecrude.com
-                </p>
-                <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
-                  +34 644 127 207 (Whatsapp)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pt-6 md:pt-[185px]">
-          <div class="h-[1px] bg-[#5B4C3E]"></div>
-          <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
-            <div class="flex justify-center items-center gap-3 flex-wrap">
-              <p>C© 2025, Crude Natural pet food</p>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Refund Policy</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Privacy Policy</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Terms of Service</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Shipping Policy</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Contact information</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Legal notice</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
-                <p>Cancellation Policy</p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex justify-center items-center gap-2 *:cursor-pointer pb-6"
-          >
-            <img src="./images/americanExpress.png" alt="" />
-            <div class="bg-white p-2 rounded-md">
-              <img src="./images/applepay.png" alt="" />
-            </div>
-            <div class="bg-white p-2 rounded-md">
-              <img src="./images/googlepay.png" alt="" />
-            </div>
-            <img src="./images/masterCard.png" alt="" />
-            <img src="./images/visa.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <section class="bg-white p-4 flex justify-center items-center">
-      <img src="./images/footerbottom.png" alt="" />
     </section>
-  </body>
+  </main>
+
+  <div class="py-[40px] px-6 lg:px-[165px] justify-between items-start bg-[#FFF] rounded-xl hidden md:flex">
+    <div class="flex items-center gap-3">
+      <button class="px-4 py-[22px] border rounded-md border-[#EBEBEB] flex gap-2 relative h-fit bg-white">
+        <div class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit" style="
+              display: flex;
+              width: 10px;
+              padding: 0px 3.667px 0px 3px;
+              justify-content: center;
+              align-items: center;
+            ">
+          3
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path
+            d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
+            stroke="#56524F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M18 15.5L12 9.5L6 15.5" stroke="#56524F" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="px-3 py-2 text-[#3E2C1C] text-base space-y-2">
+        <div class="flex gap-2">
+          <img src="./images/products/car.png" alt="" />
+          <p>Buy today and receive it between March 7 and March 10.</p>
+        </div>
+        <div class="flex gap-2">
+          <img src="./images/products/car.png" alt="" />
+          <p>
+            Free shipping within 24-48 hours + shipping insurance included.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <img src="./images/products/car.png" alt="" />
+          <p class="text-[#18A20C]">$148 more to free delivery</p>
+        </div>
+        <input class="w-full" style="accent-color: #3e2c1c" type="range" />
+      </div>
+    </div>
+    <div>
+      <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
+      <button class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer">
+        Select Plan
+      </button>
+    </div>
+  </div>
+  <!-- For small device -->
+  <div class="py-10 px-6 border-t border-[#E2E1E0] block md:hidden space-y-4">
+    <div class="flex justify-between items-center gap-3">
+      <button class="px-4 py-[22px] flex gap-2 relative h-fit">
+        <div class="relative left-9 top-0 bg-[#3E2C1C] text-white text-[8px] font-medium rounded-full h-fit" style="
+              display: flex;
+              width: 10px;
+              padding: 0px 3.667px 0px 3px;
+              justify-content: center;
+              align-items: center;
+            ">
+          3
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path
+            d="M2 2.5H3.30616C3.55218 2.5 3.67519 2.5 3.77418 2.54524C3.86142 2.58511 3.93535 2.64922 3.98715 2.72995C4.04593 2.82154 4.06333 2.94332 4.09812 3.18686L4.57143 6.5M4.57143 6.5L5.62332 14.2314C5.75681 15.2125 5.82355 15.7031 6.0581 16.0723C6.26478 16.3977 6.56108 16.6564 6.91135 16.8174C7.30886 17 7.80394 17 8.79411 17H17.352C18.2945 17 18.7658 17 19.151 16.8304C19.4905 16.6809 19.7818 16.4398 19.9923 16.1342C20.2309 15.7876 20.3191 15.3247 20.4955 14.3988L21.8191 7.44969C21.8812 7.12381 21.9122 6.96087 21.8672 6.8335C21.8278 6.72177 21.7499 6.62768 21.6475 6.56802C21.5308 6.5 21.365 6.5 21.0332 6.5H4.57143ZM10 21.5C10 22.0523 9.55228 22.5 9 22.5C8.44772 22.5 8 22.0523 8 21.5C8 20.9477 8.44772 20.5 9 20.5C9.55228 20.5 10 20.9477 10 21.5ZM18 21.5C18 22.0523 17.5523 22.5 17 22.5C16.4477 22.5 16 22.0523 16 21.5C16 20.9477 16.4477 20.5 17 20.5C17.5523 20.5 18 20.9477 18 21.5Z"
+            stroke="#56524F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+          <path d="M18 15.5L12 9.5L6 15.5" stroke="#56524F" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <h1 class="text-[#0B0500] text-[32px] font-semibold">51.00 €</h1>
+    </div>
+    <div class="space-y-2">
+      <div class="text-[#3E2C1C] text-base space-y-2">
+        <div class="flex gap-2">
+          <img class="object-contain" src="./images/products/car.png" alt="" />
+          <p>Buy today and receive it between March 7 and March 10.</p>
+        </div>
+        <div class="flex gap-2">
+          <img class="object-contain" src="./images/products/car.png" alt="" />
+          <p>
+            Free shipping within 24-48 hours + shipping insurance included.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <img class="object-contain" src="./images/products/car.png" alt="" />
+          <p class="text-[#18A20C]">$148 more to free delivery</p>
+        </div>
+      </div>
+      <button class="px-6 py-2 text-white font-medium text-base bg-[#3E2C1C] rounded cursor-pointer w-full">
+        Select Plan
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <footer class="bg-[#3E2C1C] pt-[64px] py-6 px-6 md:px-8 lg:px-12 xl:px-[165px] md:py-8">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <img src="./images/footerLogo.png" alt="" />
+        <div class="flex md:-ml-16 xl:-ml-32 gap-[41px] md:gap-12 lg:gap-[60px] xl:gap-[166px] w-full mt-6 md:mt-0">
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">Menu</h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Dog snacks
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Frequently Asked Questions
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Access to subscription portal
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Blog Crude
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Track your shipment
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Calculate your daily ration
+              </p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h1 class="text-xl md:text-2xl font-semibold text-white">
+              Contact
+            </h1>
+            <div class="space-y-2 md:space-y-4 mt-2 *:cursor-pointer">
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                @wecrude
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                The blog
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                Blog Crude
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                info@wecrude.com
+              </p>
+              <p class="text-[#E2E1E0] text-base md:text-lg font-normal">
+                +34 644 127 207 (Whatsapp)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 md:pt-[185px]">
+        <div class="h-[1px] bg-[#5B4C3E]"></div>
+        <div class="py-4 md:py-6 text-white text-sm md:text-base font-normal">
+          <div class="flex justify-center items-center gap-3 flex-wrap">
+            <p>C© 2025, Crude Natural pet food</p>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Refund Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Privacy Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Terms of Service</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Shipping Policy</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Contact information</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Legal notice</p>
+            </div>
+            <div class="flex gap-1 items-center">
+              <div class="size-1 bg-[#D9D9D9] rounded-full"></div>
+              <p>Cancellation Policy</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-2 *:cursor-pointer pb-6">
+          <img src="./images/americanExpress.png" alt="" />
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/applepay.png" alt="" />
+          </div>
+          <div class="bg-white p-2 rounded-md">
+            <img src="./images/googlepay.png" alt="" />
+          </div>
+          <img src="./images/masterCard.png" alt="" />
+          <img src="./images/visa.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="bg-white p-4 flex justify-center items-center">
+    <img src="./images/footerbottom.png" alt="" />
+  </section>
+</body>
+
 </html>
